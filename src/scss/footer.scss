@@ -1,0 +1,95 @@
+.footer {
+}
+
+.footer__top {
+}
+
+.footer__logo {
+}
+
+.footer__nav {
+}
+
+.footer__subtitle {
+}
+
+.footer__menu {
+}
+
+.footer__menu-item {
+}
+
+.footer__contacts {
+}
+
+.footer__contacts-list {
+}
+
+.footer__contacts-item {
+}
+
+.footer__news {
+}
+
+.footer__form {
+}
+
+.footer__social {
+}
+
+.social {
+}
+
+.social__title {
+}
+
+.social__list {
+}
+
+.social__item {
+}
+
+.social__icon {
+}
+
+// bottom
+
+.footer__bottom {
+  padding: 16px 0;
+  background-color: $grey-300;
+}
+
+.footer__bottom-container {
+  max-width: 1690px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__copy {
+  margin-right: 65px;
+  color: $grey-700;
+  font-weight: 500;
+}
+
+.footer__rewards {
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.footer__reward {
+}
+
+.footer__dev {
+  color: $grey-700;
+  font-weight: 500;
+
+  a {
+    color: $black;
+    font-weight: 700;
+  }
+}

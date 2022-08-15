@@ -1,0 +1,30 @@
+.btn {
+	display: inline-flex;
+	align-items: center;
+	padding: rem(15) rem(25);
+	min-height: rem(55);
+	border: 1px solid #1F1E48;
+	border-radius: 6px;
+	transition: color 0.3s ease-out, background-color 0.3s ease-out, border-color 0.3s ease-out;
+
+	&:hover {
+		background-color: $accent;
+		color: #ffffff;
+		border-color: transparent;
+	}
+
+	&--apple,
+	&--google {
+		padding-right: rem(60);
+		background-repeat: no-repeat;
+		background-position: calc(100% - 25px) center;
+	}
+
+	&--apple {
+		background-image: url('@img/icons/icon-apple.png');
+	}
+
+	&--google {
+		background-image: url('@img/icons/icon-google.png');
+	}
+}

@@ -1,0 +1,32 @@
+.rating-mini {
+	margin: 10px 25px 0;
+	display: inline-flex;
+	font-size: 0;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+}
+
+.rating-mini span {
+	padding: 0;
+	font-size: 20px;
+	line-height: 1;
+	color: lightgrey;
+
+	&:not(:last-child) {
+		margin-right: rem(4);
+	}
+}
+
+.rating-mini > span:before {
+	content: '';
+	display: block;
+	width: 20px;
+	height: 20px;
+	background-size: 100%;
+	background-image: url('@img/icons/icon-star-empty.svg');
+}
+
+.rating-mini > span.active::before {
+	background-image: url('@img/icons/icon-star.svg');
+}
