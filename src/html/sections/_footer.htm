@@ -1,8 +1,11 @@
 <footer class="footer">
 	<div class="footer__top">
 		<div class="footer__container">
-			<a class="footer__logo logo" href="#">
-				<img src="@img/logo.png" alt="logo">
+			<a class="logo" href="#">
+				<picture>
+					<source media="(max-width: 1024px)" srcset="@img/logo-mobile.png">
+					<img src="@img/logo.png" alt="logo">
+				</picture>
 			</a>
 
 			<div class="footer__nav">
@@ -32,7 +35,7 @@
 			<address class="footer__contacts">
 				<strong class="footer__subtitle">Контакты</strong>
 				<ul class="footer__contacts-list">
-					<li class="footer__contacts-item">
+					<li>
 						M:
 						<a class="footer__contacts-item" href="tel:+37122843061">+371 22843061</a>,
 						<a class="footer__contacts-item" href="tel:+37122070762">+371 22070762</a>
@@ -53,20 +56,20 @@
 			<div class="footer__news">
 				<strong class="footer__subtitle">Следи за новостями</strong>
 				<form class="footer__form">
-					<input class="input" name="user-email" required type="email" placeholder="Введите свой email"
+					<input class="footer__input input" name="user-email" required type="email" placeholder="Введите свой email"
 						aria-label="Введите свой email">
 
-					<button class="button button--round button-formpart" type="submit" aria-label="Подписаться на рыссылку">
+					<button class="footer__btn button button--round-accent" type="submit" aria-label="Подписаться на рыссылку">
 						<svg class="button__icon">
 							<use xlink:href="@img/sprite.svg#icon-arrow-right"></use>
 						</svg>
 					</button>
 				</form>
 
-				<div class="footer__social social">
+				<div class="social">
 					<strong class="social__title">Мы в сетях:</strong>
 					<ul class="social__list">
-						<li class="social__item">
+						<li>
 							<a href="#">
 								<svg class="social__icon">
 									<use xlink:href="@img/sprite.svg#icon-facebook"></use>
@@ -74,7 +77,7 @@
 							</a>
 						</li>
 
-						<li class="social__item">
+						<li>
 							<a href="#">
 								<svg class="social__icon">
 									<use xlink:href="@img/sprite.svg#icon-insta"></use>
@@ -82,7 +85,7 @@
 							</a>
 						</li>
 
-						<li class="social__item">
+						<li>
 							<a href="#">
 								<svg class="social__icon">
 									<use xlink:href="@img/sprite.svg#icon-twitter"></use>
@@ -94,15 +97,16 @@
 			</div>
 		</div>
 	</div>
+
 	<div class="footer__bottom">
 		<div class="footer__bottom-container">
 			<p class="footer__copy">COPYRIGHT © 1999 - 2022. 1Travel. ALL RIGHTS RESERVED</p>
 			<ul class="footer__rewards">
-				<li class="footer__reward">
+				<li class="footer__reward footer__reward--iata">
 					<!-- todo Вопрос: ссылки ли это? -->
 					<img src="@img/icons/icon-iata-logo.png" alt="iata logo">
 				</li>
-				<li class="footer__reward">
+				<li class="footer__reward footer__reward--alta">
 					<img src="@img/icons/icon-alta-logo.png" alt="alta logo">
 				</li>
 			</ul>

@@ -18,15 +18,22 @@ $fontSize: rem(14); // где 14(px) - размер шрифта по умолч
 
 // Основные цвета
 $black: #000000;
+$disabled: #dadada;
 $white: #ffffff;
+$accent-hover: #f0940e7d;
+$accent-700: #e87811;
 $accent: #f0940e;
 $accent-300: #ffe7c3;
 $green-400: #51d36e;
 $green-300: #69e784;
 $red: #e76969;
-$grey-700: #717171;
-$grey-300: #f8f8f8;
-$grey-400: #cecece;
+$grey-800: #717171;
+$grey-700: #5b5b5b;
+$grey-600: #9d9d9d;
+$grey-500: #a4a4a4;
+$grey-400: #cec9c9;
+$grey-300: #cecece;
+$grey-200: #f8f8f8;
 $accentGradient: linear-gradient(92.72deg, #efa00d 0%, #ef870d 100%),
   linear-gradient(0deg, #efa00d, #efa00d);
 
@@ -163,9 +170,9 @@ body {
 @import 'common';
 
 // Подключение стилей отдельных блоков
-@import 'components/btn';
-@import 'components/search';
-@import 'components/rating-mini';
+@import 'components/social';
+@import 'components/button';
+@import 'components/menu';
 
 // Подключение стилей отдельных секций
 @import 'header';

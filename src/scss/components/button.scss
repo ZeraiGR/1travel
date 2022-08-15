@@ -1,0 +1,76 @@
+.button {
+  padding: 18px 42px;
+  line-height: 1.25;
+  color: $white;
+  border-radius: 62px;
+  background: linear-gradient(92.72deg, #efa00d 0%, #ef870d 100%);
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+
+  &:hover {
+    box-shadow: 0 4px 17px 0 $accent-hover;
+  }
+
+  &:active {
+    background: $accent-700;
+  }
+
+  &--round-accent,
+  &--round-dark {
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+
+  &--round-accent {
+    &:hover {
+      background: #db7210;
+    }
+  }
+
+  &--round-dark {
+    border: 1px solid $grey-400;
+    background: transparent;
+
+    .button__icon {
+      fill: $black;
+    }
+
+    &:hover {
+      background: #424242;
+
+      .button__icon {
+        fill: $white;
+      }
+    }
+  }
+
+  &:disabled {
+    background: $disabled;
+    color: $grey-500;
+    cursor: not-allowed;
+
+    &:hover {
+      box-shadow: none;
+    }
+
+    &:active {
+      background: $disabled;
+    }
+  }
+}
+
+.button__icon {
+  width: 16px;
+  height: 11px;
+  fill: $white;
+}

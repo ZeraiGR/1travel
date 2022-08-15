@@ -8,6 +8,20 @@
 	<div class="wrapper">
 		@@include('html/sections/_header.htm',{})
 		<main class="page">
+
+			<!-- buttons -->
+			<button class="button">Получить предложение</button>
+			<button class="button" disabled>Получить предложение</button>
+			<button class="button button--round-accent">
+				<svg class="button__icon">
+					<use xlink:href="@img/sprite.svg#icon-arrow-right"></use>
+				</svg>
+			</button>
+			<button class="button button--round-dark">
+				<svg class="button__icon">
+					<use xlink:href="@img/sprite.svg#icon-arrow-right"></use>
+				</svg>
+			</button>
 		</main>
 		@@include('html/sections/_footer.htm',{})
 	</div>

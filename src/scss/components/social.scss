@@ -1,0 +1,32 @@
+.social {
+  display: flex;
+  align-items: center;
+
+  @media (max-width: em(972)) {
+    justify-content: center;
+  }
+}
+
+.social__title {
+  margin-right: 20px;
+  font-size: 18px;
+  font-weight: 500;
+
+  @media (max-width: $mobile) {
+    font-size: 16px;
+  }
+
+  @media (max-width: $mobileSmall) {
+    font-size: 14px;
+  }
+}
+
+.social__list {
+  display: flex;
+  gap: 14px;
+}
+
+.social__icon {
+  width: 37px;
+  height: 37px;
+}
