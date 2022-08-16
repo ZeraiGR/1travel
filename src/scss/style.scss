@@ -77,8 +77,51 @@ body {
 
   // Меню открыто
   .menu-open & {
-    .header__mobile {
-      // styles
+    .header__logo {
+      background-color: $white;
+    }
+
+    .header__logo-icon {
+      display: block;
+      fill: $accent;
+    }
+
+    .header__logo-img {
+      display: none;
+    }
+
+    .header__lang {
+      display: block;
+    }
+
+    .header__nav {
+      &::after {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    .header__mobpanel {
+      transform: translateY(0);
+    }
+
+    .header__button--mobile {
+      display: none;
+    }
+
+    .burger {
+      span {
+        background-color: $white;
+
+        &:first-of-type {
+          transform: rotate(45deg);
+          top: 5px;
+        }
+        &:last-of-type {
+          transform: rotate(-45deg);
+          bottom: 5px;
+        }
+      }
     }
   }
 }
@@ -173,6 +216,7 @@ body {
 @import 'components/social';
 @import 'components/button';
 @import 'components/menu';
+@import 'components/burger';
 
 // Подключение стилей отдельных секций
 @import 'header';

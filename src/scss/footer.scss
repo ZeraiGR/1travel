@@ -34,6 +34,35 @@
   }
 }
 
+.logo__footer {
+  @media (max-width: $mobile) {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: $accent;
+  }
+}
+
+.footer__logo-icon {
+  display: none;
+  width: 18.9px;
+  height: 46.6px;
+  fill: $white;
+
+  @media (max-width: $mobile) {
+    display: block;
+  }
+}
+
+.footer__logo-img {
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
+
 .footer__subtitle {
   margin-bottom: 30px;
   display: block;

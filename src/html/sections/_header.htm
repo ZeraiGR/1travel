@@ -1,71 +1,60 @@
-<header class="header header--main">
+<header class="header">
 	<div class="header__container">
 		<nav class="header__nav">
-			<a class="header__logo header__logo--mobile logo" href="#">
-				<img src="@img/logo.png" alt="logo">
+			<a class="header__logo" href="#">
+				<svg class="header__logo-icon">
+					<use xlink:href="@img/sprite.svg#icon-logo-number"></use>
+				</svg>
+				<img class="header__logo-img" src="@img/logo.png" alt="logo" width="206" height="91">
 			</a>
-			<select name="form[]" class="form">
-				<option value="ru" selected>RU</option>
-				<option value="lv">LV</option>
-				<option value="eng">ENG</option>
-			</select>
-			<button class="menu__icon icon-menu" type="button">
-				<span aria-hidden></span>
-			</button>
 
-			<div class="header__mobile">
-				<ul class="header__menu">
-					<li class="header__item">
-						<a class="header__link" href="#">Блог</a>
+			<form class="header__lang">
+				<select name="form[]" class="form">
+					<option value="ru" selected>RU</option>
+					<option value="lv">LV</option>
+					<option value="eng">ENG</option>
+				</select>
+			</form>
+
+			<div class="header__mobpanel">
+				<ul class="header__menu menu">
+					<li>
+						<a href="#">Все туры</a>
 					</li>
-					<li class="header__item">
-						<a class="header__link" href="#">Про остров</a>
+					<li>
+						<a href="#">Визы</a>
 					</li>
-					<li class="header__item">
-						<a class="header__link" href="#">Каталог</a>
+					<li>
+						<a href="#">Чартеры</a>
 					</li>
-					<li class="header__item header__item--logo">
-						<a class="header__link" href="#">
-							<img src="@img/icons/logo.png" alt="logo">
-						</a>
-					</li>
-					<li class="header__item">
-						<a class="header__link" href="#">Контакты</a>
-					</li>
-					<li class="header__item">
-						<a class="header__link" href="#">О нас</a>
-					</li>
-					<li class="header__item">
-						<a class="header__link" href="#">Аккаунт</a>
+					<li>
+						<a href="#">О нас</a>
 					</li>
 				</ul>
 
-				<ul class="social header__social">
-					<li class="social__item">
-						<a class="socials__link" href="#">
-							<img src="@img/icons/icon-insta.svg" alt="instagram">
-						</a>
-					</li>
-					<li class="social__item">
-						<a class="socials__link" href="#">
-							<img src="@img/icons/icon-facebook.svg" alt="facebook">
-						</a>
-					</li>
-					<li class="social__item">
-						<a class="socials__link" href="#">
-							<img src="@img/icons/icon-vk.svg" alt="vk">
-						</a>
-					</li>
-					<li class="social__item">
-						<a class="socials__link" href="#">
-							<img src="@img/icons/icon-youtube.svg" alt="youtube">
-						</a>
-					</li>
-				</ul>
+				<form class="header__search">
+					<!-- todo лупа - это кнопка для поиска? Или просто декор? -->
+					<svg class="header__search-icon">
+						<use xlink:href="@img/sprite.svg#icon-search"></use>
+					</svg>
+					<input class="hrader__search-input" type="search" placeholder="Поиск" aria-label="Поиск по сайту">
+				</form>
+
+				<button class="header__button button">
+					<!-- todo кнопка или ссылка? Что должно произойти при клике? -->
+					Получить предложение
+				</button>
 			</div>
 
+			<button class="header__button button header__button--mobile">
+				<!-- todo кнопка или ссылка? Что должно произойти при клике? -->
+				Получить предложение
+			</button>
 
+			<button class="header__burger burger" type="button" aria-label="Кнопка открыть / закрыть мобильное меню">
+				<span aria-hidden></span>
+				<span aria-hidden></span>
+			</button>
 		</nav>
-		<button class="button">Получить предложение</button>
 	</div>
 </header>
