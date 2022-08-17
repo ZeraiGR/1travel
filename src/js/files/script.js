@@ -17,3 +17,15 @@ export function headerFixed() {
     }
   });
 }
+
+// transforming when elems were focused
+import './custom/transform-with-focus.js';
+
+// swaping city's names when button was clicked
+import './custom/swap-inputs.js';
+
+// date picker
+import './custom/date-picker.js';
+
+// passengers counter
+import './custom/passengers-counter.js';

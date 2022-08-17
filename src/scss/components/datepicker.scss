@@ -1,0 +1,93 @@
+.datepicker {
+  position: relative;
+  z-index: 2;
+  min-height: 76px;
+  max-width: 280px;
+  width: 100%;
+  padding: 35px 22px 15px;
+  width: 100%;
+  height: 100%;
+  font-size: 22px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.qs-datepicker-container {
+  width: 520px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px 0 #0000001a;
+}
+
+.qs-controls {
+  padding: 40px 50px 30px;
+  background-color: transparent;
+  border-bottom: 1px solid #d8d8d8;
+  font-size: 24px;
+}
+
+.qs-arrow.qs-left,
+.qs-arrow.qs-right {
+  &::after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 14px;
+    background-image: url('@img/icons/icon-little-angle.svg');
+    background-size: 8px 14px;
+    background-repeat: no-repeat;
+    border: none;
+  }
+}
+
+.qs-month-year {
+  margin-right: auto;
+}
+
+.qs-arrow {
+  &:hover {
+    background-color: $accent-hover;
+  }
+}
+
+.qs-arrow.qs-left {
+  order: 2;
+  transform: rotate(180deg);
+}
+
+.qs-arrow.qs-right {
+  order: 3;
+}
+
+.qs-squares {
+  padding: 40px 50px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.qs-square {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  color: #666666;
+
+  &.qs-day {
+    color: #333333;
+  }
+
+  &.qs-current {
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  &.qs-active {
+    background-color: $accent;
+    color: $white;
+  }
+}
+
+.qs-square:not(.qs-empty):not(.qs-disabled):not(.qs-day):not(.qs-active):hover {
+  color: $white;
+  background: $accent-hover;
+}

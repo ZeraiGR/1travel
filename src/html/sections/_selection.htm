@@ -1,0 +1,298 @@
+<section class="selection">
+	<div class="selection__container selection__container--big">
+		<div class="selection__slider">
+			<ul class="selection__swiper">
+				<li class="selection__slide" style="background-image: url('@img/decor/selection-slider-bg-1.jpg');">
+				</li>
+				<li class="selection__slide" style="background-image: url('@img/decor/selection-slider-bg-1.jpg');">
+				</li>
+				<li class="selection__slide" style="background-image: url('@img/decor/selection-slider-bg-1.jpg');">
+				</li>
+				<li class="selection__slide" style="background-image: url('@img/decor/selection-slider-bg-1.jpg');">
+				</li>
+				<li class="selection__slide" style="background-image: url('@img/decor/selection-slider-bg-1.jpg');">
+				</li>
+			</ul>
+
+			<div class="selection__pagination"></div>
+
+			<button class="selection__btn selection__btn--prev" type="button">
+				<svg class="selection__btn-icon">
+					<use xlink:href="@img/sprite.svg#icon-angle"></use>
+				</svg>
+			</button>
+
+			<button class="selection__btn selection__btn--next" type="button">
+				<svg class="selection__btn-icon">
+					<use xlink:href="@img/sprite.svg#icon-angle"></use>
+				</svg>
+			</button>
+
+			<div class="selection__content">
+				<strong class="selection__title title">1Travel</strong>
+
+				<div data-tabs class="tabs selection__tabs">
+					<nav data-tabs-titles class="tabs__navigation selection__navigation">
+						<button class="selection__tab-title tabs__title _tab-active" type="button">Авторские туры</button>
+						<button class="selection__tab-title tabs__title" type="button">Чартеры</button>
+					</nav>
+
+					<div data-tabs-body class="tabs__content">
+						<div class="tabs__body">
+							<form class="router">
+								<div class="router__places router__places--right field-box">
+									<input id="author-city-from" class="router__field transform-field" name="author-city-from"
+										type="text">
+									<label class="router__label transform-label" for="author-city-from">Город вылета</label>
+								</div>
+
+								<button class="router__switch" type="button" aria-label="Поменять города местами">
+									<svg class="router__switch-icon">
+										<use xlink:href="@img/sprite.svg#icon-switch"></use>
+									</svg>
+								</button>
+
+								<div class="router__places router__places--left field-box">
+									<input id="author-city-to" class="router__field transform-field" name="author-city-to" type="text">
+									<label class="router__label transform-label" for="author-city-to">Страна прибытия</label>
+								</div>
+
+								<div class="field-box field-box--date-from">
+									<input id="author-date-from" class="transform-field datepicker" name="author-date-from"
+										autocomplete="off" readonly>
+									<label class="router__label transform-label" for="author-date-from">Дата вылета</label>
+								</div>
+
+								<div class="field-box field-box--date-back">
+									<input id="author-date-back" class="transform-field datepicker" name="author-date-back"
+										autocomplete="off" readonly>
+									<label class="router__label transform-label" for="author-date-back">Дата
+										прибытия</label>
+									<button class="router__date-close" type="button" aria-label="Сбросить дату"
+										data-id="author-date-back">
+										<svg class="router__date-close-icon">
+											<use xlink:href="@img/sprite.svg#icon-close"></use>
+										</svg>
+									</button>
+								</div>
+
+								<div class="field-box field-box--passengers">
+									<span class="router__label transform-label transform-label--filled">Пассажиры</span>
+
+									<button class="router__counter" type="button" aria-haspopup="true">
+										<span class="router__passengers-total">1</span>
+										<span class="router__declination">пассажир</span>
+									</button>
+
+									<ul class="router__counter-popup" aria-hidden="true">
+										<li class="router__counter-item">
+											<div class="router__counter-descr">
+												<strong class="router__counter-category">Взрослые</strong>
+												<span class="router__counter-detailed">Старше 12 лет</span>
+											</div>
+
+											<div class="minmax" role="slider" aria-valuenow="0" aria-valuemin="0" aria-valuemax="10"
+												aria-label="Количество взрослых пассажиров">
+												<button class="minmax__btn minmax__btn--dec" type="button"
+													aria-label="Убрать взрослого пассажира" data-action="dec">
+												</button>
+
+												<input class="minmax__num" data-passenger="adult" name="author-adult-counter" value="1"
+													type="text" readonly aria-label="Количество взрослых пассажиров">
+
+												<button class="minmax__btn minmax__btn--inc" aria-label="Добавить взрослого пассажира"
+													type="button" data-action="inc">
+												</button>
+											</div>
+										</li>
+
+										<li class="router__counter-item">
+											<div class="router__counter-descr">
+												<strong class="router__counter-category">Дети</strong>
+												<span class="router__counter-detailed">
+													От 2 до 12 лет
+												</span>
+											</div>
+
+											<div class="minmax" role="slider" aria-valuenow="0" aria-valuemin="0" aria-valuemax="10"
+												aria-label="Количество детей">
+												<button class="minmax__btn minmax__btn--dec" type="button" aria-label="Убрать ребенка"
+													data-action="dec">
+												</button>
+
+												<input class="minmax__num" data-passenger="child" name="author-child-counter" value="0"
+													type="text" readonly aria-label="Количество детей">
+
+												<button class="minmax__btn minmax__btn--inc" aria-label="Добавить ребенка" type="button"
+													data-action="inc">
+												</button>
+											</div>
+										</li>
+
+										<li class="router__counter-item">
+											<div class="router__counter-descr">
+												<strong class="router__counter-category">
+													Младенцы
+												</strong>
+												<span class="router__counter-detailed">
+													До 2 лет, без места
+												</span>
+											</div>
+
+											<div class="minmax" role="slider" aria-valuenow="0" aria-valuemin="0" aria-valuemax="10"
+												aria-label="Количество младенцев">
+												<button class="minmax__btn minmax__btn--dec" type="button" aria-label="Убрать младенца"
+													data-action="dec">
+												</button>
+
+												<input class="minmax__num" data-passenger="baby" name="author-baby-counter" value="0"
+													type="text" readonly aria-label="Количество младенцев">
+
+												<button class="minmax__btn minmax__btn--inc" aria-label="Добавить младенца" type="button"
+													data-action="inc">
+												</button>
+											</div>
+										</li>
+									</ul>
+								</div>
+
+								<button class="router__submit" type="submit" aria-label="Запустить поиск">
+									<svg class="router__submit-icon">
+										<use xlink:href="@img/sprite.svg#icon-search"></use>
+									</svg>
+								</button>
+							</form>
+						</div>
+
+						<div class="tabs__body">
+							<form class="router">
+								<div class="router__places router__places--right field-box">
+									<input id="charter-city-from" class="router__field transform-field" name="charter-city-from"
+										type="text">
+									<label class="router__label transform-label" for="charter-city-from">Город вылета</label>
+								</div>
+
+								<button class="router__switch" type="button" aria-label="Поменять города местами">
+									<svg class="router__switch-icon">
+										<use xlink:href="@img/sprite.svg#icon-switch"></use>
+									</svg>
+								</button>
+
+								<div class="router__places router__places--left field-box">
+									<input id="charter-city-to" class="router__field transform-field" name="charter-city-to" type="text">
+									<label class="router__label transform-label" for="charter-city-to">Страна прибытия</label>
+								</div>
+
+								<div class="field-box field-box--date-from">
+									<input id="charter-date-from" class="transform-field datepicker" name="charter-date-from"
+										autocomplete="off" readonly>
+									<label class="router__label transform-label" for="charter-date-from">Дата вылета</label>
+								</div>
+
+								<div class="field-box field-box--date-back">
+									<input id="charter-date-back" class="transform-field datepicker" name="charter-date-back"
+										autocomplete="off" readonly>
+									<label class="router__label transform-label" for="charter-date-back">Дата прибытия</label>
+									<button class="router__date-close" type="button" aria-label="Сбросить дату"
+										data-id="charter-date-back">
+										<svg class="router__date-close-icon">
+											<use xlink:href="@img/sprite.svg#icon-close"></use>
+										</svg>
+									</button>
+								</div>
+
+								<div class="field-box field-box--passengers">
+									<span class="router__label transform-label transform-label--filled">Пассажиры</span>
+
+									<button class="router__counter" type="button" aria-haspopup="true">
+										<span class="router__passengers-total">1</span>
+										<span class="router__declination">пассажир</span>
+									</button>
+
+									<ul class="router__counter-popup" aria-hidden="true">
+										<li class="router__counter-item">
+											<div class="router__counter-descr">
+												<strong class="router__counter-category">Взрослые</strong>
+												<span class="router__counter-detailed">Старше 12 лет</span>
+											</div>
+
+											<div class="minmax" role="slider" aria-valuenow="1" aria-valuemin="0" aria-valuemax="10"
+												aria-label="Количество взрослых пассажиров">
+												<button class="minmax__btn minmax__btn--dec" type="button"
+													aria-label="Убрать взрослого пассажира" data-action="dec">
+												</button>
+
+												<input class="minmax__num" data-passenger="adult" name="charter-adult-counter" value="1"
+													type="text" readonly aria-label="Количество взрослых пассажиров">
+
+												<button class="minmax__btn minmax__btn--inc" aria-label="Добавить взрослого пассажира"
+													type="button" data-action="inc">
+												</button>
+											</div>
+										</li>
+
+										<li class="router__counter-item">
+											<div class="router__counter-descr">
+												<strong class="router__counter-category">Дети</strong>
+												<span class="router__counter-detailed">
+													От 2 до 12 лет
+												</span>
+											</div>
+
+											<div class="minmax" role="slider" aria-valuenow="0" aria-valuemin="0" aria-valuemax="10"
+												aria-label="Количество детей">
+												<button class="minmax__btn minmax__btn--dec" type="button" aria-label="Убрать ребенка"
+													data-action="dec">
+												</button>
+
+												<input class="minmax__num" data-passenger="child" name="charter-child-counter" value="0"
+													type="text" readonly aria-label="Количество детей">
+
+												<button class="minmax__btn minmax__btn--inc" aria-label="Добавить ребенка" type="button"
+													data-action="inc">
+												</button>
+											</div>
+										</li>
+
+										<li class="router__counter-item">
+											<div class="router__counter-descr">
+												<strong class="router__counter-category">
+													Младенцы
+												</strong>
+												<span class="router__counter-detailed">
+													До 2 лет, без места
+												</span>
+											</div>
+
+											<div class="minmax" role="slider" aria-valuenow="0" aria-valuemin="0" aria-valuemax="10"
+												aria-label="Количество младенцев">
+												<button class="minmax__btn minmax__btn--dec" type="button" aria-label="Убрать младенца"
+													data-action="dec">
+												</button>
+
+												<input class="minmax__num" data-passenger="baby" name="charter-baby-counter" value="0"
+													type="text" readonly aria-label="Количество младенцеы">
+
+												<button class="minmax__btn minmax__btn--inc" aria-label="Добавить младенца" data-action="inc"
+													type="button">
+												</button>
+											</div>
+										</li>
+									</ul>
+								</div>
+
+								<button class="router__submit" type="submit" aria-label="Запустить поиск">
+									<svg class="router__submit-icon">
+										<use xlink:href="@img/sprite.svg#icon-search"></use>
+									</svg>
+								</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+</section>

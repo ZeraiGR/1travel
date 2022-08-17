@@ -149,7 +149,7 @@
     margin-top: auto;
   }
 
-  @media (orientation: landscape) {
+  @media (max-width: em(1366)) and (orientation: landscape) {
     display: none;
   }
 }

@@ -207,7 +207,7 @@ body {
 @import 'base';
 
 // Подключение доп. библиотек
-// @import 'libs/fancybox';
+@import '~js-datepicker/dist/datepicker.min.css';
 
 // Подключение стилей общих элементов проекта
 @import 'common';
@@ -217,15 +217,11 @@ body {
 @import 'components/button';
 @import 'components/menu';
 @import 'components/burger';
+@import 'components/router';
+@import 'components/datepicker';
 
 // Подключение стилей отдельных секций
 @import 'header';
-@import 'sections/hero';
-@import 'sections/promo';
-@import 'sections/about';
-@import 'sections/howitwork';
-@import 'sections/travel';
-@import 'sections/tours';
-@import 'sections/download';
+@import 'sections/selection';
 
 @import 'footer';

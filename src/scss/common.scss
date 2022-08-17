@@ -1,16 +1,10 @@
 // Заголовки, общие БЄМ блоки и проче...
 
 .logo {
-	display: block;
+  display: block;
 }
 
 .title {
-	font-size: rem(50);
-	line-height: 1.25;
-	font-family: 'Caveat', sans-serif;
-	color: $accent;
-
-	@media (max-width:$mobile){
-		font-size: rem(30);
-	}
+  font-size: rem(64);
+  line-height: 1.07;
 }
