@@ -29,3 +29,9 @@ import './custom/date-picker.js';
 
 // passengers counter
 import './custom/passengers-counter.js';
+
+// calc padding for sliders
+import './custom/slider-margin-calc.js';
+
+// calc quantity of lines of text
+import './custom/calculate-text-height.js';

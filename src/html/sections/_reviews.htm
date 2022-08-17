@@ -1,0 +1,64 @@
+<section class="reviews">
+	<div class="reviews__container reviews__container--narrow">
+		<h2 class="title reviews__title">
+			Отзывы наших клиентов
+		</h2>
+		<div class="reviews__navigation">
+			<button class="reviews__btn reviews__btn--prev button button--round-dark" type="button">
+				<svg class="button__icon reviews__link-icon">
+					<use xlink:href="@img/sprite.svg#icon-arrow-right"></use>
+				</svg>
+			</button>
+
+			<button class="reviews__btn reviews__btn--next button button--round-dark">
+				<svg class="button__icon reviews__link-icon">
+					<use xlink:href="@img/sprite.svg#icon-arrow-right"></use>
+				</svg>
+			</button>
+		</div>
+	</div>
+
+	<div class="reviews__slider">
+		<ul class="reviews__swiper">
+			<li class="reviews__slide">
+				@@include('../components/_review.htm',
+				{
+				"title": "Тур в дубай: отдых в дубае!",
+				"imgurl": "img/decor/review-1.jpg"
+				})
+			</li>
+			<li class="reviews__slide">
+				@@include('../components/_review.htm',
+				{
+				"title": "тур в перу: по следам великих инков!",
+				"imgurl": "img/decor/review-2.jpg"
+				})
+			</li>
+			<li class="reviews__slide">
+				@@include('../components/_review.htm',
+				{
+				"title": "Тур в италию: под солнцем тосканы",
+				"imgurl": "img/decor/review-3.jpg"
+				})
+			</li>
+			<li class="reviews__slide">
+				@@include('../components/_review.htm',
+				{
+				"title": "Тур в италию: под солнцем тосканы",
+				"imgurl": "img/decor/review-3.jpg"
+				})
+			</li>
+			<li class="reviews__slide">
+				@@include('../components/_review.htm',
+				{
+				"title": "Тур в италию: под солнцем тосканы",
+				"imgurl": "img/decor/review-3.jpg"
+				})
+			</li>
+		</ul>
+	</div>
+
+	<button class="button reviews__button" type="button">
+		Получить запрос на тур
+	</button>
+</section>

@@ -46,8 +46,6 @@ function initSliders() {
 
   if (document.querySelector('.swiper')) {
     new Swiper('.selection__slider', {
-      // Подключаем модули слайдера
-      // для конкретного случая
       modules: [Navigation, Pagination, EffectFade],
       effect: 'fade',
       fadeEffect: {
@@ -71,23 +69,17 @@ function initSliders() {
       },
       // Arrows
       navigation: {
-        nextEl: '.selection__btn--prev',
-        prevEl: '.selection__btn--next',
+        nextEl: '.selection__btn--next',
+        prevEl: '.selection__btn--prev',
       },
       breakpoints: {
         320: {
-          centeredSlides: false,
-          spaceBetween: 20,
         },
         768: {
-          centeredSlides: true,
-          spaceBetween: 30,
         },
         1024: {
-          spaceBetween: 40,
         },
         1366: {
-          spaceBetween: 50,
         },
       },
 
@@ -95,8 +87,6 @@ function initSliders() {
     });
 		if (window.innerWidth < 768) {
 			new Swiper('.best-offers__slider', {
-      // Подключаем модули слайдера
-      // для конкретного случая
       modules: [Navigation],
       observer: true,
       observeParents: true,
@@ -112,23 +102,47 @@ function initSliders() {
       // Dotts
       // Arrows
       navigation: {
-        nextEl: '.best-offers__btn--prev',
-        prevEl: '.best-offers__btn--next',
+        nextEl: '.best-offers__btn--next',
+        prevEl: '.best-offers__btn--prev',
       },
       breakpoints: {
         320: {
-          centeredSlides: false,
-          spaceBetween: 20,
         },
         768: {
-          centeredSlides: true,
-          spaceBetween: 30,
         },
       },
 
       on: {},
     });
 		}
+		new Swiper('.reviews__slider', {
+      modules: [Navigation],
+      observer: true,
+      observeParents: true,
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+      speed: 800,
+      //touchRatio: 0,
+      //simulateTouch: false,
+      // loop: false,
+      // Arrows
+      navigation: {
+        nextEl: '.reviews__btn--next',
+        prevEl: '.reviews__btn--prev',
+      },
+      breakpoints: {
+        320: {
+        },
+        768: {
+        },
+        1024: {
+        },
+        1366: {
+        },
+      },
+
+      on: {},
+    });
   }
 }
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)

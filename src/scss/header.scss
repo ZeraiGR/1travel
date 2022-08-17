@@ -68,6 +68,7 @@
 }
 
 .header__lang {
+	min-width: 130px;
   text-transform: uppercase;
 
   @media (max-width: em(1366)) {

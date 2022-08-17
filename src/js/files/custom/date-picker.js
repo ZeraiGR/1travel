@@ -8,7 +8,6 @@ const pickerIds = [
 ];
 
 const resetBtns = document.querySelectorAll('.router__date-close');
-console.log(resetBtns);
 let pickers = [];
 
 const checkFilled = (el) => {
