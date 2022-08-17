@@ -17,7 +17,21 @@
 
   &:active {
     background: $accent-700;
+		color: $white;
   }
+
+	&--ghost {
+		background: transparent;
+		border: 2px solid #e7e7e7;
+		color: $black;
+		transition: background 0.3s ease, color 0.3s ease;
+
+		&:hover {
+			background: $black;
+			color: $white;
+			box-shadow: none;
+		}
+	}
 
   &--round-accent,
   &--round-dark {

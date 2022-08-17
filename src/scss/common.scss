@@ -7,4 +7,11 @@
 .title {
   font-size: rem(64);
   line-height: 1.07;
+	font-weight: 700;
+}
+
+.subtitle {
+	display: block;
+	font-size: 24px;
+	color: rgba(0, 0, 0, 0.46);
 }

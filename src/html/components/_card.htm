@@ -1,3 +1,44 @@
 <article class="card">
+	<a class="card__link" href="#">
+		<img class="card__img" src="@@@imgurl" alt="tour image">
 
+		<div class="card__content">
+			<div class="card__top">
+				<div class="card__info">
+					<h3 class="card__title">@@title</h3>
+					<span class="card__descr">@@descr</span>
+				</div>
+
+				<div class="card__price">
+					@@price
+				</div>
+			</div>
+
+			<hr class="card__divider">
+
+			<div class="card__duration">
+				@@duration
+			</div>
+
+			<ul class="card__chars">
+				<li class="card__char" aria-label="vip">
+					<svg class="card__icon">
+						<use xlink:href="@img/sprite.svg#icon-vip"></use>
+					</svg>
+				</li>
+				<li class="card__char" aria-label="group">
+					<svg class="card__icon">
+						<use xlink:href="@img/sprite.svg#icon-group"></use>
+					</svg>
+				</li>
+				<li class="card__char" aria-label="by airplane">
+					<svg class="card__icon">
+						<use xlink:href="@img/sprite.svg#icon-airplane"></use>
+					</svg>
+				</li>
+			</ul>
+
+		</div>
+
+	</a>
 </article>

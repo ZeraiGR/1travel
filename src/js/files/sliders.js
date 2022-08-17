@@ -93,6 +93,42 @@ function initSliders() {
 
       on: {},
     });
+		if (window.innerWidth < 768) {
+			new Swiper('.best-offers__slider', {
+      // Подключаем модули слайдера
+      // для конкретного случая
+      modules: [Navigation],
+      observer: true,
+      observeParents: true,
+      slidesPerView: 'auto',
+      spaceBetween: 50,
+      speed: 800,
+      centeredSlides: true,
+      //touchRatio: 0,
+      //simulateTouch: false,
+      // loop: false,
+      //preloadImages: false,
+      //lazy: true,
+      // Dotts
+      // Arrows
+      navigation: {
+        nextEl: '.best-offers__btn--prev',
+        prevEl: '.best-offers__btn--next',
+      },
+      breakpoints: {
+        320: {
+          centeredSlides: false,
+          spaceBetween: 20,
+        },
+        768: {
+          centeredSlides: true,
+          spaceBetween: 30,
+        },
+      },
+
+      on: {},
+    });
+		}
   }
 }
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
