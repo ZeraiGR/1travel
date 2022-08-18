@@ -1,16 +1,28 @@
 .card {
+  height: 100%;
   background-color: $white;
   border-radius: 30px;
   overflow: hidden;
   transition: box-shadow 0.3s ease;
+  background-color: $white;
 
   &:hover {
     box-shadow: 0 20px 40px 0 #0000000d;
   }
+
+  @media (max-width: em(830)) {
+    box-shadow: 0 4px 29px 0 #00000012;
+  }
+
+  @media (max-width: $mobileSmall) {
+    max-width: 260px;
+  }
 }
 
 .card__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   border: 1px solid transparent;
   border-radius: inherit;
 
@@ -22,16 +34,41 @@
 .card__img {
   object-fit: cover;
   height: 420px;
+
+  @media (max-width: em(1500)) {
+    height: 280px;
+  }
+
+  @media (max-width: em(1366)) {
+    height: 240px;
+  }
+
+  @media (max-width: $mobile) {
+    height: 220px;
+  }
 }
 
 .card__content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
   padding: 25px 30px 25px 40px;
+
+  @media (max-width: em(1366)) {
+    padding: 13px 10px 15px 20px;
+  }
 }
 
 .card__top {
+  flex-grow: 1;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 15px;
+
+  @media (max-width: $mobile) {
+    align-items: center;
+  }
 }
 
 .card__title {
@@ -39,18 +76,56 @@
   font-size: 32px;
   font-weight: 600;
   line-height: 1.06;
+  @include cut-text(2);
+
+  @media (max-width: em(1366)) {
+    font-size: 28px;
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 24px;
+  }
+
+  @media (max-width: $mobileSmall) {
+    font-size: 20px;
+  }
 }
 
 .card__descr {
   font-size: 16px;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.54);
+  @include cut-text(2);
+
+  @media (max-width: $mobile) {
+    font-size: 14px;
+  }
+
+  @media (max-width: $mobileSmall) {
+    font-size: 10px;
+  }
 }
 
 .card__price {
   color: $green-400;
   font-size: 32px;
   font-weight: 600;
+
+  @media (max-width: em(1366)) {
+    font-size: 28px;
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 24px;
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 20px;
+  }
+
+  @media (max-width: $mobileSmall) {
+    font-size: 18px;
+  }
 }
 
 .card__divider {
@@ -64,6 +139,14 @@
   margin-bottom: 8px;
   font-size: 16px;
   font-weight: 500;
+
+  @media (max-width: $mobile) {
+    font-size: 13px;
+  }
+
+  @media (max-width: $mobileSmall) {
+    font-size: 10px;
+  }
 }
 
 .card__chars {

@@ -17,10 +17,18 @@ textarea {
   font-size: rem(64);
   line-height: 1.07;
   font-weight: 700;
+
+  @media (max-width: $tablet) {
+    font-size: rem(50);
+  }
 }
 
 .subtitle {
   display: block;
   font-size: 24px;
   color: rgba(0, 0, 0, 0.46);
+
+  @media (max-width: $tablet) {
+    font-size: 20px;
+  }
 }

@@ -84,15 +84,14 @@ function initSliders() {
 
       on: {},
     });
-    if (window.innerWidth < 768) {
+    if (window.innerWidth < 830) {
       new Swiper('.best-offers__slider', {
         modules: [Navigation],
         observer: true,
         observeParents: true,
         slidesPerView: 'auto',
-        spaceBetween: 50,
+        spaceBetween: 30,
         speed: 800,
-        centeredSlides: true,
         //touchRatio: 0,
         //simulateTouch: false,
         // loop: false,
