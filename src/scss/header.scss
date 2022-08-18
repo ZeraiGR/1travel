@@ -224,17 +224,15 @@
     }
   }
 
+  &--menu {
+    @media (max-width: $mobileSmall) {
+      max-width: 90%;
+      width: 100%;
+    }
+  }
+
   @media (max-width: em(1366)) {
     border: 1px solid $white;
-  }
-
-  @media (max-width: $mobile) {
-    max-width: 80%;
-    width: 100%;
-  }
-
-  @media (max-width: $mobileSmall) {
-    max-width: 90%;
   }
 }
 

@@ -1,30 +1,29 @@
 const scrollbarWidth = () => {
-		let div = document.createElement('div');
+  let div = document.createElement('div');
 
-		div.style.overflowY = 'scroll';
-		div.style.width = '50px';
-		div.style.height = '50px';
+  div.style.overflowY = 'scroll';
+  div.style.width = '50px';
+  div.style.height = '50px';
 
-		document.body.append(div);
-		let scrollWidth = div.offsetWidth - div.clientWidth;
-		div.remove();
+  document.body.append(div);
+  let scrollWidth = div.offsetWidth - div.clientWidth;
+  div.remove();
 
-		return scrollWidth;
+  return scrollWidth;
 };
 
 const calcPaddingSliders = () => {
-		const histories = document.querySelector('.reviews__slider');
-		
-		const calcPadding = (section) => {
-				if (section) {
-						const windowWidth =
-								(window.innerWidth - 1620 - scrollbarWidth()) / 2;
+  const histories = document.querySelector('.reviews__slider');
 
-						section.style['margin-left'] = windowWidth + 'px';
-				}
-		};
+  const calcPadding = (section) => {
+    if (section && window.innerWidth >= 1620) {
+      const windowWidth = (window.innerWidth - 1620 - scrollbarWidth()) / 2;
 
-		calcPadding(histories);
+      section.style['margin-left'] = windowWidth + 'px';
+    }
+  };
+
+  calcPadding(histories);
 };
 
 calcPaddingSliders();
