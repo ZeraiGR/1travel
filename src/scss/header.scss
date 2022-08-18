@@ -68,7 +68,7 @@
 }
 
 .header__lang {
-	min-width: 130px;
+  min-width: 130px;
   text-transform: uppercase;
 
   @media (max-width: em(1366)) {
@@ -181,6 +181,16 @@
     background-color: $grey-200;
     color: $black;
   }
+}
+
+.header__search-results {
+  z-index: 3;
+  width: 370px;
+  max-height: 430px;
+}
+
+.header__search-loader {
+  display: none;
 }
 
 .header__button {

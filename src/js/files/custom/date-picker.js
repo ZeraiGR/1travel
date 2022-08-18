@@ -10,7 +10,7 @@ const pickerIds = [
 const resetBtns = document.querySelectorAll('.router__date-close');
 let pickers = [];
 
-const checkFilled = (el) => {
+export const checkFilled = (el) => {
   if (el.value.length) {
     el.classList.add('filled');
     el.parentNode.classList.add('filled');

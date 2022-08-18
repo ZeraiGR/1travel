@@ -35,3 +35,6 @@ import './custom/slider-margin-calc.js';
 
 // calc quantity of lines of text
 import './custom/calculate-text-height.js';
+
+// handle autocomplete city
+import './custom/hadnling-autocomplete-city.js';

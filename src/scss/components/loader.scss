@@ -1,0 +1,38 @@
+.loader {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  display: none;
+
+  &::before,
+  &::after {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    content: '';
+    border-width: 3px;
+    border-style: solid;
+    border-color: $accent transparent transparent;
+    border-image: initial;
+    border-radius: 100%;
+  }
+
+  &::before {
+    z-index: 1;
+    animation: 1s ease 0s infinite normal none running spin;
+  }
+
+  &::after {
+    z-index: 0;
+    border: 3px solid #ebebeb;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

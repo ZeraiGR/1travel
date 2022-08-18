@@ -161,6 +161,10 @@
   fill: $white;
 }
 
+.transform-field {
+  border-radius: inherit;
+}
+
 .transform-field:focus + label,
 .transform-field.filled + label,
 .transform-label--filled {
@@ -295,4 +299,8 @@
   text-align: center;
   font-size: 16px;
   font-weight: 500;
+}
+
+.router__results {
+  width: 370px;
 }

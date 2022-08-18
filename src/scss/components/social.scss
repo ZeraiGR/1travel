@@ -24,6 +24,10 @@
 .social__list {
   display: flex;
   gap: 14px;
+
+  a {
+    display: block;
+  }
 }
 
 .social__icon {

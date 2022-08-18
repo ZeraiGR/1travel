@@ -40,14 +40,6 @@ const initHandleCounter = () => {
     }
   };
 
-  const updateListeners = (state) => {
-    if (state) {
-      window.addEventListener('click', handleWindowClick);
-    } else {
-      window.removeEventListener('click', handleWindowClick);
-    }
-  };
-
   const handleWindowClick = (e) => {
     const target = e.target;
 
@@ -73,6 +65,14 @@ const initHandleCounter = () => {
         isOpen = false;
         updateListeners(isOpen);
       });
+    }
+  };
+
+  const updateListeners = (state) => {
+    if (state) {
+      window.addEventListener('click', handleWindowClick);
+    } else {
+      window.removeEventListener('click', handleWindowClick);
     }
   };
 

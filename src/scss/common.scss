@@ -4,14 +4,23 @@
   display: block;
 }
 
+button,
+input,
+a,
+textarea {
+  &:focus-visible {
+    box-shadow: 0 0 1px 1px $accent;
+  }
+}
+
 .title {
   font-size: rem(64);
   line-height: 1.07;
-	font-weight: 700;
+  font-weight: 700;
 }
 
 .subtitle {
-	display: block;
-	font-size: 24px;
-	color: rgba(0, 0, 0, 0.46);
+  display: block;
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.46);
 }
