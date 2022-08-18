@@ -5,11 +5,14 @@
   max-width: 280px;
   width: 100%;
   padding: 35px 22px 15px;
-  width: 100%;
   height: 100%;
   font-size: 22px;
   font-weight: 600;
   cursor: pointer;
+
+  @media (max-width: em(1500)) {
+    max-width: 100%;
+  }
 }
 
 .qs-datepicker-container {
@@ -17,6 +20,18 @@
   border: none;
   border-radius: 20px;
   box-shadow: 0 20px 60px 0 #0000001a;
+
+  @media (max-width: $tablet) {
+    width: 100%;
+  }
+
+  @media (max-width: $mobile) {
+    width: 370px;
+  }
+
+  @media (max-width: em(475)) {
+    width: 100%;
+  }
 }
 
 .qs-controls {
@@ -24,6 +39,12 @@
   background-color: transparent;
   border-bottom: 1px solid #d8d8d8;
   font-size: 24px;
+  line-height: 1.1;
+
+  @media (max-width: $tablet) {
+    font-size: 18px;
+    padding: 20px 30px 15px;
+  }
 }
 
 .qs-arrow.qs-left,
@@ -64,6 +85,12 @@
   padding: 40px 50px;
   font-size: 24px;
   font-weight: 500;
+
+  @media (max-width: $tablet) {
+    justify-content: center;
+    padding: 10px 5px;
+    font-size: 18px;
+  }
 }
 
 .qs-square {
@@ -84,6 +111,11 @@
   &.qs-active {
     background-color: $accent;
     color: $white;
+  }
+
+  @media (max-width: $tablet) {
+    width: 45px;
+    height: 45px;
   }
 }
 

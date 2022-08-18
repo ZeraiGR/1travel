@@ -1,5 +1,6 @@
 .results {
   position: absolute !important;
+  z-index: 3;
   top: calc(100% + 10px);
   left: 0;
   padding: 20px;
@@ -48,6 +49,10 @@
       }
     }
   }
+}
+
+.results__content {
+  color: $black;
 }
 
 .results__item {

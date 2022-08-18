@@ -74,48 +74,45 @@ function initSliders() {
       },
       breakpoints: {
         320: {
+          noSwiping: true,
+          noSwipingClass: '.selection__slider',
         },
         768: {
-        },
-        1024: {
-        },
-        1366: {
+          noSwiping: false,
         },
       },
 
       on: {},
     });
-		if (window.innerWidth < 768) {
-			new Swiper('.best-offers__slider', {
-      modules: [Navigation],
-      observer: true,
-      observeParents: true,
-      slidesPerView: 'auto',
-      spaceBetween: 50,
-      speed: 800,
-      centeredSlides: true,
-      //touchRatio: 0,
-      //simulateTouch: false,
-      // loop: false,
-      //preloadImages: false,
-      //lazy: true,
-      // Dotts
-      // Arrows
-      navigation: {
-        nextEl: '.best-offers__btn--next',
-        prevEl: '.best-offers__btn--prev',
-      },
-      breakpoints: {
-        320: {
+    if (window.innerWidth < 768) {
+      new Swiper('.best-offers__slider', {
+        modules: [Navigation],
+        observer: true,
+        observeParents: true,
+        slidesPerView: 'auto',
+        spaceBetween: 50,
+        speed: 800,
+        centeredSlides: true,
+        //touchRatio: 0,
+        //simulateTouch: false,
+        // loop: false,
+        //preloadImages: false,
+        //lazy: true,
+        // Dotts
+        // Arrows
+        navigation: {
+          nextEl: '.best-offers__btn--next',
+          prevEl: '.best-offers__btn--prev',
         },
-        768: {
+        breakpoints: {
+          320: {},
+          768: {},
         },
-      },
 
-      on: {},
-    });
-		}
-		new Swiper('.reviews__slider', {
+        on: {},
+      });
+    }
+    new Swiper('.reviews__slider', {
       modules: [Navigation],
       observer: true,
       observeParents: true,
@@ -131,14 +128,10 @@ function initSliders() {
         prevEl: '.reviews__btn--prev',
       },
       breakpoints: {
-        320: {
-        },
-        768: {
-        },
-        1024: {
-        },
-        1366: {
-        },
+        320: {},
+        768: {},
+        1024: {},
+        1366: {},
       },
 
       on: {},

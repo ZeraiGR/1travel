@@ -6,6 +6,27 @@
   background-color: $white;
   box-shadow: 0 20px 60px 0 #0000001a;
   border-radius: 20px;
+
+  @media (max-width: em(1500)) {
+    display: grid;
+    grid-template-columns: [start] 280px [before] 35px [middle] 280px [after] 1fr [end];
+  }
+
+  @media (max-width: em(1366)) {
+    grid-template-columns: [start] 220px [before] 35px [middle] 220px [after] 1fr [end];
+  }
+
+  @media (max-width: $tablet) {
+    padding: 24px 32px;
+    grid-template-columns: [start] 1fr [before] 35px [after] 1fr [end];
+  }
+
+  @media (max-width: $mobile) {
+    position: relative;
+    padding: 30px 16px;
+    gap: 6px;
+    grid-template-columns: [start] 7fr [middle] 3fr [end];
+  }
 }
 
 .field-box {
@@ -17,6 +38,26 @@
   &--passengers {
     max-width: 220px;
     width: 100%;
+
+    @media (max-width: em(1500)) {
+      grid-row: 1 / 2;
+      grid-column: after / end;
+      max-width: 50%;
+    }
+
+    @media (max-width: em(1366)) {
+      max-width: 100%;
+    }
+
+    @media (max-width: $tablet) {
+      grid-row: 3 / 4;
+      grid-column: start / after;
+    }
+
+    @media (max-width: $mobile) {
+      grid-row: 5 / 6;
+      grid-column: start / middle;
+    }
   }
 
   &--date-from,
@@ -38,6 +79,36 @@
       width: 26px;
       height: 29px;
       background-image: url('@img/icons/icon-calendar.svg');
+    }
+
+    @media (max-width: em(1500)) {
+      grid-row: 2 / 3;
+      grid-column: start / before;
+    }
+
+    @media (max-width: $tablet) {
+      grid-column: start / after;
+    }
+
+    @media (max-width: $mobile) {
+      grid-row: 3 / 4;
+      grid-column: start / end;
+    }
+  }
+
+  &--date-back {
+    @media (max-width: em(1500)) {
+      grid-row: 2 / 3;
+      grid-column: before / after;
+    }
+
+    @media (max-width: $tablet) {
+      grid-column: after / end;
+    }
+
+    @media (max-width: $mobile) {
+      grid-row: 4 / 5;
+      grid-column: start / end;
     }
   }
 
@@ -63,6 +134,25 @@
       right: 0;
       transform: translate(50%, -50%);
     }
+
+    @media (max-width: em(1500)) {
+      grid-row: 1 / 2;
+      grid-column: start / before;
+    }
+
+    @media (max-width: em(1366)) {
+      margin-right: 0;
+    }
+
+    @media (max-width: $tablet) {
+      max-width: 100%;
+      grid-column: start / before;
+    }
+
+    @media (max-width: $mobile) {
+      grid-row: 1 / 2;
+      grid-column: start / end;
+    }
   }
 
   &--left {
@@ -71,6 +161,23 @@
     &::before {
       left: 0;
       transform: translate(-50%, -50%);
+    }
+
+    @media (max-width: em(1500)) {
+      grid-row: 1 / 2;
+      grid-column: middle / after;
+      max-width: calc(100% + 10px);
+    }
+
+    @media (max-width: $tablet) {
+      grid-column: after / end;
+    }
+
+    @media (max-width: $mobile) {
+      max-width: 100%;
+      margin-left: 0;
+      grid-row: 2 / 3;
+      grid-column: start / end;
     }
   }
 
@@ -83,6 +190,10 @@
     border: 1px solid $grey-300;
     border-radius: 50%;
     top: 50%;
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
   }
 }
 
@@ -94,6 +205,29 @@
   justify-content: center;
   align-items: center;
   background-color: $white;
+
+  @media (max-width: em(1500)) {
+    grid-row: 1 / 2;
+    grid-column: before / middle;
+    width: 45px;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  @media (max-width: $tablet) {
+    grid-column: before / after;
+  }
+
+  @media (max-width: $mobile) {
+    position: absolute;
+    top: 68px;
+    right: 40px;
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+    transform: rotate(90deg);
+    box-shadow: 0 4px 15px 0 #00000026;
+  }
 }
 
 .router__switch-icon {
@@ -133,6 +267,10 @@
   color: #00000080;
   font-size: 20px;
   font-weight: 500;
+
+  @media (max-width: em(1024)) {
+    font-size: 18px;
+  }
 }
 
 .router__field {
@@ -143,6 +281,18 @@
   width: 100%;
   font-size: 22px;
   font-weight: 600;
+
+  @media (max-width: em(1500)) {
+    max-width: 100%;
+  }
+
+  @media (max-width: em(1024)) {
+    font-size: 18px;
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 20px;
+  }
 }
 
 .router__submit {
@@ -153,6 +303,21 @@
   align-items: center;
   background-color: $black;
   border-radius: 10px;
+
+  @media (max-width: em(1500)) {
+    grid-row: 2 / 3;
+    grid-column: after / end;
+  }
+
+  @media (max-width: $tablet) {
+    grid-row: 3 / 4;
+  }
+
+  @media (max-width: $mobile) {
+    width: 100%;
+    grid-row: 5 / 6;
+    grid-column: middle / end;
+  }
 }
 
 .router__submit-icon {
@@ -199,6 +364,10 @@
     &::after {
       transform: rotate(-180deg) translateY(100%);
     }
+  }
+
+  @media (max-width: em(1024)) {
+    font-size: 18px;
   }
 }
 
@@ -303,4 +472,8 @@
 
 .router__results {
   width: 370px;
+
+  @media (max-width: $mobileSmall) {
+    width: 100%;
+  }
 }
