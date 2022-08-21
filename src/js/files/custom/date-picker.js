@@ -36,6 +36,10 @@ resetBtns?.forEach((btn) => {
 });
 
 const initPickers = (idArr) => {
+  if (!idArr.every((id) => document.querySelector(id))) {
+    return;
+  }
+
   if (Array.isArray(idArr)) {
     idArr.forEach((id) => {
       const picker = datepicker(id, {

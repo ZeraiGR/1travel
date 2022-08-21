@@ -1,0 +1,108 @@
+.tours {
+  padding: 40px 0 125px;
+}
+
+.tours__container {
+  display: flex;
+  gap: 70px;
+}
+
+.tours__content {
+  width: 100%;
+}
+
+.tours__top {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.tours__title {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.tours__sort {
+  max-width: 170px;
+  width: 100%;
+  font-weight: 500;
+
+  .select {
+    &._select-open {
+      .select__title {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
+  }
+
+  .select__title {
+    width: 100%;
+    padding: 13px 17px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+  }
+
+  .select__value {
+    &::before {
+      content: '';
+      width: 9px;
+      height: 7px;
+      background-image: url('@img/icons/icon-carret.svg');
+      background-repeat: no-repeat;
+    }
+  }
+
+  .select__options {
+    top: 100%;
+    padding: 18px 17px;
+    background-color: #e3e3e3;
+    color: $black;
+    font-weight: 500;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+
+  .select__option {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.tours__list {
+  margin-bottom: 55px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.tours__item {
+  &:not(:last-child) {
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e8e8e8;
+  }
+}
+
+.tours__filters {
+  max-width: 310px;
+  width: 100%;
+  flex: none;
+}
+
+.tours__btn {
+  width: 100%;
+  background-color: #ededed;
+  text-align: center;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  color: $accent;
+  transition: box-shadow 0.3s ease;
+  border-radius: 10px;
+
+  &:hover {
+    box-shadow: 0 4px 20px 0 #0000000d;
+  }
+}

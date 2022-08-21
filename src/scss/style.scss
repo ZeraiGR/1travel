@@ -207,6 +207,7 @@ body {
 
 // Подключение доп. библиотек
 @import '~js-datepicker/dist/datepicker.min.css';
+@import 'libs/slim-select.scss';
 
 // Подключение стилей общих элементов проекта
 @import 'common';
@@ -222,11 +223,16 @@ body {
 @import 'components/review';
 @import 'components/loader';
 @import 'components/results';
+@import 'components/chars';
+@import 'components/tour';
+@import 'components/filters';
+@import 'components/checkbox';
 
 // Подключение стилей отдельных секций
 @import 'header';
 @import 'sections/selection';
 @import 'sections/best-offers';
 @import 'sections/reviews';
+@import 'sections/tours';
 
 @import 'footer';

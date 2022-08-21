@@ -72,6 +72,38 @@
   min-width: 130px;
   text-transform: uppercase;
 
+  .select {
+    position: relative;
+    padding: 25px 0 25px 25px;
+    border-left: 1px solid #d1d1d1;
+    color: #00000099;
+    font-weight: 500;
+    font-size: 16px;
+
+    &__title {
+      padding-left: 35px;
+      color: inherit;
+      text-align: left;
+      background-color: $white;
+      cursor: pointer;
+      width: 100%;
+      border-radius: 4px;
+
+      background-image: url('@img/icons/icon-global.svg');
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-size: 24px;
+
+      @media (max-width: $mobileSmall) {
+        padding-left: 24px;
+        background-size: 17px;
+        background-image: url('@img/icons/icon-global-white.svg');
+        background-color: transparent;
+        color: $white;
+      }
+    }
+  }
+
   @media (max-width: em(1366)) {
     margin-right: auto;
   }

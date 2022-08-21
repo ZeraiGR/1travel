@@ -1,0 +1,84 @@
+.tour {
+  position: relative;
+  display: flex;
+  gap: 50px;
+}
+
+.tour__link {
+  &--image {
+    max-width: 355px;
+    width: 100%;
+    height: 225px;
+  }
+}
+
+.tour__img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.tour__content {
+  padding-top: 15px;
+}
+
+.tour__info {
+  margin-bottom: 25px;
+}
+
+.tour__descr {
+  color: #6b6b6b;
+}
+
+.tour__title {
+  margin-bottom: 7px;
+  font-size: 26px;
+  font-weight: 600;
+  color: $black;
+  line-height: 1.2;
+}
+
+.tour__price {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 25px;
+  font-size: 28px;
+
+  strong {
+    font-weight: 600;
+  }
+}
+
+.tour__duration {
+  margin-bottom: 14px;
+  display: block;
+  font-weight: 500;
+}
+
+.tour__chars {
+  margin-bottom: 20px;
+}
+
+.tour__button {
+  position: relative;
+  display: block;
+  max-width: 140px;
+  padding: 10px 25px;
+  font-size: 16px;
+  font-weight: 500;
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    background-image: url('@img/icons/icon-arrow-corner.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: '';
+  }
+}

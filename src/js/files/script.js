@@ -38,3 +38,9 @@ import './custom/calculate-text-height.js';
 
 // handle autocomplete city
 import './custom/hadnling-autocomplete-city.js';
+
+// handle filter's switcher button
+import './custom/filters-switcher.js';
+
+// init select pure for the tagger
+import './custom/tagger.js';

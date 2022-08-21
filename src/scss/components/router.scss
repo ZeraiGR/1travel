@@ -237,6 +237,7 @@
 
 .transform-label {
   position: absolute;
+  z-index: 2;
   top: 50%;
   transform: translate(0, -50%) scale(1);
   pointer-events: none;
@@ -345,6 +346,7 @@
   line-height: 1.1;
   font-size: 22px;
   font-weight: 600;
+  text-align: left;
 
   &::after {
     position: absolute;

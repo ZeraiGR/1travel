@@ -1,0 +1,161 @@
+.filters__item {
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.filters__switcher {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.filters__content {
+  margin-top: 18px;
+  margin-bottom: 24px;
+  display: none;
+
+  &.active {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &--grid {
+    &.active {
+      display: grid;
+    }
+
+    gap: 10px 35px;
+    grid-template-columns: repeat(2, 80px);
+
+    .filters__checkbox {
+      height: 24px;
+
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &--tagger {
+    .select__body {
+      display: none;
+    }
+
+    .ss-multi-selected {
+      border: none;
+    }
+
+    .ss-main .ss-multi-selected .ss-values {
+      gap: 8px;
+    }
+
+    .ss-main .ss-multi-selected .ss-values .ss-value {
+      margin: 0;
+      padding: 10px 10px 10px 16px;
+      color: $black;
+      font-size: 13px;
+      background-color: #eaeaea;
+      border-radius: 7px;
+    }
+
+    .ss-content .ss-search input {
+      &:focus {
+        box-shadow: 0 0 1px 1px $accent;
+      }
+    }
+
+    .ss-content .ss-list .ss-option {
+      &:hover {
+        background-color: #eaeaea;
+        color: $black;
+      }
+
+      &.ss-disabled {
+        background-color: transparent;
+        color: #dedede;
+      }
+    }
+
+    .ss-main .ss-multi-selected .ss-values .ss-value .ss-value-delete {
+      margin: 0 0 0 15px;
+      font-size: 0;
+      width: 20px;
+      height: 20px;
+      background-image: url('@img/icons/icon-close-black.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 10px;
+    }
+
+    .ss-content {
+      border-radius: 12px;
+      border: none;
+      box-shadow: 0 20px 60px 0 #0000001a;
+    }
+
+    .ss-main .ss-multi-selected .ss-add {
+      margin: 0;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.noUi-target {
+  border: none;
+}
+
+.noUi-connect {
+  height: 18px;
+  box-shadow: 0 0 15px 0 #0000000f inset;
+  background-color: $grey-200;
+}
+
+.noUi-horizontal .noUi-handle {
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 50%;
+
+  &::before,
+  &::after {
+    display: none;
+  }
+}
+
+.noUi-touch-area {
+  width: 28px;
+  height: 28px;
+  background-color: $white;
+  border: 1.5px solid $accent;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.tagger-new {
+  input {
+    width: 100%;
+  }
+}
+
+.filters__price-counter {
+  margin-bottom: 14px;
+  font-size: 16px;
+  display: flex;
+  gap: 8px;
+}
+
+.filters__checkbox {
+  max-width: max-content;
+  height: 24px;
+}
+
+.filters__tagger-placeholder,
+.filters__price-currency,
+.filters__price-min,
+.filters__price-max {
+  display: none;
+}

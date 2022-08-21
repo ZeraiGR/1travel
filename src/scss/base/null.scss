@@ -81,7 +81,7 @@ body {
 input,
 button,
 textarea {
-  font-family: $fontFamily;
+  font-family: $fontFamily, sans-serif;
   font-size: inherit;
 }
 
@@ -149,5 +149,5 @@ select:-webkit-autofill:focus {
 
 input:-webkit-autofill,
 input:-webkit-autofill:focus {
-	transition: background-color 600000s 0s, color 600000s 0s;
+  transition: background-color 600000s 0s, color 600000s 0s;
 }
