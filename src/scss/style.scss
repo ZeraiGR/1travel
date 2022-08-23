@@ -230,6 +230,10 @@ body {
 @import 'components/tour';
 @import 'components/filters';
 @import 'components/checkbox';
+@import 'components/resume';
+@import 'components/breadcrumbs';
+@import 'components/details';
+@import 'components/gallery';
 
 // Подключение стилей отдельных секций
 @import 'header';
@@ -237,5 +241,6 @@ body {
 @import 'sections/best-offers';
 @import 'sections/reviews';
 @import 'sections/tours';
+@import 'sections/single';
 
 @import 'footer';

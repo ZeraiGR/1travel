@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"1Travel - Страница тура"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/sections/_header.htm',{})
+		<main class="page">
+			@@include('html/sections/_single.htm', {})
+			@@include('html/sections/_similar.htm', {})
+		</main>
+		@@include('html/sections/_footer--light.htm',{})
+	</div>
+	<!-- @@include('html/_popup.htm',{}) -->
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

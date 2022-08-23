@@ -33,4 +33,9 @@
 .social__icon {
   width: 37px;
   height: 37px;
+  fill: $accent;
+
+  @media print {
+    fill: $black;
+  }
 }

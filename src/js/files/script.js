@@ -47,3 +47,6 @@ import './custom/tagger.js';
 
 // init tours mobile logic
 import './custom/tours-mobile-handler.js';
+
+// init resume content fixed
+import './custom/resume-content-equalizer.js';

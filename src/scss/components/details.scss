@@ -1,0 +1,170 @@
+.details {
+}
+
+.details__tabs {
+}
+
+.details__navigation {
+  max-width: 100%;
+  margin-bottom: 40px;
+  justify-content: center;
+}
+
+.details__title {
+  flex-grow: 1;
+  padding: 10px 30px;
+}
+
+.details__content {
+}
+
+.details__body {
+}
+
+.details__list {
+}
+
+.details__item {
+  &:not(:last-child) {
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #d8d8d8;
+  }
+
+  &:last-child {
+    padding-bottom: 10px;
+  }
+}
+
+.details__top {
+  margin-bottom: 28px;
+  display: flex;
+  gap: 16px;
+  line-height: 1.1;
+  font-size: 16px;
+  font-weight: 500;
+
+  strong {
+    font-weight: 600;
+  }
+}
+
+.details__location {
+  position: relative;
+  padding-left: 18px;
+  color: $accent;
+
+  &::before {
+    position: absolute;
+    top: 1px;
+    left: 0;
+    width: 12px;
+    height: 14px;
+    background-image: url('@img/icons/icon-location.svg');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: cover;
+    content: '';
+
+    @media print {
+      background-image: url('@img/icons/icon-location-print.svg');
+    }
+  }
+
+  @media print {
+    color: $black;
+  }
+}
+
+.details__text {
+  p:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  strong {
+    font-weight: 700;
+  }
+
+  ul {
+    margin-bottom: 55px;
+    padding-left: 18px;
+  }
+
+  li {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+
+    list-style: disc;
+  }
+
+  &--additional {
+    strong {
+      display: block;
+      margin-bottom: 32px;
+    }
+  }
+}
+
+.grey {
+  color: #000000a6;
+}
+
+.details__table {
+  width: 100%;
+  font-weight: 500;
+
+  tr:first-child {
+    font-weight: 400;
+
+    th {
+      padding: 25px 22px;
+      font-size: 12px;
+      white-space: nowrap;
+
+      &:first-child {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+
+      &:last-child {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+    }
+
+    width: 100%;
+    background-color: $grey-200;
+  }
+
+  tr {
+    &:not(:first-child) {
+      border-bottom: 1px solid #d8d8d8;
+    }
+
+    td {
+      &:first-child {
+        text-align: left;
+
+        span {
+          display: block;
+          margin-bottom: 5px;
+        }
+      }
+
+      &:nth-child(3) {
+        white-space: nowrap;
+      }
+    }
+  }
+
+  td {
+    padding: 25px 22px;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  .button {
+    padding: 10px 32px;
+  }
+}

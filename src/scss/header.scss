@@ -3,6 +3,10 @@
     border-bottom: 1px solid #f1f1f1;
   }
 
+  @media print {
+    display: none;
+  }
+
   &--router {
     border-bottom: 1px solid #f1f1f1;
 
