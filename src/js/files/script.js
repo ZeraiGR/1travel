@@ -53,3 +53,6 @@ import './custom/resume-content-equalizer.js';
 
 // init print btn handler
 import './custom/print-btn-handler.js';
+
+// init cookie handler
+import './custom/cookie-handler.js';

@@ -162,26 +162,12 @@ export let bodyUnlock = (delay = 500) => {
       body.style.paddingRight = '0px';
       document.documentElement.classList.remove('lock');
     }, delay);
-
-    document.documentElement.removeEventListener('click', closeMenu);
     bodyLockStatus = false;
     setTimeout(function () {
       bodyLockStatus = true;
     }, delay);
   }
 };
-
-function closeMenu(e) {
-  if (
-    !e.target.matches('.burger') &&
-    !e.target.closest('.header__mobile') &&
-    !e.target.closest('.header')
-  ) {
-    bodyUnlock();
-    document.documentElement.classList.remove('menu-open');
-  }
-}
-
 export let bodyLock = (delay = 500) => {
   let body = document.querySelector('body');
   if (bodyLockStatus) {
@@ -194,8 +180,6 @@ export let bodyLock = (delay = 500) => {
     body.style.paddingRight =
       window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
     document.documentElement.classList.add('lock');
-
-    document.documentElement.addEventListener('click', closeMenu);
 
     bodyLockStatus = false;
     setTimeout(function () {

@@ -1,31 +1,147 @@
-<div id="popup" aria-hidden="true" class="popup">
+<div id="order-tour" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">
+				<span class="sr-only">Закрыть</span>
+				<svg class="popup__close-icon">
+					<use xlink:href="@img/sprite.svg#icon-close"></use>
+				</svg>
+			</button>
+			<div class="popup__text">
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="get-offer" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<button data-close type="button" class="popup__close">
+			<span class="sr-only">Закрыть</span>
+			<svg class="popup__close-icon">
+				<use xlink:href="@img/sprite.svg#icon-close"></use>
+			</svg>
+		</button>
+		<div class="popup__content">
+			<form class="popup__form">
+				<div class="popup__left">
+					<strong class="popup__title">Получить предложение</strong>
+
+					<div class="popup__field">
+						<label class="popup__label" for="user-name">Имя</label>
+						<input class="popup__input" type="text">
+					</div>
+
+					<div class="popup__field">
+						<label class="popup__label" for="user-name">Фамилия</label>
+						<input class="popup__input" type="text">
+					</div>
+
+					<div class="popup__field">
+						<label class="popup__label" for="user-name">Номер телефона</label>
+						<input class="popup__input" type="tel">
+					</div>
+
+					<div class="popup__field">
+						<label class="popup__label" for="user-name">Номер телефона</label>
+						<input class="popup__input" type="email">
+					</div>
+
+					<div class="popup__checkbox checkbox">
+						<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="isAgree">
+
+						<label for="c_1" class="checkbox__label"><span class="checkbox__text">Согласен на обработку персональных
+								данных</span>
+						</label>
+					</div>
+				</div>
+				<div class="popup__right">
+					<div class="popup__field">
+						<span class="popup__subtitle">Количество человек:</span>
+
+						<div class="popup__select">
+							<span>Взрослые</span>
+
+							<select name="adults" class="resume__select-form">
+								<option selected></option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+							</select>
+						</div>
+
+						<div class="popup__select popup__select--children">
+							<span>Дети (1-12)</span>
+
+							<select name="adults" class="resume__select-form">
+								<option selected></option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="popup__field">
+						<span class="popup__subtitle">Период</span>
+						<div class="popup__select-box">
+							<div class="popup__select">
+								<span>от</span>
+
+								<select name="adults" class="resume__select-form">
+									<option selected></option>
+									<option value="20.10.2021">20.10.2021</option>
+									<option value="21.10.2021">21.10.2021</option>
+									<option value="22.10.2021">22.10.2021</option>
+								</select>
+							</div>
+
+							<div class="popup__select">
+								<span>до</span>
+
+								<select name="adults" class="resume__select-form">
+									<option selected></option>
+									<option value="20.10.2021">20.10.2021</option>
+									<option value="21.10.2021">21.10.2021</option>
+									<option value="22.10.2021">22.10.2021</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+					<div class="popup__field">
+						<span class="popup__subtitle">Желаемый бюджет</span>
+						<input class="popup__input popup__input--light" type="text">
+					</div>
+
+					<div class="popup__field">
+						<label class="popup__subtitle" for="">Пожелания</label>
+						<textarea name="" id=""></textarea>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div id="author-tours" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
 			<button data-close type="button" class="popup__close">Закрыть</button>
 			<div class="popup__text">
+
 			</div>
-			<ul class="social">
-				<li class="social__item">
-					<a class="socials__link" href="#">
-						<img src="@img/icons/icon-insta.png" alt="instagram">
-					</a>
-				</li>
-				<li class="social__item">
-					<a class="socials__link" href="#">
-						<img src="@img/icons/icon-facebook.png" alt="facebook">
-					</a>
-				</li>
-				<li class="social__item">
-					<a class="socials__link" href="#">
-						<img src="@img/icons/icon-vk.png" alt="vk">
-					</a>
-				</li>
-				<li class="social__item">
-					<a class="socials__link" href="#">
-						<img src="@img/icons/icon-youtube.png" alt="youtube">
-					</a>
-				</li>
-			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="charters" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__text">
+
+			</div>
 		</div>
 	</div>
 </div>
