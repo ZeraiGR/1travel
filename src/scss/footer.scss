@@ -1,5 +1,13 @@
 .footer {
   border-top: 1px solid #d8d8d8;
+
+  &--light {
+    background-color: #fbfbfb;
+
+    @media (max-width: em(972)) {
+      background-color: $white;
+    }
+  }
 }
 
 .footer__top {

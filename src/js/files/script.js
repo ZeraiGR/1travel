@@ -44,3 +44,6 @@ import './custom/filters-switcher.js';
 
 // init select pure for the tagger
 import './custom/tagger.js';
+
+// init tours mobile logic
+import './custom/tours-mobile-handler.js';

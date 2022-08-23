@@ -1,11 +1,13 @@
 import datepicker from 'js-datepicker';
 
-const pickerIds = [
-  '#author-date-from',
-  '#author-date-back',
-  '#charter-date-from',
-  '#charter-date-back',
-];
+const datePickers = document.querySelectorAll('.datepicker');
+const pickerIds = [];
+
+if (datePickers) {
+  datePickers.forEach((el) => {
+    pickerIds.push(`#${el.id}`);
+  });
+}
 
 const resetBtns = document.querySelectorAll('.router__date-close');
 let pickers = [];

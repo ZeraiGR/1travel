@@ -30,20 +30,19 @@ export function rangeInit() {
       }),
     });
 
-    // const priceStart = document.getElementById('price-start');
-    // const priceEnd = document.getElementById('price-end');
-    // priceStart.addEventListener('change', setPriceValues);
-    // priceEnd.addEventListener('change', setPriceValues);
+    const priceInputs = [
+      document.getElementById('input-price-start'),
+      document.getElementById('input-price-end'),
+    ];
 
     const formatValues = [
       document.getElementById('price-start'),
       document.getElementById('price-end'),
     ];
 
-    priceSlider.noUiSlider.on('update', function (values, handle, unencoded) {
-      // "values" has the "to" function from "format" applied
-      // "unencoded" contains the raw numerical slider values
+    priceSlider.noUiSlider.on('update', function (values, handle) {
       formatValues[handle].innerHTML = values[handle];
+      priceInputs[handle].value = values[handle].replace(currency, '');
     });
 
     function setPriceValues() {

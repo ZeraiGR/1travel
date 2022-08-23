@@ -1,0 +1,244 @@
+<header class="header header--router">
+	<div class="header__container">
+		<nav class="header__nav">
+			<a class="header__logo" href="#">
+				<svg class="header__logo-icon">
+					<use xlink:href="@img/sprite.svg#icon-logo-number"></use>
+				</svg>
+				<img class="header__logo-img" src="@img/logo.png" alt="logo" width="206" height="91">
+			</a>
+
+			<form class="router">
+				<div class="router__places router__places--right field-box">
+					<input id="author-city-from" class="router__field router__field--city transform-field" name="author-city-from"
+						type="text" autocomplete="off" autocorrect="off" autocapitalize="off">
+					<label class="router__label transform-label" for="author-city-from">Город вылета</label>
+
+					<div class="router__results results" data-simplebar>
+						<ul class="results__content">
+							<li class="results__item results__item--head results__item--success">
+								<span class="results__detail">Популярные направления:</span>
+							</li>
+
+							<li class="results__item results__item--head results__item--not">
+								<span class="results__detail">По данному запросу ничего не найдено</span>
+							</li>
+
+							<li class="results__item">
+								<!-- button / link -->
+								<!-- available modificator: "results__btn--choose" for enabling autocomplete option -->
+								<button class="results__btn results__btn--choose" type="button">
+									<!-- mod: "results__main--comma" is optional -->
+									<strong class="results__main results__main--comma">Москва</strong>
+									<span class="results__detail">Россия</span>
+								</button>
+							</li>
+
+							<li class="results__item">
+								<button class="results__btn results__btn--choose" type="button">
+									<strong class="results__main results__main--comma">Санкт-Петербург</strong>
+									<span class="results__detail">Россия</span>
+								</button>
+							</li>
+
+							<li class="results__item">
+								<button class="results__btn results__btn--choose" type="button">
+									<strong class="results__main results__main--comma">Киев</strong>
+									<span class="results__detail">Украина</span>
+								</button>
+							</li>
+
+							<li class="results__item">
+								<button class="results__btn results__btn--choose" type="button">
+									<strong class="results__main results__main--comma">Ростов-на-Дону</strong>
+									<span class="results__detail">Россия, Ростовская область</span>
+								</button>
+							</li>
+						</ul>
+						<div class="loader" aria-hidden="true">
+						</div>
+					</div>
+				</div>
+
+				<div class="router__places router__places--left field-box">
+					<input id="author-city-to" class="router__field router__field--city transform-field" name="author-city-to"
+						type="text" autocomplete="off" autocorrect="off" autocapitalize="off">
+					<label class="router__label transform-label" for="author-city-to">Страна прибытия</label>
+
+					<div class="router__results results" data-simplebar>
+						<ul class="results__content">
+							<li class="results__item results__item--head results__item--success">
+								<span class="results__detail">Популярные направления:</span>
+							</li>
+
+							<li class="results__item results__item--head results__item--not">
+								<span class="results__detail">По данному запросу ничего не найдено</span>
+							</li>
+
+							<li class="results__item">
+								<!-- button / link -->
+								<!-- available modificator: "results__btn--choose" for enabling autocomplete option -->
+								<button class="results__btn results__btn--choose" type="button">
+									<!-- mod: "results__main--comma" is optional -->
+									<strong class="results__main results__main--comma">Москва</strong>
+									<span class="results__detail">Россия</span>
+								</button>
+							</li>
+
+							<li class="results__item">
+								<button class="results__btn results__btn--choose" type="button">
+									<strong class="results__main results__main--comma">Санкт-Петербург</strong>
+									<span class="results__detail">Россия</span>
+								</button>
+							</li>
+
+							<li class="results__item">
+								<button class="results__btn results__btn--choose" type="button">
+									<strong class="results__main results__main--comma">Киев</strong>
+									<span class="results__detail">Украина</span>
+								</button>
+							</li>
+
+							<li class="results__item">
+								<button class="results__btn results__btn--choose" type="button">
+									<strong class="results__main results__main--comma">Ростов-на-Дону</strong>
+									<span class="results__detail">Россия, Ростовская область</span>
+								</button>
+							</li>
+						</ul>
+						<div class="loader" aria-hidden="true">
+						</div>
+					</div>
+				</div>
+
+				<div class="field-box field-box--date-from">
+					<input id="header-date-from" class="transform-field datepicker" name="header-date-from" autocomplete="off"
+						readonly>
+					<label class="router__label transform-label" for="header-date-from">Дата вылета</label>
+				</div>
+
+				<div class="field-box field-box--date-back">
+					<input id="header-date-back" class="transform-field datepicker" name="header-date-back" autocomplete="off"
+						readonly>
+					<label class="router__label transform-label" for="header-date-back">Дата
+						прибытия</label>
+
+					<button class="router__date-close" type="button" aria-label="Сбросить дату" data-id="header-date-back">
+						<svg class="router__date-close-icon">
+							<use xlink:href="@img/sprite.svg#icon-close"></use>
+						</svg>
+					</button>
+				</div>
+
+				<div class="field-box field-box--passengers">
+					<span class="router__label transform-label transform-label--filled">Пассажиры</span>
+
+					<button class="router__counter" type="button" aria-haspopup="true">
+						<span class="router__passengers-total">1</span>
+						<span class="router__declination">пассажир</span>
+					</button>
+
+					<ul class="router__counter-popup" aria-hidden="true">
+						<li class="router__counter-item">
+							<div class="router__counter-descr">
+								<strong class="router__counter-category">Взрослые</strong>
+								<span class="router__counter-detailed">Старше 12 лет</span>
+							</div>
+
+							<div class="minmax" role="slider" aria-valuenow="0" aria-valuemin="0" aria-valuemax="10"
+								aria-label="Количество взрослых пассажиров">
+								<button class="minmax__btn minmax__btn--dec" type="button" aria-label="Убрать взрослого пассажира"
+									data-action="dec">
+								</button>
+
+								<input class="minmax__num" tabindex="-1" data-passenger="adult" name="adult-counter" value="1"
+									type="text" readonly aria-label="Количество взрослых пассажиров">
+
+								<button class="minmax__btn minmax__btn--inc" aria-label="Добавить взрослого пассажира" type="button"
+									data-action="inc">
+								</button>
+							</div>
+						</li>
+
+						<li class="router__counter-item">
+							<div class="router__counter-descr">
+								<strong class="router__counter-category">Дети</strong>
+								<span class="router__counter-detailed">
+									От 2 до 12 лет
+								</span>
+							</div>
+
+							<div class="minmax" role="slider" aria-valuenow="0" aria-valuemin="0" aria-valuemax="10"
+								aria-label="Количество детей">
+								<button class="minmax__btn minmax__btn--dec" type="button" aria-label="Убрать ребенка"
+									data-action="dec">
+								</button>
+
+								<input class="minmax__num" tabindex="-1" data-passenger="child" name="child-counter" value="0"
+									type="text" readonly aria-label="Количество детей">
+
+								<button class="minmax__btn minmax__btn--inc" aria-label="Добавить ребенка" type="button"
+									data-action="inc">
+								</button>
+							</div>
+						</li>
+
+						<li class="router__counter-item">
+							<div class="router__counter-descr">
+								<strong class="router__counter-category">
+									Младенцы
+								</strong>
+								<span class="router__counter-detailed">
+									До 2 лет, без места
+								</span>
+							</div>
+
+							<div class="minmax" role="slider" aria-valuenow="0" aria-valuemin="0" aria-valuemax="10"
+								aria-label="Количество младенцев">
+								<button class="minmax__btn minmax__btn--dec" type="button" aria-label="Убрать младенца"
+									data-action="dec">
+								</button>
+
+								<input class="minmax__num" tabindex="-1" data-passenger="baby" name="baby-counter" value="0" type="text"
+									readonly aria-label="Количество младенцев">
+
+								<button class="minmax__btn minmax__btn--inc" aria-label="Добавить младенца" type="button"
+									data-action="inc">
+								</button>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<button class="router__submit" type="submit" aria-label="Запустить поиск">
+					<svg class="router__submit-icon">
+						<use xlink:href="@img/sprite.svg#icon-search"></use>
+					</svg>
+				</button>
+
+				<div class="router__mobile-btns">
+					<button class="router__btn router__btn--close" type="button">
+						Закрыть
+					</button>
+					<button class="router__btn router__btn--search" type="submit">
+						Поиск
+					</button>
+				</div>
+			</form>
+
+			<button class="header__open-btn" type="button">
+				<svg class="header__open-icon">
+					<use xlink:href="img/sprite.svg#icon-search"></use>
+				</svg>
+			</button>
+
+			<form class="header__lang">
+				<select name="lang" class="form">
+					<option value="ru" selected>RU</option>
+					<option value="lv">LV</option>
+					<option value="eng">ENG</option>
+				</select>
+			</form>
+		</nav>
+	</div>
+</header>

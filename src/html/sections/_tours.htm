@@ -1,372 +1,392 @@
 <section class="tours">
 	<div class="tours__container">
 		<div class="tours__filters filters">
-			<ul class="filters__list">
-				<li class="filters__item">
-					<button class="filters__switcher active" type="button">
-						Фильтры
-					</button>
-					<div class="filters__content filters__content--tagger active">
-						<select class="filters__tagger" id="multiple" multiple>
-							<option value="RU" selected>Россия</option>
-							<option value="LT" selected>Литва</option>
-							<option value="UA" selected>Украина</option>
-							<option value="CZ">Казахстан</option>
-							<option value="AT">Австрия</option>
-							<option value="AZ">Азербайджан</option>
-							<option value="AL">Албания</option>
-							<option value="DZ">Алжир</option>
-							<option value="AI">Ангилья</option>
-							<option value="AO">Ангола</option>
-							<!-- ... -->
-						</select>
-						<div class="filters__tagger-placeholder">
-							Выберите ключевые слова
+			<form class="filters__form">
+				<ul class="filters__list">
+					<li class="filters__item">
+						<button class="filters__switcher active" type="button">
+							Фильтры
+						</button>
+
+						<div class="filters__content filters__content--tagger active">
+							<select class="filters__tagger" id="multiple" multiple>
+								<option value="RU" selected>Россия</option>
+								<option value="LT" selected>Литва</option>
+								<option value="UA" selected>Украина</option>
+								<option value="CZ">Казахстан</option>
+								<option value="AT">Австрия</option>
+								<option value="AZ">Азербайджан</option>
+								<option value="AL">Албания</option>
+								<option value="DZ">Алжир</option>
+								<option value="AI">Ангилья</option>
+								<option value="AO">Ангола</option>
+								<!-- etc -->
+							</select>
+							<div class="filters__tagger-placeholder">
+								Выберите ключевые слова
+							</div>
+
+							<div class="filters__helpers">
+								<!-- inputs type hidden will be dynamicaly added here  -->
+								<!-- for example <input name="tag-1" type="hidden" class="hide" value="Россия"> -->
+							</div>
 						</div>
-					</div>
+					</li>
 
-				</li>
+					<li class="filters__item">
+						<button class="filters__switcher active" type="button">
+							Бюджет
+						</button>
 
-				<li class="filters__item">
-					<button class="filters__switcher active" type="button">
-						Бюджет
-					</button>
-
-					<div class="filters__content active">
-						<div class="filters__price-counter">
-							<div class="filters__price-currency">€</div>
-							<div class="filters__price-min">0</div>
-							<div class="filters__price-max">2400</div>
-							<span id="price-start">0</span>-<span id="price-end">2400</span>
+						<div class="filters__content active">
+							<div class="filters__price-counter">
+								<!-- these elems just for configurate initial state they aren't visible in the DOM -->
+								<div class="filters__price-currency">€</div>
+								<div class="filters__price-min">0</div>
+								<div class="filters__price-max">2400</div>
+								<!--  -->
+								<input id="input-price-start" class="filters__price-input" name="price-start" type="text"
+									aria-label="Минимальная цена">
+								<input id="input-price-end" class="filters__price-input" name="price-end" type="text"
+									aria-label="Максимальная цена">
+								<span id="price-start">0</span>-<span id="price-end">2400</span>
+							</div>
+							<div class="filters__range" id="#range"></div>
 						</div>
-						<div class="filters__range" id="#range"></div>
-					</div>
-				</li>
+					</li>
 
-				<li class="filters__item">
+					<li class="filters__item">
 
-					<button class="filters__switcher active" type="button">
-						Туры выходного дня
-					</button>
+						<button class="filters__switcher active" type="button">
+							Туры выходного дня
+						</button>
 
-					<div class="filters__content active">
-						<div class="filters__checkbox checkbox">
-							<!-- todo это чекбоксы или радио-кнопки -->
-							<input id="vacation-tour-yes" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
-								name="vacation-tour-yes">
+						<div class="filters__content active">
+							<div class="filters__checkbox checkbox">
+								<!-- todo это чекбоксы или радио-кнопки -->
+								<input id="vacation-tour-yes" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+									name="vacation-tour-yes">
 
-							<label for="vacation-tour-yes" class="checkbox__label">
-								<span class="checkbox__text">Да</span>
-							</label>
+								<label for="vacation-tour-yes" class="checkbox__label">
+									<span class="checkbox__text">Да</span>
+								</label>
+							</div>
+
+							<div class="filters__checkbox checkbox">
+								<input class="checkbox__input" id="vacation-tour-no" data-error="Ошибка" type="checkbox" value="1"
+									name="vacation-tour-no">
+
+								<label class="checkbox__label" for="vacation-tour-no">
+									<span class="checkbox__text">Нет</span>
+								</label>
+							</div>
 						</div>
+					</li>
 
-						<div class="filters__checkbox checkbox">
-							<input class="checkbox__input" id="vacation-tour-no" data-error="Ошибка" type="checkbox" value="1"
-								name="vacation-tour-no">
+					<li class="filters__item">
+						<button class="filters__switcher active" type="button">Время года</button>
 
-							<label class="checkbox__label" for="vacation-tour-no">
-								<span class="checkbox__text">Нет</span>
-							</label>
+						<div class="filters__content filters__content--grid active">
+							<div class="filters__checkbox">
+								<input id="winter" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="winter">
+								<label for="winter" class="checkbox__label"><span class="checkbox__text">Зима</span></label>
+							</div>
+
+							<div class="filters__checkbox">
+								<input id="summer" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="summer">
+								<label for="summer" class="checkbox__label"><span class="checkbox__text">Лето</span></label>
+							</div>
+
+							<div class="filters__checkbox">
+								<input class="checkbox__input" id="spring" data-error="Ошибка" type="checkbox" value="1" name="spring">
+								<label for="spring" class="checkbox__label"><span class="checkbox__text">Весна</span></label>
+							</div>
+
+							<div class="filters__checkbox">
+								<input id="autumn" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="autumn">
+								<label for="autumn" class="checkbox__label"><span class="checkbox__text">Осень</span></label>
+							</div>
 						</div>
-					</div>
-				</li>
+					</li>
 
-				<li class="filters__item">
-					<button class="filters__switcher active" type="button">Время года</button>
+					<li class="filters__item">
+						<button class="filters__switcher" type="button">Месяц</button>
 
-					<div class="filters__content filters__content--grid active">
-						<div class="filters__checkbox">
-							<input id="winter" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="winter">
-							<label for="winter" class="checkbox__label"><span class="checkbox__text">Зима</span></label>
+						<div class="filters__content">
+							<div class="filters__checkbox">
+								<input id="all-months" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+									name="all-months">
+								<label for="all-months" class="checkbox__label"><span class="checkbox__text">Все месяцы</span></label>
+							</div>
+
+							<div class="filters__checkbox checkbox">
+								<input id="january" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+									name="january">
+								<label for="january" class="checkbox__label">
+									<span class="checkbox__text">Январь</span>
+								</label>
+							</div>
+
+							<div class="filters__checkbox checkbox">
+								<input id="february" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+									name="february">
+								<label for="february" class="checkbox__label">
+									<span class="checkbox__text">Февраль</span>
+								</label>
+							</div>
+
+							<div class="filters__checkbox checkbox">
+								<input id="march" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="march">
+								<label for="march" class="checkbox__label">
+									<span class="checkbox__text">Март</span>
+								</label>
+							</div>
+
+							<div class="filters__checkbox checkbox">
+								<input id="april" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="april">
+								<label for="april" class="checkbox__label">
+									<span class="checkbox__text">Апрель</span>
+								</label>
+							</div>
+
+							<div class="filters__checkbox checkbox">
+								<input id="may" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="may">
+								<label for="may" class="checkbox__label">
+									<span class="checkbox__text">Май</span>
+								</label>
+							</div>
+
+							<div class="filters__checkbox checkbox">
+								<input id="june" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="june">
+								<label for="june" class="checkbox__label">
+									<span class="checkbox__text">Июнь</span>
+								</label>
+							</div>
+
+							<div class="filters__checkbox checkbox">
+								<input id="july" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="july">
+								<label for="july" class="checkbox__label">
+									<span class="checkbox__text">Июль</span>
+								</label>
+							</div>
+
+							<div class="filters__checkbox checkbox">
+								<input id="august" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="august">
+								<label for="august" class="checkbox__label">
+									<span class="checkbox__text">Август</span>
+								</label>
+							</div>
+
+							<div class="filters__checkbox checkbox">
+								<input id="september" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+									name="september">
+								<label for="september" class="checkbox__label">
+									<span class="checkbox__text">Сентябрь</span>
+								</label>
+							</div>
+
+							<div class="filters__checkbox checkbox">
+								<input id="october" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+									name="october">
+								<label for="october" class="checkbox__label">
+									<span class="checkbox__text">Октябрь</span>
+								</label>
+							</div>
+
+							<div class="filters__checkbox checkbox">
+								<input id="november" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+									name="november">
+								<label for="november" class="checkbox__label">
+									<span class="checkbox__text">Ноябрь</span>
+								</label>
+							</div>
+
+							<div class="filters__checkbox checkbox">
+								<input id="december" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+									name="december">
+								<label for="december" class="checkbox__label">
+									<span class="checkbox__text">Декабрь</span>
+								</label>
+							</div>
 						</div>
+					</li>
 
-						<div class="filters__checkbox">
-							<input id="summer" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="summer">
-							<label for="summer" class="checkbox__label"><span class="checkbox__text">Лето</span></label>
+					<li class="filters__item">
+						<button class="filters__switcher" type="button">
+							Горящие путёвки/туры
+						</button>
+
+						<div class="filters__content">
+							<div class="filters__checkbox checkbox">
+								<input id="fire-tour-yes" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+									name="fire-tour-yes">
+
+								<label for="fire-tour-yes" class="checkbox__label">
+									<span class="checkbox__text">Да</span>
+								</label>
+							</div>
+
+							<div class="filters__checkbox checkbox">
+								<input class="checkbox__input" id="fire-tour-no" data-error="Ошибка" type="checkbox" value="1"
+									name="fire-tour-no">
+
+								<label class="checkbox__label" for="fire-tour-no">
+									<span class="checkbox__text">Нет</span>
+								</label>
+							</div>
 						</div>
+					</li>
 
-						<div class="filters__checkbox">
-							<input class="checkbox__input" id="spring" data-error="Ошибка" type="checkbox" value="1" name="spring">
-							<label for="spring" class="checkbox__label"><span class="checkbox__text">Весна</span></label>
+					<li class="filters__item">
+						<button class="filters__switcher" type="button">
+							Всё включено
+						</button>
+
+						<div class="filters__content">
+							<div class="filters__checkbox checkbox">
+								<input id="all-include-tour-yes" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+									name="all-include-tour-yes">
+
+								<label for="all-include-tour-yes" class="checkbox__label">
+									<span class="checkbox__text">Да</span>
+								</label>
+							</div>
+
+							<div class="filters__checkbox checkbox">
+								<input class="checkbox__input" id="all-include-tour-no" data-error="Ошибка" type="checkbox" value="1"
+									name="all-include-tour-no">
+
+								<label class="checkbox__label" for="all-include-tour-no">
+									<span class="checkbox__text">Нет</span>
+								</label>
+							</div>
 						</div>
+					</li>
 
-						<div class="filters__checkbox">
-							<input id="autumn" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="autumn">
-							<label for="autumn" class="checkbox__label"><span class="checkbox__text">Осень</span></label>
+					<li class="filters__item">
+						<button class="filters__switcher" type="button">
+							Вид транспорта
+						</button>
+
+						<div class="filters__content">
+							<div class="filters__checkbox checkbox">
+								<input id="liner" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="liner">
+
+								<label for="liner" class="checkbox__label">
+									<span class="checkbox__text">Круизный лайнер</span>
+								</label>
+							</div>
+
+							<div class="filters__checkbox checkbox">
+								<input class="checkbox__input" id="bus" data-error="Ошибка" type="checkbox" value="1" name="bus">
+
+								<label class="checkbox__label" for="bus">
+									<span class="checkbox__text">Автобус</span>
+								</label>
+							</div>
+
+							<div class="filters__checkbox checkbox">
+								<input class="checkbox__input" id="airplane" data-error="Ошибка" type="checkbox" value="1"
+									name="airplane">
+
+								<label class="checkbox__label" for="airplane">
+									<span class="checkbox__text">Самолёт</span>
+								</label>
+							</div>
 						</div>
-					</div>
-				</li>
+					</li>
 
-				<li class="filters__item">
-					<button class="filters__switcher" type="button">Месяц</button>
+					<li class="filters__item">
+						<button class="filters__switcher" type="button">
+							Для кого?
+						</button>
 
-					<div class="filters__content">
-						<div class="filters__checkbox">
-							<input id="all-months" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
-								name="all-months">
-							<label for="all-months" class="checkbox__label"><span class="checkbox__text">Все месяцы</span></label>
+						<div class="filters__content">
+							<div class="filters__checkbox checkbox">
+								<input id="for-one" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+									name="for-one">
+
+								<label for="for-one" class="checkbox__label">
+									<span class="checkbox__text">Для одного</span>
+								</label>
+							</div>
+
+							<div class="filters__checkbox checkbox">
+								<input class="checkbox__input" id="for-two" data-error="Ошибка" type="checkbox" value="1"
+									name="for-two">
+
+								<label class="checkbox__label" for="for-two">
+									<span class="checkbox__text">Для двоих</span>
+								</label>
+							</div>
+
+							<div class="filters__checkbox checkbox">
+								<input class="checkbox__input" id="for-adult" data-error="Ошибка" type="checkbox" value="1"
+									name="for-adult">
+
+								<label class="checkbox__label" for="for-adult">
+									<span class="checkbox__text">Для взрослых</span>
+								</label>
+							</div>
+
+							<div class=" filters__checkbox checkbox">
+								<input class="checkbox__input" id="for-family" data-error="Ошибка" type="checkbox" value="1"
+									name="for-family">
+
+								<label class="checkbox__label" for="for-family">
+									<span class="checkbox__text">Для семьи</span>
+								</label>
+							</div>
 						</div>
+					</li>
 
-						<div class="filters__checkbox checkbox">
-							<input id="january" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="january">
-							<label for="january" class="checkbox__label">
-								<span class="checkbox__text">Январь</span>
-							</label>
+					<li class="filters__item">
+						<button class="filters__switcher" type="button">
+							Праздник
+						</button>
+
+						<div class="filters__content">
+							<div class="filters__checkbox checkbox">
+								<input id="easter" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="easter">
+
+								<label for="easter" class="checkbox__label">
+									<span class="checkbox__text">Пасха</span>
+								</label>
+							</div>
+
+							<div class="filters__checkbox checkbox">
+								<input class="checkbox__input" id="wedding" data-error="Ошибка" type="checkbox" value="1"
+									name="wedding">
+
+								<label class="checkbox__label" for="wedding">
+									<span class="checkbox__text">Свадьба</span>
+								</label>
+							</div>
+
+							<div class="filters__checkbox checkbox">
+								<input class="checkbox__input" id="honeymoon" data-error="Ошибка" type="checkbox" value="1"
+									name="honeymoon">
+
+								<label class="checkbox__label" for="honeymoon">
+									<span class="checkbox__text">Медовый месяц</span>
+								</label>
+							</div>
+
+							<div class="filters__checkbox checkbox">
+								<input class="checkbox__input" id="new-year" data-error="Ошибка" type="checkbox" value="1"
+									name="new-year">
+
+								<label class="checkbox__label" for="new-year">
+									<span class="checkbox__text">Новый год</span>
+								</label>
+							</div>
 						</div>
-
-						<div class="filters__checkbox checkbox">
-							<input id="february" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
-								name="february">
-							<label for="february" class="checkbox__label">
-								<span class="checkbox__text">Февраль</span>
-							</label>
-						</div>
-
-						<div class="filters__checkbox checkbox">
-							<input id="march" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="march">
-							<label for="march" class="checkbox__label">
-								<span class="checkbox__text">Март</span>
-							</label>
-						</div>
-
-						<div class="filters__checkbox checkbox">
-							<input id="april" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="april">
-							<label for="april" class="checkbox__label">
-								<span class="checkbox__text">Апрель</span>
-							</label>
-						</div>
-
-						<div class="filters__checkbox checkbox">
-							<input id="may" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="may">
-							<label for="may" class="checkbox__label">
-								<span class="checkbox__text">Май</span>
-							</label>
-						</div>
-
-						<div class="filters__checkbox checkbox">
-							<input id="june" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="june">
-							<label for="june" class="checkbox__label">
-								<span class="checkbox__text">Июнь</span>
-							</label>
-						</div>
-
-						<div class="filters__checkbox checkbox">
-							<input id="july" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="july">
-							<label for="july" class="checkbox__label">
-								<span class="checkbox__text">Июль</span>
-							</label>
-						</div>
-
-						<div class="filters__checkbox checkbox">
-							<input id="august" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="august">
-							<label for="august" class="checkbox__label">
-								<span class="checkbox__text">Август</span>
-							</label>
-						</div>
-
-						<div class="filters__checkbox checkbox">
-							<input id="september" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
-								name="september">
-							<label for="september" class="checkbox__label">
-								<span class="checkbox__text">Сентябрь</span>
-							</label>
-						</div>
-
-						<div class="filters__checkbox checkbox">
-							<input id="october" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="october">
-							<label for="october" class="checkbox__label">
-								<span class="checkbox__text">Октябрь</span>
-							</label>
-						</div>
-
-						<div class="filters__checkbox checkbox">
-							<input id="november" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
-								name="november">
-							<label for="november" class="checkbox__label">
-								<span class="checkbox__text">Ноябрь</span>
-							</label>
-						</div>
-
-						<div class="filters__checkbox checkbox">
-							<input id="december" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
-								name="december">
-							<label for="december" class="checkbox__label">
-								<span class="checkbox__text">Декабрь</span>
-							</label>
-						</div>
-					</div>
-				</li>
-
-				<li class="filters__item">
-					<button class="filters__switcher" type="button">
-						Горящие путёвки/туры
-					</button>
-
-					<div class="filters__content">
-						<div class="filters__checkbox checkbox">
-							<input id="fire-tour-yes" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
-								name="fire-tour-yes">
-
-							<label for="fire-tour-yes" class="checkbox__label">
-								<span class="checkbox__text">Да</span>
-							</label>
-						</div>
-
-						<div class="filters__checkbox checkbox">
-							<input class="checkbox__input" id="fire-tour-no" data-error="Ошибка" type="checkbox" value="1"
-								name="fire-tour-no">
-
-							<label class="checkbox__label" for="fire-tour-no">
-								<span class="checkbox__text">Нет</span>
-							</label>
-						</div>
-					</div>
-				</li>
-
-				<li class="filters__item">
-					<button class="filters__switcher" type="button">
-						Всё включено
-					</button>
-
-					<div class="filters__content">
-						<div class="filters__checkbox checkbox">
-							<input id="all-include-tour-yes" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
-								name="all-include-tour-yes">
-
-							<label for="all-include-tour-yes" class="checkbox__label">
-								<span class="checkbox__text">Да</span>
-							</label>
-						</div>
-
-						<div class="filters__checkbox checkbox">
-							<input class="checkbox__input" id="all-include-tour-no" data-error="Ошибка" type="checkbox" value="1"
-								name="all-include-tour-no">
-
-							<label class="checkbox__label" for="all-include-tour-no">
-								<span class="checkbox__text">Нет</span>
-							</label>
-						</div>
-					</div>
-				</li>
-
-				<li class="filters__item">
-					<button class="filters__switcher" type="button">
-						Вид транспорта
-					</button>
-
-					<div class="filters__content">
-						<div class="filters__checkbox checkbox">
-							<input id="liner" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="liner">
-
-							<label for="liner" class="checkbox__label">
-								<span class="checkbox__text">Круизный лайнер</span>
-							</label>
-						</div>
-
-						<div class="filters__checkbox checkbox">
-							<input class="checkbox__input" id="bus" data-error="Ошибка" type="checkbox" value="1" name="bus">
-
-							<label class="checkbox__label" for="bus">
-								<span class="checkbox__text">Автобус</span>
-							</label>
-						</div>
-
-						<div class="filters__checkbox checkbox">
-							<input class="checkbox__input" id="airplane" data-error="Ошибка" type="checkbox" value="1"
-								name="airplane">
-
-							<label class="checkbox__label" for="airplane">
-								<span class="checkbox__text">Самолёт</span>
-							</label>
-						</div>
-					</div>
-				</li>
-
-				<li class="filters__item">
-					<button class="filters__switcher" type="button">
-						Для кого?
-					</button>
-
-					<div class="filters__content">
-						<div class="filters__checkbox checkbox">
-							<input id="for-one" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="for-one">
-
-							<label for="for-one" class="checkbox__label">
-								<span class="checkbox__text">Для одного</span>
-							</label>
-						</div>
-
-						<div class="filters__checkbox checkbox">
-							<input class="checkbox__input" id="for-two" data-error="Ошибка" type="checkbox" value="1" name="for-two">
-
-							<label class="checkbox__label" for="for-two">
-								<span class="checkbox__text">Для двоих</span>
-							</label>
-						</div>
-
-						<div class="filters__checkbox checkbox">
-							<input class="checkbox__input" id="for-adult" data-error="Ошибка" type="checkbox" value="1"
-								name="for-adult">
-
-							<label class="checkbox__label" for="for-adult">
-								<span class="checkbox__text">Для взрослых</span>
-							</label>
-						</div>
-
-						<div class=" filters__checkbox checkbox">
-							<input class="checkbox__input" id="for-family" data-error="Ошибка" type="checkbox" value="1"
-								name="for-family">
-
-							<label class="checkbox__label" for="for-family">
-								<span class="checkbox__text">Для семьи</span>
-							</label>
-						</div>
-					</div>
-				</li>
-
-				<li class="filters__item">
-					<button class="filters__switcher" type="button">
-						Праздник
-					</button>
-
-					<div class="filters__content">
-						<div class="filters__checkbox checkbox">
-							<input id="easter" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="easter">
-
-							<label for="easter" class="checkbox__label">
-								<span class="checkbox__text">Пасха</span>
-							</label>
-						</div>
-
-						<div class="filters__checkbox checkbox">
-							<input class="checkbox__input" id="wedding" data-error="Ошибка" type="checkbox" value="1" name="wedding">
-
-							<label class="checkbox__label" for="wedding">
-								<span class="checkbox__text">Свадьба</span>
-							</label>
-						</div>
-
-						<div class="filters__checkbox checkbox">
-							<input class="checkbox__input" id="honeymoon" data-error="Ошибка" type="checkbox" value="1"
-								name="honeymoon">
-
-							<label class="checkbox__label" for="honeymoon">
-								<span class="checkbox__text">Медовый месяц</span>
-							</label>
-						</div>
-
-						<div class="filters__checkbox checkbox">
-							<input class="checkbox__input" id="new-year" data-error="Ошибка" type="checkbox" value="1"
-								name="new-year">
-
-							<label class="checkbox__label" for="new-year">
-								<span class="checkbox__text">Новый год</span>
-							</label>
-						</div>
-					</div>
-				</li>
-			</ul>
-
+					</li>
+				</ul>
+				<!-- this button will be triggered when user will click on the button at the bottom of this section (below) when filters is open -->
+				<button class="filters__btn button" type="submit" aria-label="Смотреть результаты">
+				</button>
+			</form>
 		</div>
 
 		<div class="tours__content">
@@ -430,5 +450,18 @@
 			</ul>
 			<button class="tours__btn" type="button">Показать больше</button>
 		</div>
+
+		<!-- when mobile filters is open, click on this button will trigger click on the button into the form above by default -->
+
+		<!-- If you want to disable this behavior you can add class "no-submit" for the root button element below for example: <button class="tours__button button no-submit" type="button"> ... -->
+		<button class="tours__button button" type="button">
+			<svg class="tours__button-icon">
+				<use xlink:href="img/sprite.svg#icon-filter"></use>
+			</svg>
+			<span class="tours__button-default-text">Фильтровать результаты</span>
+			<span class="tours__button-mobile-text">
+				Смотреть результаты
+			</span>
+		</button>
 	</div>
 </section>

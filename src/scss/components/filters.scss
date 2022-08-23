@@ -44,6 +44,7 @@
 
     .ss-multi-selected {
       border: none;
+      gap: 5px;
     }
 
     .ss-main .ss-multi-selected .ss-values {
@@ -148,6 +149,10 @@
   gap: 8px;
 }
 
+.filters__price-input {
+  display: none;
+}
+
 .filters__checkbox {
   max-width: max-content;
   height: 24px;
@@ -157,5 +162,9 @@
 .filters__price-currency,
 .filters__price-min,
 .filters__price-max {
+  display: none;
+}
+
+.filters__btn {
   display: none;
 }
