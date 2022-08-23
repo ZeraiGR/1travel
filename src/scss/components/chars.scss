@@ -31,4 +31,10 @@
 .chars__icon {
   width: 100%;
   height: 100%;
+
+  fill: $accent;
+
+  @media print {
+    fill: $black;
+  }
 }

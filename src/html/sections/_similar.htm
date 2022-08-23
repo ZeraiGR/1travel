@@ -5,9 +5,37 @@
 		<div class="similar__slider">
 			<ul class="similar__swiper">
 				<li class="similar__slide">
+					@@include('../components/_card.htm', {"imgurl": "img/decor/tour-2.jpg", "title": "Туры в Египет",
+					"descr":
+					"Чартерные пакеты в Египет!", "price": "219€", "duration": "от 5 дней (30.04 - 31.10)"})
+				</li>
 
+				<li class="similar__slide">
+					@@include('../components/_card.htm', {"imgurl": "img/decor/tour-3.jpg", "title": "Туры в Болагрию",
+					"descr":
+					"Чартерные пакеты в Болгарию!", "price": "349€", "duration": "от 5 дней (30.04 - 31.10)"})
+				</li>
+
+				<li class="similar__slide">
+					@@include('../components/_card.htm', {"imgurl": "img/decor/tour-1.jpg", "title": "Туры в Грецию",
+					"descr":
+					"Чартерные пакеты в Грецию!", "price": "249€", "duration": "от 8 дней (30.04 - 31.10)"})
 				</li>
 			</ul>
+
+			<div class="similar__navigation">
+				<button class="similar__btn similar__btn--prev button button--round-dark" type="button">
+					<svg class="button__icon similar__link-icon">
+						<use xlink:href="@img/sprite.svg#icon-arrow-right"></use>
+					</svg>
+				</button>
+
+				<button class="similar__btn similar__btn--next button button--round-dark">
+					<svg class="button__icon similar__link-icon">
+						<use xlink:href="@img/sprite.svg#icon-arrow-right"></use>
+					</svg>
+				</button>
+			</div>
 		</div>
 	</div>
 </section>

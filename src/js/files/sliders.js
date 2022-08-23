@@ -111,6 +111,33 @@ function initSliders() {
         on: {},
       });
     }
+    if (window.innerWidth < 1140) {
+      new Swiper('.similar__slider', {
+        modules: [Navigation],
+        observer: true,
+        observeParents: true,
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+        speed: 800,
+        //touchRatio: 0,
+        //simulateTouch: false,
+        // loop: false,
+        //preloadImages: false,
+        //lazy: true,
+        // Dotts
+        // Arrows
+        navigation: {
+          nextEl: '.similar__btn--next',
+          prevEl: '.similar__btn--prev',
+        },
+        breakpoints: {
+          320: {},
+          768: {},
+        },
+
+        on: {},
+      });
+    }
     new Swiper('.reviews__slider', {
       modules: [Navigation],
       observer: true,

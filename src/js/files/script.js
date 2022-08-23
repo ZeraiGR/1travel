@@ -50,3 +50,6 @@ import './custom/tours-mobile-handler.js';
 
 // init resume content fixed
 import './custom/resume-content-equalizer.js';
+
+// init print btn handler
+import './custom/print-btn-handler.js';
