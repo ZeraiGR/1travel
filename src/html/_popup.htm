@@ -1,21 +1,5 @@
 <div id="order-tour" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">
-				<span class="sr-only">Закрыть</span>
-				<svg class="popup__close-icon">
-					<use xlink:href="@img/sprite.svg#icon-close"></use>
-				</svg>
-			</button>
-			<div class="popup__text">
-
-			</div>
-		</div>
-	</div>
-</div>
-
-<div id="get-offer" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
 		<button data-close type="button" class="popup__close">
 			<span class="sr-only">Закрыть</span>
 			<svg class="popup__close-icon">
@@ -25,7 +9,7 @@
 		<div class="popup__content">
 			<form class="popup__form">
 				<div class="popup__left">
-					<strong class="popup__title">Получить предложение</strong>
+					<strong class="popup__title">Заказать тур</strong>
 
 					<div class="popup__field">
 						<label class="popup__label" for="user-name">Имя</label>
@@ -34,7 +18,7 @@
 
 					<div class="popup__field">
 						<label class="popup__label" for="user-surname">Фамилия</label>
-						<input class="popup__input" user-name="user-surname" id="user-surname" type="text">
+						<input class="popup__input" name="user-surname" id="user-surname" type="text">
 					</div>
 
 					<div class="popup__field">
@@ -47,14 +31,40 @@
 						<input class="popup__input" name="user-email" id="user-email" type="email">
 					</div>
 
-					<div class="popup__checkbox checkbox">
-						<input id="isAgree" data-error="Ошибка" name="isAgree" class="checkbox__input" type="checkbox" value="1"
-							name="isAgree">
+					<div class="popup__checkboxes">
+						<div class="popup__checkbox checkbox">
+							<input id="isAgree" data-error="Ошибка" name="isAgree" class="checkbox__input" type="checkbox" value="1">
 
-						<label for="isAgree" class="checkbox__label"><span class="checkbox__text">Согласен на обработку персональных
-								данных</span>
-						</label>
+							<label for="isAgree" class="checkbox__label"><span class="checkbox__text">Согласен на обработку
+									персональных
+									данных</span>
+							</label>
+						</div>
+
+						<div class="popup__checkbox checkbox">
+							<input id="subscribe" data-error="Ошибка" name="subscribe" class="checkbox__input" type="checkbox"
+								value="1">
+
+							<label for="subscribe" class="checkbox__label">
+								<span class="checkbox__text">
+									Согласен получать рассылку на e-mail
+								</span>
+							</label>
+						</div>
+
+						<div class="popup__checkbox checkbox">
+							<input id="polity" data-error="Ошибка" name="polity" class="checkbox__input" type="checkbox" value="1">
+
+							<label for="polity" class="checkbox__label">
+								<span class="checkbox__text">Ознакомлен с
+									<a href="#">
+										политикой конфиденциальности
+									</a>
+								</span>
+							</label>
+						</div>
 					</div>
+
 				</div>
 				<div class="popup__right">
 					<div class="popup__field popup__field--passengers">
@@ -74,7 +84,18 @@
 						<div class="popup__select popup__select--children">
 							<span>Дети (1-12)</span>
 
-							<select name="adults" class="resume__select-form">
+							<select name="children" class="resume__select-form">
+								<option selected></option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+							</select>
+						</div>
+
+						<div class="popup__select popup__select--baby">
+							<span>0-2</span>
+
+							<select name="baby" class="resume__select-form">
 								<option selected></option>
 								<option value="1">1</option>
 								<option value="2">2</option>
@@ -89,7 +110,7 @@
 							<div class="popup__select">
 								<span>от</span>
 
-								<select name="adults" class="resume__select-form">
+								<select name="date-form" class="resume__select-form">
 									<option selected></option>
 									<option value="20.10.2021">20.10.2021</option>
 									<option value="21.10.2021">21.10.2021</option>
@@ -100,7 +121,124 @@
 							<div class="popup__select">
 								<span>до</span>
 
-								<select name="adults" class="resume__select-form">
+								<select name="date-back" class="resume__select-form">
+									<option selected></option>
+									<option value="20.10.2021">20.10.2021</option>
+									<option value="21.10.2021">21.10.2021</option>
+									<option value="22.10.2021">22.10.2021</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+					<div class="popup__field popup__field--wishes">
+						<label class="popup__subtitle" for="wishes">Доп. комментарий</label>
+						<textarea class="popup__textarea" name="wishes" id="wishes"></textarea>
+					</div>
+
+					<div class="popup__bottom">
+						<div class="popup__price">
+							Общая сумма: 1050 EUR
+						</div>
+
+						<button data-send class="popup__button button button--send-popup" type="submit">Отправить</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div id="get-offer" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<button data-close type="button" class="popup__close">
+			<span class="sr-only">Закрыть</span>
+			<svg class="popup__close-icon">
+				<use xlink:href="@img/sprite.svg#icon-close"></use>
+			</svg>
+		</button>
+		<div class="popup__content">
+			<form class="popup__form">
+				<div class="popup__left">
+					<strong class="popup__title">Получить предложение</strong>
+
+					<div class="popup__field">
+						<label class="popup__label" for="offer-user-name">Имя</label>
+						<input class="popup__input" name="offer-user-name" id="offer-user-name" type="text">
+					</div>
+
+					<div class="popup__field">
+						<label class="popup__label" for="offer-user-surname">Фамилия</label>
+						<input class="popup__input" name="offer-user-surname" id="offer-user-surname" type="text">
+					</div>
+
+					<div class="popup__field">
+						<label class="popup__label" for="offer-user-phone">Номер телефона</label>
+						<input class="popup__input" name="offer-user-phone" id="offer-user-phone" type="tel">
+					</div>
+
+					<div class="popup__field">
+						<label class="popup__label" for="offer-user-email">E-mail</label>
+						<input class="popup__input" name="offer-user-email" id="offer-user-email" type="email">
+					</div>
+
+					<div class="popup__checkboxes">
+						<div class="popup__checkbox checkbox">
+							<input id="offer-isAgree" data-error="Ошибка" name="offer-isAgree" class="checkbox__input" type="checkbox"
+								value="1">
+
+							<label for="offer-isAgree" class="checkbox__label"><span class="checkbox__text">Согласен на обработку
+									персональных
+									данных</span>
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="popup__right">
+					<div class="popup__field popup__field--passengers">
+						<span class="popup__subtitle">Количество человек:</span>
+
+						<div class="popup__select popup__select--adult">
+							<span>Взрослые</span>
+
+							<select name="offer-adults" class="resume__select-form">
+								<option selected></option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+							</select>
+						</div>
+
+						<div class="popup__select popup__select--children">
+							<span>Дети (1-12)</span>
+
+							<select name="offer-children" class="resume__select-form">
+								<option selected></option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="popup__field popup__field--period">
+						<span class="popup__subtitle">Период</span>
+						<div class="popup__select-box">
+							<div class="popup__select">
+								<span>от</span>
+
+								<select name="offer-date-from" class="resume__select-form">
+									<option selected></option>
+									<option value="20.10.2021">20.10.2021</option>
+									<option value="21.10.2021">21.10.2021</option>
+									<option value="22.10.2021">22.10.2021</option>
+								</select>
+							</div>
+
+							<div class="popup__select">
+								<span>до</span>
+
+								<select name="offer-date-back" class="resume__select-form">
 									<option selected></option>
 									<option value="20.10.2021">20.10.2021</option>
 									<option value="21.10.2021">21.10.2021</option>
@@ -112,12 +250,12 @@
 
 					<div class="popup__field popup__field--budget">
 						<span class="popup__subtitle">Желаемый бюджет</span>
-						<input class="popup__input" type="text">
+						<input class="popup__input" name="offer-budget" type="text">
 					</div>
 
 					<div class="popup__field popup__field--wishes">
-						<label class="popup__subtitle" for="wishes">Пожелания</label>
-						<textarea class="popup__textarea" name="wishes" id="wishes"></textarea>
+						<label class="popup__subtitle" for="offer-wishes">Пожелания</label>
+						<textarea class="popup__textarea" name="offer-wishes" id="offer-wishes"></textarea>
 					</div>
 
 					<button data-send class="popup__button button button--send-popup" type="submit">Отправить</button>
@@ -129,22 +267,190 @@
 
 <div id="author-tours" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
+		<button data-close type="button" class="popup__close">
+			<span class="sr-only">Закрыть</span>
+			<svg class="popup__close-icon">
+				<use xlink:href="@img/sprite.svg#icon-close"></use>
+			</svg>
+		</button>
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
+			<form class="popup__form">
+				<div class="popup__left">
+					<strong class="popup__title">Заказать тур</strong>
 
-			</div>
+					<div class="popup__field">
+						<label class="popup__label" for="author-user-name">Имя</label>
+						<input class="popup__input" name="author-user-name" id="author-user-name" type="text">
+					</div>
+
+					<div class="popup__field">
+						<label class="popup__label" for="author-user-phone">Номер телефона</label>
+						<input class="popup__input" name="author-user-phone" id="author-user-phone" type="tel">
+					</div>
+
+					<div class="popup__field">
+						<label class="popup__label" for="author-user-email">E-mail</label>
+						<input class="popup__input" name="author-user-email" id="author-user-email" type="email">
+					</div>
+
+					<div class="popup__checkboxes">
+						<div class="popup__checkbox checkbox">
+							<input id="author-isAgree" data-error="Ошибка" name="author-isAgree" class="checkbox__input"
+								type="checkbox" value="1">
+
+							<label for="author-isAgree" class="checkbox__label"><span class="checkbox__text">Согласен на обработку
+									персональных
+									данных</span>
+							</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="popup__right">
+					<div class="popup__field popup__field--passengers">
+						<span class="popup__subtitle">Количество человек:</span>
+
+						<div class="popup__select popup__select--adult">
+							<span>Взрослые</span>
+
+							<select name="author-adults" class="resume__select-form">
+								<option selected></option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+							</select>
+						</div>
+
+						<div class="popup__select popup__select--children">
+							<span>Дети (1-12)</span>
+
+							<select name="author-children" class="resume__select-form">
+								<option selected></option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="popup__field popup__field--period">
+						<span class="popup__subtitle">Период</span>
+						<div class="popup__select-box">
+							<div class="popup__select">
+								<span>от</span>
+
+								<select name="author-date-from" class="resume__select-form">
+									<option selected></option>
+									<option value="20.10.2021">20.10.2021</option>
+									<option value="21.10.2021">21.10.2021</option>
+									<option value="22.10.2021">22.10.2021</option>
+								</select>
+							</div>
+
+							<div class="popup__select">
+								<span>до</span>
+
+								<select name="author-date-back" class="resume__select-form">
+									<option selected></option>
+									<option value="20.10.2021">20.10.2021</option>
+									<option value="21.10.2021">21.10.2021</option>
+									<option value="22.10.2021">22.10.2021</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+					<div class="popup__bottom popup__bottom--vertical">
+						<div class="popup__price">
+							Общая сумма: 1050 EUR
+						</div>
+
+						<button data-send class="popup__button button button--send-popup" type="submit">Отправить</button>
+					</div>
+				</div>
+			</form>
 		</div>
 	</div>
 </div>
 
 <div id="charters" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
+		<button data-close type="button" class="popup__close">
+			<span class="sr-only">Закрыть</span>
+			<svg class="popup__close-icon">
+				<use xlink:href="@img/sprite.svg#icon-close"></use>
+			</svg>
+		</button>
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
+			<form class="popup__form">
+				<div class="popup__left">
+					<strong class="popup__title">Заказать тур</strong>
 
-			</div>
+					<div class="popup__field">
+						<label class="popup__label" for="charter-user-name">Имя</label>
+						<input class="popup__input" name="charter-user-name" id="charter-user-name" type="text">
+					</div>
+
+					<div class="popup__field">
+						<label class="popup__label" for="charter-user-phone">Номер телефона</label>
+						<input class="popup__input" name="charter-user-phone" id="charter-user-phone" type="tel">
+					</div>
+
+					<div class="popup__field">
+						<label class="popup__label" for="charter-user-email">E-mail</label>
+						<input class="popup__input" name="charter-user-email" id="charter-user-email" type="email">
+					</div>
+
+					<div class="popup__checkboxes">
+						<div class="popup__checkbox checkbox">
+							<input id="charter-isAgree" data-error="Ошибка" name="charter-isAgree" class="checkbox__input"
+								type="checkbox" value="1">
+
+							<label for="charter-isAgree" class="checkbox__label"><span class="checkbox__text">Согласен на обработку
+									персональных
+									данных</span>
+							</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="popup__right">
+					<div class="popup__field popup__field--passengers">
+						<span class="popup__subtitle">Количество человек:</span>
+
+						<div class="popup__select popup__select--adult">
+							<span>Взрослые</span>
+
+							<select name="charter-adults" class="resume__select-form">
+								<option selected></option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="popup__info">
+						<span class="popup__subtitle">Информация о туре:</span>
+
+						<div class="popup__info-box">
+							<img class="popup__info-img" src="@img/decor/tour-1.jpg" alt="info image">
+							<div class="popup__info-text">
+								<strong class="popup__info-title">Тур в Колумбию</strong>
+								<span class="popup__info-descr">Манящая Колумбия!</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="popup__bottom popup__bottom--vertical">
+						<div class="popup__price">
+							Общая сумма: 1050 EUR
+						</div>
+
+						<button data-send class="popup__button button button--send-popup" type="submit">Отправить</button>
+					</div>
+				</div>
+			</form>
 		</div>
 	</div>
 </div>
