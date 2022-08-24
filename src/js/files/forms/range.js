@@ -8,54 +8,87 @@ import wNumb from 'wnumb';
 // Подключение cтилей из node_modules
 // import 'nouislider/dist/nouislider.css';
 
-const currency = document.querySelector('.filters__price-currency')?.textContent;
-const priceMin = document.querySelector('.filters__price-min')?.textContent;
-const priceMax = document.querySelector('.filters__price-max')?.textContent;
-
 export function rangeInit() {
-  const priceSlider = document.querySelector('.filters__range');
-  if (priceSlider) {
-    let textFrom = priceSlider.getAttribute('data-from');
-    let textTo = priceSlider.getAttribute('data-to');
-    noUiSlider.create(priceSlider, {
-      start: [0, 200000],
-      connect: true,
-      range: {
-        min: +priceMin || 0,
-        max: +priceMax || 1000,
-      },
-      format: wNumb({
-        decimals: 0,
-        suffix: currency || '€',
-      }),
-    });
+  const rangers = document.querySelectorAll('.filters__range');
 
-    const priceInputs = [
-      document.getElementById('input-price-start'),
-      document.getElementById('input-price-end'),
-    ];
+  rangers?.forEach((range) => {
+    if (range.classList.contains('budget')) {
+      const currency = range.parentNode.querySelector('.filters__price-currency')?.textContent,
+        valueMin = range.parentNode.querySelector('.filters__value-min')?.textContent,
+        valueMax = range.parentNode.querySelector('.filters__value-max')?.textContent;
 
-    const formatValues = [
-      document.getElementById('price-start'),
-      document.getElementById('price-end'),
-    ];
+      const budgetSlider = noUiSlider.create(range, {
+        start: [+valueMin || 0, +valueMax || 1000],
+        connect: true,
+        range: {
+          min: +valueMin || 0,
+          max: +valueMax || 1000,
+        },
+        format: wNumb({
+          decimals: 0,
+          suffix: currency || '€',
+        }),
+      });
 
-    priceSlider.noUiSlider.on('update', function (values, handle) {
-      formatValues[handle].innerHTML = values[handle];
-      priceInputs[handle].value = values[handle].replace(currency, '');
-    });
+      const priceInputs = [
+        range.parentNode.querySelector('#input-price-start'),
+        range.parentNode.querySelector('#input-price-end'),
+      ];
 
-    function setPriceValues() {
-      let priceStartValue;
-      let priceEndValue;
-      if (priceStart.value != '') {
-        priceStartValue = priceStart.value;
-      }
-      if (priceEnd.value != '') {
-        priceEndValue = priceEnd.value;
-      }
-      priceSlider.noUiSlider.set([priceStartValue, priceEndValue]);
+      const formatValues = [
+        range.parentNode.querySelector('#price-start'),
+        range.parentNode.querySelector('#price-end'),
+      ];
+
+      budgetSlider.on('update', function (values, handle) {
+        formatValues[handle].innerHTML = values[handle];
+        priceInputs[handle].value = values[handle].replace(currency, '');
+      });
     }
-  }
+
+    if (range.classList.contains('date')) {
+      const valueMin = range.parentNode.querySelector('.filters__value-min')?.textContent,
+        valueMax = range.parentNode.querySelector('.filters__value-max')?.textContent,
+        inputMin = range.parentNode.querySelector('#input-day-start'),
+        inputMax = range.parentNode.querySelector('#input-day-end');
+
+      const inputs = [inputMin, inputMax];
+
+      const dateSlider = noUiSlider.create(range, {
+        start: [+valueMin || 0, +valueMax || 10],
+        connect: true,
+        range: {
+          min: +valueMin || 0,
+          max: +valueMax || 10,
+        },
+      });
+
+      dateSlider.on('update', function (values, handle) {
+        inputs[handle].value = parseInt(values[handle]);
+      });
+
+      const handle = (e) => {
+        if (e.code === 'Enter') {
+          e.preventDefault();
+          e.currentTarget.blur();
+        }
+      };
+
+      inputs?.forEach((inp, i) => {
+        inp.addEventListener('change', function () {
+          if (i === 0) {
+            dateSlider.set([this.value, null]);
+          } else {
+            dateSlider.set([null, this.value]);
+          }
+        });
+
+        inp.onkeypress = handle;
+        inp.onkeyup = handle;
+        inp.onkeypress = handle;
+      });
+    }
+  });
 }
+
 rangeInit();

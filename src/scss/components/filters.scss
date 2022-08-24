@@ -142,11 +142,35 @@
   }
 }
 
-.filters__price-counter {
-  margin-bottom: 14px;
+.filters__price-counter,
+.filters__day-counter {
   font-size: 16px;
   display: flex;
+}
+
+.filters__price-counter {
+  margin-bottom: 14px;
   gap: 8px;
+}
+
+.filters__day-counter {
+  margin-bottom: 6px;
+  gap: 15px;
+}
+
+.filters__day-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filters__day-input {
+  max-width: 45px;
+  width: 100%;
+  min-height: 30px;
+  padding: 5px 10px;
+  background-color: #f5f5f5;
+  line-height: 1.1;
 }
 
 .filters__price-input {
@@ -160,8 +184,8 @@
 
 .filters__tagger-placeholder,
 .filters__price-currency,
-.filters__price-min,
-.filters__price-max {
+.filters__value-min,
+.filters__value-max {
   display: none;
 }
 

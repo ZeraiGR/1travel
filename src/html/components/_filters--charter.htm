@@ -1,0 +1,87 @@
+<div class="tours__filters filters">
+	<form class="filters__form">
+		<ul class="filters__list">
+			<li class="filters__item">
+				<button class="filters__switcher active" type="button">
+					Фильтры
+				</button>
+
+				<div class="filters__content filters__content--tagger active">
+					<select class="filters__tagger" id="multiple" multiple>
+						<option value="RU" selected>Россия</option>
+						<option value="LT" selected>Литва</option>
+						<option value="UA" selected>Украина</option>
+						<option value="CZ">Казахстан</option>
+						<option value="AT">Австрия</option>
+						<option value="AZ">Азербайджан</option>
+						<option value="AL">Албания</option>
+						<option value="DZ">Алжир</option>
+						<option value="AI">Ангилья</option>
+						<option value="AO">Ангола</option>
+						<!-- etc -->
+					</select>
+					<div class="filters__tagger-placeholder">
+						Выберите ключевые слова
+					</div>
+
+					<div class="filters__helpers">
+						<!-- inputs type hidden will be dynamicaly added here  -->
+						<!-- for example <input name="tag-1" type="hidden" class="hide" value="Россия"> -->
+					</div>
+				</div>
+			</li>
+
+			<li class="filters__item">
+				<button class="filters__switcher active" type="button">
+					Количество дней
+				</button>
+
+				<div class="filters__content active">
+					<div class="filters__day-counter">
+						<!-- these elems just for configurate initial state they aren't visible in the DOM -->
+						<div class="filters__value-min">0</div>
+						<div class="filters__value-max">90</div>
+						<!--  -->
+						<div class="filters__day-item">
+							<span>от</span>
+							<input id="input-day-start" class="filters__day-input" name="input-day-start" type="number" value="2"
+								aria-label="Минимальная цена">
+						</div>
+
+						<div class="filters__day-item">
+							<span>до</span>
+							<input id="input-day-end" class="filters__day-input" name="price-end" type="number" value="4"
+								aria-label="Максимальная цена">
+						</div>
+					</div>
+					<div class="filters__range date" id="#day-range"></div>
+				</div>
+			</li>
+
+			<li class="filters__item">
+				<button class="filters__switcher active" type="button">
+					Бюджет
+				</button>
+
+				<div class="filters__content active">
+					<div class="filters__price-counter">
+						<!-- these elems just for configurate initial state they aren't visible in the DOM -->
+						<div class="filters__price-currency">€</div>
+						<div class="filters__value-min">0</div>
+						<div class="filters__value-max">2400</div>
+						<!--  -->
+						<input id="input-price-start" class="filters__price-input" name="input-price-start" type="text"
+							aria-label="Минимальная цена">
+						<input id="input-price-end" class="filters__price-input" name="input-price-end" type="text"
+							aria-label="Максимальная цена">
+						<span id="price-start">0</span>-<span id="price-end">2400</span>
+					</div>
+					<div class="filters__range budget" id="#budget-range"></div>
+				</div>
+			</li>
+		</ul>
+		<!-- this button will be triggered when user will click on the button at the bottom of this section (below) when filters is open -->
+		<button class="filters__btn button" type="submit" aria-label="Смотреть результаты">
+		</button>
+	</form>
+</div>

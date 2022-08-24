@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"1Travel - Чартеры"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/sections/_header--router.htm',{})
+		<main class="page">
+			<h1 class="sr-only">Чартеры</h1>
+			@@include('html/sections/_tours--charter.htm', {})
+		</main>
+		@@include('html/sections/_footer--light.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_cookie.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
