@@ -3,15 +3,13 @@
 
   ul {
     display: flex;
-    gap: 22px;
+    flex-wrap: wrap;
+    gap: 10px;
   }
 
   li:not(:last-child) {
-    position: relative;
-
     &::after {
-      position: absolute;
-      right: -15px;
+      margin-left: 10px;
       content: '/';
     }
   }
@@ -26,5 +24,13 @@
 
   @media print {
     color: #818181;
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 14px;
+  }
+
+  @media (max-width: $mobileSmall) {
+    font-size: 12px;
   }
 }

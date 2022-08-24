@@ -4,24 +4,49 @@
 .details__tabs {
 }
 
+.details__navigation--mobile {
+  @media (max-width: em(972)) {
+    overflow-x: auto;
+    margin: 0 -15px 15px;
+  }
+}
+
 .details__navigation {
   max-width: 100%;
   margin-bottom: 40px;
   justify-content: center;
+
+  @media (max-width: em(972)) {
+    margin-bottom: 0;
+    max-width: 972px;
+    width: 972px;
+    border-radius: 0;
+  }
 }
 
 .details__title {
   flex-grow: 1;
   padding: 10px 30px;
+  color: #a4a4a4;
 }
 
 .details__content {
 }
 
 .details__body {
-}
+  @media (max-width: em(972)) {
+    padding: 30px 20px 60px;
+    border: 1px solid $grey-300;
+    border-radius: 8px;
 
-.details__list {
+    &--map,
+    &--table,
+    &--additional {
+      margin-top: 30px;
+      border: none;
+      padding: 0;
+    }
+  }
 }
 
 .details__item {
@@ -29,6 +54,10 @@
     margin-bottom: 24px;
     padding-bottom: 24px;
     border-bottom: 1px solid #d8d8d8;
+
+    @media (max-width: $mobileSmall) {
+      border-bottom: none;
+    }
   }
 
   &:last-child {
@@ -46,6 +75,11 @@
 
   strong {
     font-weight: 600;
+  }
+
+  @media (max-width: em(525)) {
+    flex-direction: column;
+    gap: 10px;
   }
 }
 
@@ -166,5 +200,71 @@
 
   .button {
     padding: 10px 32px;
+    font-weight: 500;
+
+    @media (max-width: em(850)) {
+      font-size: 13px;
+    }
+  }
+
+  @media (max-width: em(850)) {
+    tr:first-child {
+      display: none;
+    }
+
+    tr {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      &:not(:nth-of-type(2)) {
+        padding-top: 30px;
+      }
+
+      td:first-child {
+        span {
+          &:not(:last-child) {
+            margin-bottom: 10px;
+          }
+
+          font-weight: 500;
+        }
+      }
+    }
+
+    td {
+      // position: relative;
+      margin-bottom: 30px;
+      padding: 0;
+      text-align: left;
+      line-height: 1.2;
+
+      &:not(:last-child) {
+        &::before {
+          margin-bottom: 14px;
+          display: block;
+          color: #707070;
+          font-size: 13px;
+          font-weight: 400;
+
+          content: attr(data-title);
+        }
+      }
+    }
+  }
+}
+
+.details__map-desk {
+  @media (max-width: em(625)) {
+    display: none;
+  }
+}
+
+.details__map-mobile {
+  display: none;
+
+  @media (max-width: em(625)) {
+    margin: 0 auto;
+    display: block;
   }
 }

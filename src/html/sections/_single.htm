@@ -49,54 +49,75 @@
 			</ul>
 		</div>
 
-		<div class="single__gallery gallery" data-gallery>
-			<a class="gallery__item gallery__item--has-label" href="@img/decor/gallery-1.jpg">
-				<img class="gallery__img" src="@img/decor/gallery-1.jpg" alt="gallery image">
-				<span class="gallery__label">
-					<svg class="gallery__label-icon">
-						<use xlink:href="@img/sprite.svg#icon-image"></use>
-					</svg>
-					Показать все фото
-				</span>
-			</a>
+		<div class="single__gallery gallery">
+			<div class="gallery__slider">
+				<div class="gallery__swiper gallery__layout" data-gallery>
+					<a class="gallery__item gallery__item--has-label" href="@img/decor/gallery-1.jpg">
+						<img class="gallery__img" src="@img/decor/gallery-1.jpg" alt="gallery image">
+						<span class="gallery__label">
+							<svg class="gallery__label-icon">
+								<use xlink:href="@img/sprite.svg#icon-image"></use>
+							</svg>
+							Показать все фото
+						</span>
+					</a>
 
-			<a class="gallery__item" href="@img/decor/gallery-2.jpg">
-				<img class="gallery__img" src="@img/decor/gallery-2.jpg" alt="gallery image">
-			</a>
+					<a class="gallery__item" href="@img/decor/gallery-2.jpg">
+						<img class="gallery__img" src="@img/decor/gallery-2.jpg" alt="gallery image">
+					</a>
 
-			<a class="gallery__item" href="@img/decor/gallery-2.jpg">
-				<img class="gallery__img" src="@img/decor/gallery-3.jpg" alt="gallery image">
-			</a>
+					<a class="gallery__item" href="@img/decor/gallery-2.jpg">
+						<img class="gallery__img" src="@img/decor/gallery-3.jpg" alt="gallery image">
+					</a>
 
-			<a class="gallery__item" href="@img/decor/gallery-2.jpg">
-				<img class="gallery__img" src="@img/decor/gallery-4.jpg" alt="gallery image">
-			</a>
+					<a class="gallery__item" href="@img/decor/gallery-2.jpg">
+						<img class="gallery__img" src="@img/decor/gallery-4.jpg" alt="gallery image">
+					</a>
 
-			<a class="gallery__item" href="@img/decor/gallery-2.jpg">
-				<img class="gallery__img" src="@img/decor/gallery-5.jpg" alt="gallery image">
-			</a>
+					<a class="gallery__item" href="@img/decor/gallery-2.jpg">
+						<img class="gallery__img" src="@img/decor/gallery-5.jpg" alt="gallery image">
+					</a>
+				</div>
+
+				<div class="gallery__navigation">
+					<button class="gallery__btn gallery__btn--prev button button--round-dark" type="button">
+						<svg class="button__icon gallery__link-icon">
+							<use xlink:href="@img/sprite.svg#icon-arrow-right"></use>
+						</svg>
+					</button>
+
+					<button class="gallery__btn gallery__btn--next button button--round-dark">
+						<svg class="button__icon gallery__link-icon">
+							<use xlink:href="@img/sprite.svg#icon-arrow-right"></use>
+						</svg>
+					</button>
+				</div>
+			</div>
 		</div>
 
 		<div class="single__content">
 			<div class="single__details details">
 				<div data-tabs class="details__tabs tabs">
-					<nav data-tabs-titles class="details__navigation tabs__navigation">
-						<button class="details__title tabs__title _tab-active" type="button">
-							Программа тура
-						</button>
+					<div class="details__navigation--mobile">
+						<nav data-tabs-titles class="details__navigation tabs__navigation">
+							<button class="details__title tabs__title _tab-active" type="button">
+								Программа тура
+							</button>
 
-						<button class="details__title tabs__title" type="button">
-							Дата и стоимость
-						</button>
+							<button class="details__title tabs__title" type="button">
+								Дата и стоимость
+							</button>
 
-						<button class="details__title tabs__title" type="button">
-							Карта
-						</button>
+							<button class="details__title tabs__title" type="button">
+								Карта
+							</button>
 
-						<button class="details__title tabs__title" type="button">
-							Дополнительная информация
-						</button>
-					</nav>
+							<button class="details__title tabs__title" type="button">
+								Дополнительная информация
+							</button>
+						</nav>
+					</div>
+
 
 					<div data-tabs-body class="details__content tabs__content">
 						<div class="details__body tabs__body">
@@ -474,7 +495,7 @@
 							</ul>
 						</div>
 
-						<div class="tabs__body">
+						<div class="details__body details__body--table tabs__body">
 							<table class="details__table">
 								<tr>
 									<th>
@@ -493,17 +514,17 @@
 								</tr>
 
 								<tr>
-									<td>
+									<td data-title="Период путешествия">
 										<span>30.04.2022 - 30.06.2022</span>
 										<span>От 8 дней</span>
 									</td>
-									<td>
+									<td data-title="Тип номера">
 										DBL
 									</td>
-									<td>
+									<td data-title="Тип питания">
 										По программе
 									</td>
-									<td>
+									<td data-title="Цена на одну персону">
 										0.00 EUR
 									</td>
 									<td>
@@ -512,17 +533,17 @@
 								</tr>
 
 								<tr>
-									<td>
+									<td data-title="Период путешествия">
 										<span>30.04.2022 - 30.06.2022</span>
 										<span>От 8 дней</span>
 									</td>
-									<td>
+									<td data-title="Тип номера">
 										DBL
 									</td>
-									<td>
+									<td data-title="Тип питания">
 										По программе
 									</td>
-									<td>
+									<td data-title="Цена на одну персону">
 										0.00 EUR
 									</td>
 									<td>
@@ -531,17 +552,17 @@
 								</tr>
 
 								<tr>
-									<td>
+									<td data-title="Период путешествия">
 										<span>30.04.2022 - 30.06.2022</span>
 										<span>От 8 дней</span>
 									</td>
-									<td>
+									<td data-title="Тип номера">
 										DBL
 									</td>
-									<td>
+									<td data-title="Тип питания">
 										По программе
 									</td>
-									<td>
+									<td data-title="Цена на одну персону">
 										0.00 EUR
 									</td>
 									<td>
@@ -550,17 +571,17 @@
 								</tr>
 
 								<tr>
-									<td>
+									<td data-title="Период путешествия">
 										<span>30.04.2022 - 30.06.2022</span>
 										<span>От 8 дней</span>
 									</td>
-									<td>
+									<td data-title="Тип номера">
 										DBL
 									</td>
-									<td>
+									<td data-title="Тип питания">
 										По программе
 									</td>
-									<td>
+									<td data-title="Цена на одну персону">
 										0.00 EUR
 									</td>
 									<td>
@@ -569,17 +590,17 @@
 								</tr>
 
 								<tr>
-									<td>
+									<td data-title="Период путешествия">
 										<span>30.04.2022 - 30.06.2022</span>
 										<span>От 8 дней</span>
 									</td>
-									<td>
+									<td data-title="Тип номера">
 										DBL
 									</td>
-									<td>
+									<td data-title="Тип питания">
 										По программе
 									</td>
-									<td>
+									<td data-title="Цена на одну персону">
 										0.00 EUR
 									</td>
 									<td>
@@ -588,17 +609,17 @@
 								</tr>
 
 								<tr>
-									<td>
+									<td data-title="Период путешествия">
 										<span>30.04.2022 - 30.06.2022</span>
 										<span>От 8 дней</span>
 									</td>
-									<td>
+									<td data-title="Тип номера">
 										DBL
 									</td>
-									<td>
+									<td data-title="Тип питания">
 										По программе
 									</td>
-									<td>
+									<td data-title="Цена на одну персону">
 										0.00 EUR
 									</td>
 									<td>
@@ -607,17 +628,17 @@
 								</tr>
 
 								<tr>
-									<td>
+									<td data-title="Период путешествия">
 										<span>30.04.2022 - 30.06.2022</span>
 										<span>От 8 дней</span>
 									</td>
-									<td>
+									<td data-title="Тип номера">
 										DBL
 									</td>
-									<td>
+									<td data-title="Тип питания">
 										По программе
 									</td>
-									<td>
+									<td data-title="Цена на одну персону">
 										0.00 EUR
 									</td>
 									<td>
@@ -627,12 +648,13 @@
 							</table>
 						</div>
 
-						<div class="tabs__body">
+						<div class="details__body details__body--map tabs__body">
 							<!-- google map API code -->
-							<img src="@img/decor/map.jpg" alt="map">
+							<img class="details__map-desk" src="@img/decor/map.jpg" alt="map">
+							<img class="details__map-mobile" src="@img/decor/map-mobile.jpg" alt="map">
 						</div>
 
-						<div class="tabs__body">
+						<div class="details__body details__body--additional tabs__body">
 							<div class="details__text details__text--additional">
 								<strong>
 									В стоимость тура не включено:

@@ -138,6 +138,36 @@ function initSliders() {
         on: {},
       });
     }
+    if (window.innerWidth <= 972) {
+      new Swiper('.gallery__slider', {
+        modules: [Navigation],
+        observer: true,
+        observeParents: true,
+        slidesPerView: 'auto',
+        speed: 800,
+        //touchRatio: 0,
+        //simulateTouch: false,
+        // loop: false,
+        //preloadImages: false,
+        //lazy: true,
+        // Dotts
+        // Arrows
+        navigation: {
+          nextEl: '.gallery__btn--next',
+          prevEl: '.gallery__btn--prev',
+        },
+        breakpoints: {
+          320: {
+            spaceBetween: 15,
+          },
+          768: {
+            spaceBetween: 30,
+          },
+        },
+
+        on: {},
+      });
+    }
     new Swiper('.reviews__slider', {
       modules: [Navigation],
       observer: true,

@@ -5,6 +5,10 @@
 
 .resume__body {
   padding: 45px 55px;
+
+  @media (max-width: $mobile) {
+    padding: 20px 25px 35px;
+  }
 }
 
 .resume__top {
@@ -15,10 +19,20 @@
   gap: 30px;
   font-weight: 600;
   line-height: 1.18;
+
+  @media (max-width: $mobile) {
+    margin-bottom: 5px;
+    gap: 10px;
+  }
 }
 
 .resume__title {
   font-size: 38px;
+
+  @media (max-width: $mobile) {
+    font-size: 18px;
+    font-weight: 600;
+  }
 }
 
 .resume__price {
@@ -26,6 +40,14 @@
 
   strong {
     font-size: 30px;
+
+    @media (max-width: $mobile) {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 9px;
   }
 }
 
@@ -37,6 +59,10 @@
   margin-bottom: 48px;
   color: #6b6b6b;
   font-size: 16px;
+
+  @media (max-width: $mobile) {
+    font-size: 12px;
+  }
 }
 
 .resume__item {
@@ -54,6 +80,20 @@
   span {
     font-weight: 700;
     white-space: nowrap;
+
+    @media (max-width: em(625)) {
+      font-weight: 500;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 14px;
+  }
+
+  @media (max-width: em(625)) {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
   }
 }
 
@@ -62,15 +102,21 @@
   background-color: $grey-200;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
+
+  @media (max-width: $mobile) {
+    padding: 12px 26px 14px;
+  }
 }
 
 .resume__counter {
   margin-bottom: 15px;
   display: flex;
-  gap: 15px;
+  gap: 5px 15px;
 
   & > span {
     max-width: max-content;
+    display: flex;
+    align-items: center;
   }
 
   .select__title {
@@ -107,6 +153,8 @@
   }
 
   &--passengers {
+    flex-wrap: wrap;
+
     .select__body {
       min-width: 46px;
     }
@@ -121,23 +169,41 @@
       width: 100%;
     }
 
+    .select__value {
+      height: auto;
+    }
+
     .select__content {
-      padding: 0 16px;
+      padding: 8px 24px 8px 16px;
       text-align: left;
+      min-height: 30px;
+      line-height: 1.4;
+      white-space: normal;
+    }
+
+    @media (max-width: em(545)) {
+      flex-direction: column;
     }
   }
 
   &--period {
     margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 10px 15px;
 
     .select__body {
       min-width: 52px;
     }
   }
+
+  @media (max-width: $mobile) {
+    font-size: 12px;
+  }
 }
 
 .resume__select {
   display: flex;
+  align-items: center;
   gap: 13px;
 
   & > span {
@@ -156,6 +222,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+  }
 }
 
 .resume__total {
@@ -176,5 +248,14 @@
   @media print {
     background: transparent;
     color: $black;
+  }
+
+  @media (max-width: $mobile) {
+    margin: 0 auto;
+  }
+
+  @media (max-width: $mobileSmall) {
+    padding: 13px 40px;
+    font-size: 12px;
   }
 }
