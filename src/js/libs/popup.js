@@ -13,6 +13,7 @@ export class Popup {
       // Для кнопок
       attributeOpenButton: 'data-popup', // Атрибут для кнопки, которая вызывает попап
       attributeCloseButton: 'data-close', // Атрибут для кнопки, которая закрывает попап
+      attributeSendButton: 'data-send',
       // Для сторонних объектов
       fixElementSelector: '[data-lp]', // Атрибут для элементов с левым паддингом (которые fixed)
       // Для объекта попапа
@@ -127,11 +128,18 @@ export class Popup {
         }
         // Закрытие на пустом месте (popup__wrapper) и кнопки закрытия (popup__close) для закрытия
         const buttonClose = e.target.closest(`[${this.options.attributeCloseButton}]`);
+        const buttonSend = e.target.closest(`[${this.options.attributeSendButton}]`);
         if (
           buttonClose ||
           (!e.target.closest(`.${this.options.classes.popupContent}`) && this.isOpen)
         ) {
           e.preventDefault();
+          this.close();
+          return;
+        } else if (
+          buttonSend ||
+          (!e.target.closest(`.${this.options.classes.popupContent}`) && this.isOpen)
+        ) {
           this.close();
           return;
         }

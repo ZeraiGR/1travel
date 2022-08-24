@@ -29,37 +29,38 @@
 
 					<div class="popup__field">
 						<label class="popup__label" for="user-name">Имя</label>
-						<input class="popup__input" type="text">
+						<input class="popup__input" name="user-name" id="user-name" type="text">
 					</div>
 
 					<div class="popup__field">
-						<label class="popup__label" for="user-name">Фамилия</label>
-						<input class="popup__input" type="text">
+						<label class="popup__label" for="user-surname">Фамилия</label>
+						<input class="popup__input" user-name="user-surname" id="user-surname" type="text">
 					</div>
 
 					<div class="popup__field">
-						<label class="popup__label" for="user-name">Номер телефона</label>
-						<input class="popup__input" type="tel">
+						<label class="popup__label" for="user-phone">Номер телефона</label>
+						<input class="popup__input" name="user-phone" id="user-phone" type="tel">
 					</div>
 
 					<div class="popup__field">
-						<label class="popup__label" for="user-name">Номер телефона</label>
-						<input class="popup__input" type="email">
+						<label class="popup__label" for="user-email">E-mail</label>
+						<input class="popup__input" name="user-email" id="user-email" type="email">
 					</div>
 
 					<div class="popup__checkbox checkbox">
-						<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="isAgree">
+						<input id="isAgree" data-error="Ошибка" name="isAgree" class="checkbox__input" type="checkbox" value="1"
+							name="isAgree">
 
-						<label for="c_1" class="checkbox__label"><span class="checkbox__text">Согласен на обработку персональных
+						<label for="isAgree" class="checkbox__label"><span class="checkbox__text">Согласен на обработку персональных
 								данных</span>
 						</label>
 					</div>
 				</div>
 				<div class="popup__right">
-					<div class="popup__field">
+					<div class="popup__field popup__field--passengers">
 						<span class="popup__subtitle">Количество человек:</span>
 
-						<div class="popup__select">
+						<div class="popup__select popup__select--adult">
 							<span>Взрослые</span>
 
 							<select name="adults" class="resume__select-form">
@@ -82,7 +83,7 @@
 						</div>
 					</div>
 
-					<div class="popup__field">
+					<div class="popup__field popup__field--period">
 						<span class="popup__subtitle">Период</span>
 						<div class="popup__select-box">
 							<div class="popup__select">
@@ -109,15 +110,17 @@
 						</div>
 					</div>
 
-					<div class="popup__field">
+					<div class="popup__field popup__field--budget">
 						<span class="popup__subtitle">Желаемый бюджет</span>
-						<input class="popup__input popup__input--light" type="text">
+						<input class="popup__input" type="text">
 					</div>
 
-					<div class="popup__field">
-						<label class="popup__subtitle" for="">Пожелания</label>
-						<textarea name="" id=""></textarea>
+					<div class="popup__field popup__field--wishes">
+						<label class="popup__subtitle" for="wishes">Пожелания</label>
+						<textarea class="popup__textarea" name="wishes" id="wishes"></textarea>
 					</div>
+
+					<button data-send class="popup__button button button--send-popup" type="submit">Отправить</button>
 				</div>
 			</form>
 		</div>
