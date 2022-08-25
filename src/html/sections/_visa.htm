@@ -1,0 +1,164 @@
+<section class="visa">
+	<div class="visa__content">
+		<div class="visa__promo">
+			<h1 class="visa__title">
+				Визы
+			</h1>
+			<span class="visa__descr">
+				Визы в любые страны в одной минуте от вас
+			</span>
+
+			<ul class="visa__items">
+				<li class="visa__item">
+					<span class="visa__name">Тип визы</span>
+					<div class="visa__value">2-кратная</div>
+				</li>
+
+				<li class="visa__item">
+					<span class="visa__name">Россия | Цель поездки</span>
+					<div class="visa__value">
+						Частные визы (сопровождение, посещение/уход за престарелыми родителями, бабушками,
+						дедушками, престарелыми братьями,
+						сестрами)
+					</div>
+				</li>
+
+				<li class="visa__item">
+					<span class="visa__name">Продолжительность</span>
+					<div class="visa__value">90 дней</div>
+				</li>
+
+				<li class="visa__item visa__item--duration">
+					<span class="visa__name">Срок изготовления визы (дней)</span>
+					<div class="visa__value">
+						<select name="visa-duration" class="visa__select">
+							<option></option>
+							<option value="30">30 дней</option>
+							<option value="50">50 дней</option>
+							<option value="90">90 дней</option>
+						</select>
+					</div>
+				</li>
+
+				<li class="visa__item">
+					<span class="visa__name">Цена</span>
+					<div class="visa__value">85.00 EUR</div>
+				</li>
+
+				<li class="visa__item visa__item--office">
+					<span class="visa__name">Офис</span>
+					<div class="visa__value">
+						<select name="office" class="visa__select">
+							<option></option>
+							<option value="москва">Москва</option>
+							<option value="спб">СПБ</option>
+							<option value="казань">Казань</option>
+						</select>
+					</div>
+				</li>
+			</ul>
+
+			<div class="visa__checkbox checkbox">
+				<input id="subscribe-agree" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+					name="subscribe-agree">
+				<label for="subscribe-agree" class="checkbox__label">
+					<span class="checkbox__text">
+						Согласен получать рассылку на e-mail
+					</span>
+				</label>
+			</div>
+
+			<div class="visa__checkbox checkbox">
+				<input id="polity-agree" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+					name="polity-agree">
+				<label for="polity-agree" class="checkbox__label">
+					<span class="checkbox__text">
+						Ознакомлен с <a href="#">политикой конфиденциальности</a>
+					</span>
+				</label>
+			</div>
+		</div>
+
+		<div class="visa__details">
+			<form class="visa__form">
+				<div class="visa__field">
+					<label class="visa__label" for="user-name">Имя</label>
+					<input class="visa__input" id="user-name" type="text">
+				</div>
+
+				<div class="visa__field">
+					<label class="visa__label" for="user-surname">Фамилия</label>
+					<input class="visa__input" id="user-surname" type="text">
+				</div>
+
+				<div class="visa__field">
+					<label class="visa__label" for="user-phone">Телефон</label>
+					<input class="visa__input" id="user-phone" type="tel">
+				</div>
+
+				<div class="visa__field">
+					<label class="visa__label" for="user-email">E-mail</label>
+					<input class="visa__input" id="user-email" type="email">
+				</div>
+
+				<div class="visa__field">
+					<label class="visa__label" for="user-dates">Даты поездки с/по</label>
+					<input class="visa__input" id="user-dates" type="text">
+				</div>
+
+				<div class="visa__field">
+					<label class="visa__label" for="user-route">Маршрут</label>
+					<input class="visa__input" id="user-route" type="text">
+				</div>
+
+				<div class="visa__field visa__field--select">
+					<label class="visa__label" for="user-aim">Цель поездки</label>
+					<select name="user-aim" class="visa__select">
+						<option></option>
+						<option value="turism">Туризм</option>
+						<option value="work">Работа</option>
+						<option value="family">По семейным обстоятельствам</option>
+					</select>
+				</div>
+
+				<div class="visa__field">
+					<label class="visa__label" for="user-address">Домашний адрес</label>
+					<input class="visa__input" id="user-address" type="text">
+				</div>
+
+				<div class="visa__field">
+					<label class="visa__label" for="user-workspace">Место работы</label>
+					<input class="visa__input" id="user-workspace" type="text">
+				</div>
+
+				<div class="visa__field">
+					<label class="visa__label" for="user-citizenship">Гражданство</label>
+					<input class="visa__input" id="user-citizenship" type="text">
+				</div>
+
+				<div class="visa__field visa__field--born">
+					<label class="visa__label" for="user-born">Место рождения (страна, город)</label>
+					<input class="visa__input" id="user-born" type="text">
+				</div>
+
+				<div class="visa__field visa__field--comments">
+					<label class="visa__label" for="user-comments">Дополнительные комментарии</label>
+					<textarea class="visa__textarea" id="user-comments" type="text"></textarea>
+				</div>
+
+				<div class="visa__info">
+					<p>
+						После заполнения и отправки анкеты ждём Вас в выбранном филиале нашей компании с паспортом, фото и
+						дополнительными
+						документами (при необходимости).
+					</p>
+					<p>
+						Больше информации и инструкции по телефонам +371 22843060, 22843061, 22843062 или info@1travel.lv.
+					</p>
+				</div>
+
+				<button class="visa__button button" type="submit">Отправить</button>
+			</form>
+		</div>
+	</div>
+</section>

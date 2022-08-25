@@ -14,6 +14,7 @@ const scrollbarWidth = () => {
 
 const calcPaddingSliders = () => {
   const histories = document.querySelector('.reviews__slider');
+  const visaPromo = document.querySelector('.visa__promo');
 
   const calcPadding = (section) => {
     if (section && window.innerWidth >= 1620) {
@@ -24,6 +25,7 @@ const calcPaddingSliders = () => {
   };
 
   calcPadding(histories);
+  calcPadding(visaPromo);
 };
 
 calcPaddingSliders();
