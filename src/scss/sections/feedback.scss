@@ -1,11 +1,22 @@
 .feedback {
   padding: 55px 0;
+
+  @media (max-width: $mobile) {
+    padding: 45px 0 50px;
+  }
 }
 
 .feedback__title {
   margin-bottom: 35px;
   font-weight: 600;
   font-size: 36px;
+  line-height: 1.07;
+
+  @media (max-width: $mobile) {
+    margin-bottom: 30px;
+    font-size: 28px;
+    text-align: left;
+  }
 }
 
 .feedback__content {
@@ -13,6 +24,11 @@
   justify-content: space-between;
   align-items: center;
   gap: 50px;
+
+  @media (max-width: em(1024)) {
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 .feedback__socials {
@@ -30,6 +46,10 @@
   @media (max-width: em(1366)) {
     padding: 40px;
   }
+
+  @media (max-width: em(630)) {
+    padding: 10px 25px 45px;
+  }
 }
 
 .feedback__send-title {
@@ -40,17 +60,38 @@
     margin-bottom: 30px;
     font-size: 32px;
   }
+
+  @media (max-width: $mobile) {
+    margin-bottom: 35px;
+    font-size: 28px;
+    font-weight: 700;
+  }
 }
 
 .feedback__form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 60px 50px;
+
+  @media (max-width: em(630)) {
+    grid-template-columns: 100%;
+    gap: 15px;
+  }
 }
 
 .feedback__field {
   display: flex;
   flex-direction: column;
+
+  &--comment {
+    @media (max-width: em(630)) {
+      .feedback__label {
+        margin-bottom: 10px;
+      }
+
+      order: 4;
+    }
+  }
 }
 
 .feedback__label {
@@ -78,6 +119,10 @@
 .feedback__box {
   display: flex;
   flex-direction: column;
+
+  @media (max-width: em(630)) {
+    order: 3;
+  }
 }
 
 .feedback__button {
@@ -98,5 +143,19 @@
     background-repeat: no-repeat;
     background-size: cover;
     content: '';
+  }
+
+  @media (max-width: em(630)) {
+    margin: 12px auto 0;
+    order: 5;
+  }
+}
+
+.feedback__mobileform {
+  @media (max-width: em(1024)) {
+    margin: 0 auto 95px;
+    padding: 0 15px;
+    display: flex;
+    justify-content: center;
   }
 }

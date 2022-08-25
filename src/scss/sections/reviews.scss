@@ -4,6 +4,12 @@
   @media (max-width: $tablet) {
     padding: 35px 0 120px;
   }
+
+  &--about {
+    @media (max-width: $tablet) {
+      padding: 35px 0 95px;
+    }
+  }
 }
 
 .reviews__container--narrow {
