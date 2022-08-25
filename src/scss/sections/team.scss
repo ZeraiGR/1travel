@@ -7,16 +7,50 @@
   margin-bottom: 35px;
   line-height: 1.2;
   font-weight: 600;
+
+  @media (max-width: $tablet) {
+    font-size: 32px;
+  }
+
+  @media (max-width: $mobile) {
+    margin-bottom: 30px;
+    font-size: 28px;
+  }
 }
 
 .team__list {
   display: flex;
   gap: 30px;
   text-align: center;
+
+  @media (max-width: em(1366)) {
+    margin: 0 auto;
+    max-width: 70%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: $tablet) {
+    max-width: 100%;
+  }
+
+  @media (max-width: em(630)) {
+    max-width: 70%;
+    gap: 60px;
+    grid-template-columns: 100%;
+  }
+
+  @media (max-width: $mobileSmall) {
+    max-width: 100%;
+  }
 }
 
 .team__item {
   position: relative;
+
+  @media (max-width: em(1366)) {
+    width: 100%;
+  }
 }
 
 .team__link {
@@ -96,6 +130,14 @@
   width: 100%;
   height: 460px;
   border-radius: 15px;
+
+  @media (max-width: em(1366)) {
+    max-width: 100%;
+  }
+
+  @media (max-width: $mobileSmall) {
+    height: 400px;
+  }
 }
 
 .team__name {
@@ -104,6 +146,10 @@
   font-weight: 700;
   font-size: 24px;
   line-height: 1.1;
+
+  @media (max-width: $mobile) {
+    font-size: 20px;
+  }
 }
 
 .team__status {
@@ -111,4 +157,8 @@
   color: #0000008c;
   line-height: 1.56;
   font-size: 16px;
+
+  @media (max-width: $mobile) {
+    font-size: 14px;
+  }
 }
