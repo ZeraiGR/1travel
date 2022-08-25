@@ -235,6 +235,7 @@ body {
 @import 'components/details';
 @import 'components/gallery';
 @import 'components/cookie';
+@import 'components/socials';
 
 // Подключение стилей отдельных секций
 @import 'header';
@@ -247,5 +248,7 @@ body {
 @import 'sections/success';
 @import 'sections/about';
 @import 'sections/team';
+@import 'sections/advantages';
+@import 'sections/feedback';
 
 @import 'footer';

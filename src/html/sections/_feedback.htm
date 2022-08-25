@@ -1,79 +1,94 @@
 <section class="feedback">
 	<div class="feedback__container">
-		<h2 class="feedback__title">
+		<h2 class="sr-only">
 			Контакты
 		</h2>
-		<div class="feedback__socials">
-			<h3 class="feedback__title">
-				Мы в соц.сетях!
-			</h3>
+		<div class="feedback__content">
+			<div class="feedback__socials">
+				<h3 class="feedback__title">
+					Мы в соц.сетях!
+				</h3>
 
-			<ul class="socials">
-				<li class="socials__item">
-					<a class="socials__link" href="#">
-						<span>Twitter</span>
-						<svg class="socials__icon">
-							<use xlink:href="@img/sprite.svg#icon-twitter-big"></use>
-						</svg>
-					</a>
-				</li>
+				<ul class="socials">
+					<li class="socials__item socials__item--twitter">
+						<a class="socials__link" href="#">
+							<span>Twitter</span>
 
-				<li class="socials__item">
-					<a class="socials__link" href="#">
-						<span>Twitter</span>
-						<svg class="socials__icon">
-							<use xlink:href="@img/sprite.svg#icon-facebook-big"></use>
-						</svg>
-					</a>
-				</li>
+							<div class="socials__icon-box">
+								<svg class="socials__icon">
+									<use xlink:href="@img/sprite.svg#icon-twitter-big"></use>
+								</svg>
+							</div>
+						</a>
+					</li>
 
-				<li class="socials__item">
-					<a class="socials__link" href="#">
-						<span>Twitter</span>
-						<svg class="socials__icon">
-							<use xlink:href="@img/sprite.svg#icon-twitter-big"></use>
-						</svg>
-					</a>
-				</li>
-			</ul>
+					<li class="socials__item socials__item--facebook">
+						<a class="socials__link" href="#">
+							<span>Facebook</span>
+
+							<div class="socials__icon-box">
+								<svg class="socials__icon">
+									<use xlink:href="@img/sprite.svg#icon-facebook-big"></use>
+								</svg>
+							</div>
+
+						</a>
+					</li>
+
+					<li class="socials__item socials__item--insta">
+						<a class="socials__link" href="#">
+							<span>Twitter</span>
+
+							<div class="socials__icon-box">
+								<svg class="socials__icon">
+									<use xlink:href="@img/sprite.svg#icon-insta-big"></use>
+								</svg>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="feedback__send">
+				<h3 class="feedback__send-title">
+					Обратная связь
+				</h3>
+				<form class="feedback__form">
+					<div class="feedback__field">
+						<label class="feedback__label" for="u-name">
+							Имя
+						</label>
+						<input class="feedback__input" id="u-name" name="u-name" type="text">
+					</div>
+
+					<div class="feedback__field">
+						<label class="feedback__label" for="u-phone">
+							Телефон
+						</label>
+						<input class="feedback__input" id="u-phone" name="u-phone" type="tel">
+					</div>
+
+					<div class="feedback__field">
+						<label class="feedback__label" for="u-comment">
+							Комментарий
+						</label>
+						<textarea class="feedback__textarea" name="u-comment" id="u-comment"></textarea>
+					</div>
+
+					<div class="feedback__box">
+						<div class="feedback__field">
+							<label class="feedback__label" for="u-email">
+								E-mail
+							</label>
+							<input class="feedback__input" id="u-email" name="u-email" type="email">
+						</div>
+
+						<button class="feedback__button button" type="submit">
+							Отправить
+						</button>
+					</div>
+				</form>
+			</div>
 		</div>
-		<div class="feedback__send">
-			<h3 class="feedback__title">
-				Обратная связь
-			</h3>
-			<form class="feedback__form">
-				<div class="feedback__field">
-					<label class="feedback__label" for="u-name">
-						Имя
-					</label>
-					<input class="feedback__input" id="u-name" name="u-name" type="text">
-				</div>
 
-				<div class="feedback__field">
-					<label class="feedback__label" for="u-phone">
-						Телефон
-					</label>
-					<input class="feedback__input" id="u-phone" name="u-phone" type="tel">
-				</div>
-
-				<div class="feedback__field">
-					<label class="feedback__label" for="u-comment">
-						Комментарий
-					</label>
-					<textarea name="u-comment" id="u-comment"></textarea>
-				</div>
-
-				<div class="feedback__field">
-					<label class="feedback__label" for="u-email">
-						Телефон
-					</label>
-					<input class="feedback__input" id="u-email" name="u-email" type="email">
-				</div>
-
-				<button class="feedback__button button" type="submit">
-					Отправить
-				</button>
-			</form>
-		</div>
 	</div>
 </section>

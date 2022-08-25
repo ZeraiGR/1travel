@@ -4,9 +4,9 @@
 
 .team__title {
   font-size: 48px;
-  font-weight: 500;
   margin-bottom: 35px;
   line-height: 1.2;
+  font-weight: 600;
 }
 
 .team__list {
@@ -23,57 +23,70 @@
   position: absolute;
   top: 20px;
   right: 20px;
+  width: 44px;
   height: 44px;
-  width: auto;
-  display: inline-flex;
+  background-color: $white;
+  border-radius: 22px;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  transition: all 0.3s ease-in-out;
+
+  &--margarita {
+    &:hover {
+      width: 190px;
+    }
+  }
+
+  &--olga {
+    &:hover {
+      width: 240px;
+    }
+  }
+
+  &--lilia {
+    &:hover {
+      width: 195px;
+    }
+  }
+
+  &--katerina {
+    &:hover {
+      width: 225px;
+    }
+  }
 
   &:hover {
+    padding-left: 15px;
+    padding-right: 30px;
+
+    .team__icon {
+      margin-right: auto;
+    }
+
     .team__mail {
-      width: 100%;
-      padding-right: 20px;
+      width: max-content;
     }
   }
 }
 
-.team__icon-box {
-  position: absolute;
-  z-index: 2;
-  cursor: pointer;
-  background: $white;
-  border-radius: 20px;
-  height: 100%;
-  width: 44px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .team__icon {
+  width: 19px;
   height: 15px;
-  width: 18px;
-  fill: $accent;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 19px 15px;
 }
 
 .team__mail {
-  position: relative;
-  z-index: 1;
-  font-size: 16px;
-  line-height: 1.5;
-  font-weight: 500;
-  white-space: nowrap;
-  height: 100%;
-  width: 0;
   overflow: hidden;
-  transition: 0.3s all ease;
-  background: $white;
-  display: flex;
-  align-items: center;
-  border-top-right-radius: 22px;
-  border-bottom-right-radius: 22px;
-  margin-left: 22px;
-  padding-left: 22px;
-  cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 0;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
 }
 
 .team__image {
