@@ -7,6 +7,51 @@
   box-shadow: 0 20px 60px 0 #0000001a;
   border-radius: 20px;
 
+  &--mobile {
+    .router__counter {
+      &::after {
+        display: none;
+      }
+    }
+
+    .field-box--date-from {
+      &::before {
+        display: none;
+      }
+    }
+
+    .field-box__content {
+      display: none;
+    }
+
+    .field-box .datepicker {
+      max-width: 100%;
+    }
+
+    @media (max-width: em(630)) {
+      .field-box .qs-datepicker-container {
+        width: 100%;
+      }
+    }
+  }
+
+  &.panel-is-open {
+    .field-box__content {
+      display: block;
+      position: static !important;
+    }
+
+    .router__counter-popup {
+      display: flex;
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      box-shadow: none;
+      padding: 15px 5px 0px;
+      gap: 38px;
+    }
+  }
+
   @media (max-width: em(1500)) {
     display: grid;
     grid-template-columns: [start] 280px [before] 35px [middle] 280px [after] 1fr [end];
@@ -477,5 +522,72 @@
 
   @media (max-width: $mobileSmall) {
     width: 100%;
+  }
+}
+
+.router__panel {
+  position: fixed;
+  transform: translateX(-100%);
+  z-index: 9;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+
+  &.show {
+    transform: translateX(0);
+    overflow: auto;
+  }
+}
+
+.field-box__list {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.field-box__btn {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  img {
+    width: 28px;
+    height: 28px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  span {
+    font-weight: 500;
+  }
+}
+
+.field-box__search {
+  position: relative;
+  margin: -15px -15px 15px;
+  display: flex;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.field-box__search-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  width: 13px;
+  height: 13px;
+}
+
+.field-box__search-input {
+  width: 100%;
+  height: 100%;
+  padding: 18px 45px;
+
+  &::placeholder {
+    color: #00000059;
   }
 }

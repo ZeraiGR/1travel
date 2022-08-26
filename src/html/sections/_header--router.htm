@@ -1,4 +1,5 @@
-<header class="header header--router">
+<!--  -->
+<header class="header header--router header--result">
 	<div class="header__container">
 		<nav class="header__nav">
 			<a class="header__logo" href="#">
@@ -8,132 +9,150 @@
 				<img class="header__logo-img" src="@img/logo.png" alt="logo" width="206" height="91">
 			</a>
 
-			<form class="router">
+			<div class="header__result">
+				<button class="header__result-btn" type="button">
+					<svg class="header__result-icon">
+						<use xlink:href="@img/sprite.svg#icon-back-black"></use>
+					</svg>
+				</button>
+
+				<dev class="header__result-text">
+					Таллин <span>/</span> Австралия <span>/</span> 08.04. - 19.04. <span>/</span> 2
+				</dev>
+			</div>
+
+			<form class="router router--mobile">
 				<div class="router__places router__places--right field-box">
-					<input id="author-city-from" class="router__field router__field--city transform-field" name="author-city-from"
-						type="text" autocomplete="off" autocorrect="off" autocapitalize="off">
+					<input id="author-city-from"
+						class="router__field router__field--city router__field--from transform-field mobile-field"
+						name="author-city-from" type="text" autocomplete="off" autocorrect="off" autocapitalize="off"
+						data-title="Вылет из">
 					<label class="router__label transform-label" for="author-city-from">Город вылета</label>
 
-					<div class="router__results results" data-simplebar>
-						<ul class="results__content">
-							<li class="results__item results__item--head results__item--success">
-								<span class="results__detail">Популярные направления:</span>
-							</li>
-
-							<li class="results__item results__item--head results__item--not">
-								<span class="results__detail">По данному запросу ничего не найдено</span>
-							</li>
-
-							<li class="results__item">
-								<!-- button / link -->
-								<!-- available modificator: "results__btn--choose" for enabling autocomplete option -->
-								<button class="results__btn results__btn--choose" type="button">
-									<!-- mod: "results__main--comma" is optional -->
-									<strong class="results__main results__main--comma">Москва</strong>
-									<span class="results__detail">Россия</span>
+					<div class="field-box__content">
+						<ul class="field-box__list">
+							<li class="field-box__item">
+								<button class="field-box__btn" type="button">
+									<img src="@img/icons/icon-tallin-flag.svg" alt="tallin">
+									<span>Таллин</span>
 								</button>
 							</li>
 
-							<li class="results__item">
-								<button class="results__btn results__btn--choose" type="button">
-									<strong class="results__main results__main--comma">Санкт-Петербург</strong>
-									<span class="results__detail">Россия</span>
+							<li class="field-box__item">
+								<button class="field-box__btn" type="button">
+									<img src="@img/icons/icon-riga-flag.svg" alt="tallin">
+									<span>Рига</span>
 								</button>
 							</li>
 
-							<li class="results__item">
-								<button class="results__btn results__btn--choose" type="button">
-									<strong class="results__main results__main--comma">Киев</strong>
-									<span class="results__detail">Украина</span>
-								</button>
-							</li>
-
-							<li class="results__item">
-								<button class="results__btn results__btn--choose" type="button">
-									<strong class="results__main results__main--comma">Ростов-на-Дону</strong>
-									<span class="results__detail">Россия, Ростовская область</span>
+							<li class="field-box__item">
+								<button class="field-box__btn" type="button">
+									<img src="@img/icons/icon-vilnus-flag.svg" alt="tallin">
+									<span>Вильнюс</span>
 								</button>
 							</li>
 						</ul>
-						<div class="loader" aria-hidden="true">
-						</div>
 					</div>
 				</div>
 
 				<div class="router__places router__places--left field-box">
-					<input id="author-city-to" class="router__field router__field--city transform-field" name="author-city-to"
-						type="text" autocomplete="off" autocorrect="off" autocapitalize="off">
+					<input id="author-city-to"
+						class="router__field router__field--city router__field--back transform-field mobile-field"
+						name="author-city-to" type="text" autocomplete="off" autocorrect="off" autocapitalize="off"
+						data-title="Место назначения">
 					<label class="router__label transform-label" for="author-city-to">Страна прибытия</label>
 
-					<div class="router__results results" data-simplebar>
-						<ul class="results__content">
-							<li class="results__item results__item--head results__item--success">
-								<span class="results__detail">Популярные направления:</span>
-							</li>
+					<div class="field-box__content">
+						<div class="field-box__search">
+							<svg class="field-box__search-icon">
+								<use xlink:href="@img/sprite.svg#icon-search-grey"></use>
+							</svg>
+							<input class="field-box__search-input" type="text" placeholder="Страна, регион...">
+						</div>
 
-							<li class="results__item results__item--head results__item--not">
-								<span class="results__detail">По данному запросу ничего не найдено</span>
-							</li>
-
-							<li class="results__item">
-								<!-- button / link -->
-								<!-- available modificator: "results__btn--choose" for enabling autocomplete option -->
-								<button class="results__btn results__btn--choose" type="button">
-									<!-- mod: "results__main--comma" is optional -->
-									<strong class="results__main results__main--comma">Москва</strong>
-									<span class="results__detail">Россия</span>
+						<ul class="field-box__list">
+							<li class="field-box__item">
+								<button class="field-box__btn" type="button">
+									<img src="@img/icons/icon-tallin-flag.svg" alt="tallin">
+									<span>Таллин</span>
 								</button>
 							</li>
 
-							<li class="results__item">
-								<button class="results__btn results__btn--choose" type="button">
-									<strong class="results__main results__main--comma">Санкт-Петербург</strong>
-									<span class="results__detail">Россия</span>
+							<li class="field-box__item">
+								<button class="field-box__btn" type="button">
+									<img src="@img/icons/icon-riga-flag.svg" alt="tallin">
+									<span>Рига</span>
 								</button>
 							</li>
 
-							<li class="results__item">
-								<button class="results__btn results__btn--choose" type="button">
-									<strong class="results__main results__main--comma">Киев</strong>
-									<span class="results__detail">Украина</span>
+							<li class="field-box__item">
+								<button class="field-box__btn" type="button">
+									<img src="@img/icons/icon-vilnus-flag.svg" alt="tallin">
+									<span>Вильнюс</span>
 								</button>
 							</li>
 
-							<li class="results__item">
-								<button class="results__btn results__btn--choose" type="button">
-									<strong class="results__main results__main--comma">Ростов-на-Дону</strong>
-									<span class="results__detail">Россия, Ростовская область</span>
+							<li class="field-box__item">
+								<button class="field-box__btn" type="button">
+									<img src="@img/icons/icon-tallin-flag.svg" alt="tallin">
+									<span>Таллин</span>
+								</button>
+							</li>
+
+							<li class="field-box__item">
+								<button class="field-box__btn" type="button">
+									<img src="@img/icons/icon-riga-flag.svg" alt="tallin">
+									<span>Рига</span>
+								</button>
+							</li>
+
+							<li class="field-box__item">
+								<button class="field-box__btn" type="button">
+									<img src="@img/icons/icon-vilnus-flag.svg" alt="tallin">
+									<span>Вильнюс</span>
+								</button>
+							</li>
+
+							<li class="field-box__item">
+								<button class="field-box__btn" type="button">
+									<img src="@img/icons/icon-tallin-flag.svg" alt="tallin">
+									<span>Таллин</span>
+								</button>
+							</li>
+
+							<li class="field-box__item">
+								<button class="field-box__btn" type="button">
+									<img src="@img/icons/icon-riga-flag.svg" alt="tallin">
+									<span>Рига</span>
+								</button>
+							</li>
+
+							<li class="field-box__item">
+								<button class="field-box__btn" type="button">
+									<img src="@img/icons/icon-vilnus-flag.svg" alt="tallin">
+									<span>Вильнюс</span>
 								</button>
 							</li>
 						</ul>
-						<div class="loader" aria-hidden="true">
-						</div>
 					</div>
 				</div>
 
 				<div class="field-box field-box--date-from">
 					<input id="header-date-from" class="transform-field datepicker" name="header-date-from" autocomplete="off"
-						readonly>
+						type="text" readonly data-title="Дата вылета">
 					<label class="router__label transform-label" for="header-date-from">Дата вылета</label>
 				</div>
 
 				<div class="field-box field-box--date-back">
 					<input id="header-date-back" class="transform-field datepicker" name="header-date-back" autocomplete="off"
-						readonly>
-					<label class="router__label transform-label" for="header-date-back">Дата
-						прибытия</label>
-
-					<button class="router__date-close" type="button" aria-label="Сбросить дату" data-id="header-date-back">
-						<svg class="router__date-close-icon">
-							<use xlink:href="@img/sprite.svg#icon-close"></use>
-						</svg>
-					</button>
+						type="text" readonly data-title="Дата прибытия">
+					<label class="router__label transform-label" for="header-date-back">Дата прибытия</label>
 				</div>
 
 				<div class="field-box field-box--passengers">
 					<span class="router__label transform-label transform-label--filled">Пассажиры</span>
 
-					<button class="router__counter" type="button" aria-haspopup="true">
+					<button class="router__counter" type="button" data-title="Пассажиры">
 						<span class="router__passengers-total">1</span>
 						<span class="router__declination">пассажир</span>
 					</button>
@@ -210,6 +229,25 @@
 					</ul>
 				</div>
 
+				<div class="router__panel panel">
+					<div class="panel__top">
+						<button class="panel__btn-back" type="button">
+							<svg class="panel__icon">
+								<use xlink:href="@img/sprite.svg#icon-back"></use>
+							</svg>
+						</button>
+						<span class="panel__title">Вылет из</span>
+						<button class="panel__btn-ok" type="button">
+							<svg class="panel__icon">
+								<use xlink:href="@img/sprite.svg#icon-ok"></use>
+							</svg>
+						</button>
+					</div>
+					<div class="panel__content">
+						<!-- It will be genereted dynamically -->
+					</div>
+				</div>
+
 				<button class="router__submit" type="submit" aria-label="Запустить поиск">
 					<svg class="router__submit-icon">
 						<use xlink:href="@img/sprite.svg#icon-search"></use>
@@ -226,7 +264,7 @@
 				</div>
 			</form>
 
-			<button class="header__open-btn" type="button">
+			<button class="header__open-btn" type="button" aria-label="Открыть меню поиска">
 				<svg class="header__open-icon">
 					<use xlink:href="img/sprite.svg#icon-search"></use>
 				</svg>

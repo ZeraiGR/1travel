@@ -123,6 +123,10 @@
 
     &.active {
       transform: translateX(0);
+
+      .filters__btn-box {
+        display: block;
+      }
     }
   }
 
@@ -136,6 +140,7 @@
   }
 
   .filters__btn-box {
+    display: none;
     position: fixed;
     z-index: 9;
     left: 0;
@@ -155,12 +160,6 @@
       width: 100%;
     }
   }
-}
-
-.visas__lang {
-}
-
-.lang {
 }
 
 .lang__list {
@@ -199,9 +198,6 @@
 .lang__icon {
   width: 100%;
   height: 100%;
-}
-
-.lang__mobile {
 }
 
 .visas__filter {

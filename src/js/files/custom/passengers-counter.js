@@ -7,13 +7,13 @@ const BTN_SELECTOR = '.router__counter',
   DECLANATION_SELECTOR = '.router__declination',
   FIELD_BOX = '.field-box--passengers',
   FIELD = '.minmax',
-  FILED_INPUT = '.minmax__num';
+  FILED_INPUT = '.minmax__num',
+  ROUTER_MOBILE = '.router--mobile';
 
 const DECLANATIONS = ['пассажир', 'пассажира', 'пассажиров'];
 
 const initHandleCounter = () => {
-  const openCounterBtns = document.querySelectorAll(BTN_SELECTOR),
-    changeValueCounterBtns = document.querySelectorAll(CHANGE_VALUE_BTN_SELECTOR);
+  const openCounterBtns = document.querySelectorAll(BTN_SELECTOR);
 
   let isOpen = false;
 
@@ -114,9 +114,14 @@ const initHandleCounter = () => {
     totalLabelEl.innerHTML = declOfNum(total, DECLANATIONS);
   };
 
-  changeValueCounterBtns?.forEach((btn) => {
-    btn.addEventListener('click', handleChange);
-  });
+  const initBtnListeners = () => {
+    const changeValueCounterBtns = document.querySelectorAll(CHANGE_VALUE_BTN_SELECTOR);
+    changeValueCounterBtns?.forEach((btn) => {
+      btn.addEventListener('click', handleChange);
+    });
+  };
+
+  initBtnListeners();
 };
 
 initHandleCounter();

@@ -5,6 +5,7 @@ const handleAutocomplete = () => {
   const RESULTS_SELECTOR = '.router__results';
   const FIELD_SELECTOR = '.router__field--city';
   const RESULTS_ITEM_SELECTOR = '.results__item';
+  const ROUTER_MOBILE = '.router--mobile';
 
   const inputs = document.querySelectorAll(FIELD_SELECTOR);
   let isOpen = false;
@@ -65,20 +66,22 @@ const handleAutocomplete = () => {
   };
 
   inputs?.forEach((inp) => {
-    inp.addEventListener('focus', (e) => {
-      let curTurget = e.currentTarget;
-      const results = getLocalResults(curTurget);
-      const items = results.querySelectorAll(RESULTS_ITEM_SELECTOR);
+    if (!inp.closest(ROUTER_MOBILE)) {
+      inp.addEventListener('focus', (e) => {
+        let curTurget = e.currentTarget;
+        const results = getLocalResults(curTurget);
+        const items = results.querySelectorAll(RESULTS_ITEM_SELECTOR);
 
-      resultsArr?.forEach((res) => {
-        res.classList.remove('results--show');
+        resultsArr?.forEach((res) => {
+          res.classList.remove('results--show');
+        });
+        results.classList.add('results--show');
+
+        isOpen = true;
+        updateWindowListeners(isOpen);
+        updateItemsListeners(isOpen, items);
       });
-      results.classList.add('results--show');
-
-      isOpen = true;
-      updateWindowListeners(isOpen);
-      updateItemsListeners(isOpen, items);
-    });
+    }
   });
 };
 

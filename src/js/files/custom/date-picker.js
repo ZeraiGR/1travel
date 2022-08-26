@@ -1,6 +1,7 @@
 import datepicker from 'js-datepicker';
 
 const datePickers = document.querySelectorAll('.datepicker');
+const ROUTER_MOBILE = '.router--mobile';
 const pickerIds = [];
 
 if (datePickers) {
