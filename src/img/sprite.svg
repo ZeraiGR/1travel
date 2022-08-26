@@ -85,4 +85,105 @@
 	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 111 117" id="icon-advantage-4">
     <path d="M89.5788 11.6063L92.705 31.3888L110.694 40.5625L101.623 58.5L110.745 76.4375L92.6025 85.6113L89.4762 105.394L69.54 102.268L55.3438 116.413L41.0962 102.063L21.3137 105.343L18.1362 85.4063L0.25 76.2838L9.3725 58.3463L0.30125 40.5625L18.29 31.2863L21.4163 11.6575L41.25 14.9375L55.4975 0.536255L69.6937 14.7325L89.5788 11.6063ZM42.685 32.875C40.6461 32.875 38.6908 33.6849 37.2491 35.1266C35.8074 36.5683 34.9975 38.5237 34.9975 40.5625C34.9975 42.6014 35.8074 44.5567 37.2491 45.9984C38.6908 47.4401 40.6461 48.25 42.685 48.25C44.7239 48.25 46.6792 47.4401 48.1209 45.9984C49.5626 44.5567 50.3725 42.6014 50.3725 40.5625C50.3725 38.5237 49.5626 36.5683 48.1209 35.1266C46.6792 33.6849 44.7239 32.875 42.685 32.875ZM68.31 68.75C66.2711 68.75 64.3158 69.5599 62.8741 71.0016C61.4324 72.4433 60.6225 74.3987 60.6225 76.4375C60.6225 78.4764 61.4324 80.4317 62.8741 81.8734C64.3158 83.3151 66.2711 84.125 68.31 84.125C70.3489 84.125 72.3042 83.3151 73.7459 81.8734C75.1876 80.4317 75.9975 78.4764 75.9975 76.4375C75.9975 74.3987 75.1876 72.4433 73.7459 71.0016C72.3042 69.5599 70.3489 68.75 68.31 68.75ZM37.0987 84.125L81.1225 40.1013L73.8962 32.875L29.8725 76.8988L37.0987 84.125Z" fill="#F0940E"></path>
   </symbol>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 32" id="icon-russia-flag">
+    <g clip-path="url(#clip0_264_9153)">
+      <rect width="45" height="32" rx="3" fill="#1A47B8"></rect>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 21.3333H45V32H0V21.3333Z" fill="#F93939"></path>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H45V10.6667H0V0Z" fill="white"></path>
+    </g>
+    <defs>
+      <clipPath id="clip0_264_9153">
+        <rect width="45" height="32" rx="3" fill="white"></rect>
+      </clipPath>
+    </defs>
+  </symbol>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 32" id="icon-belorussia-flag">
+    <g clip-path="url(#clip0_264_9152)">
+      <rect width="46" height="32" rx="3" fill="#F93939"></rect>
+      <path d="M41.619 0H4.38095C1.96142 0 0 1.91025 0 4.26667V27.7333C0 30.0898 1.96142 32 4.38095 32H41.619C44.0386 32 46 30.0898 46 27.7333V4.26667C46 1.91025 44.0386 0 41.619 0Z" fill="#F93939"></path>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9531 23.4667H46.0007V32H10.9531V23.4667Z" fill="#249F58"></path>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M6.57143 0L10.9524 3.2L6.57143 6.4V0ZM6.57143 6.4L10.9524 9.6L6.57143 12.8V6.4ZM6.57143 12.8L10.9524 16L6.57143 19.2V12.8ZM6.57143 19.2L10.9524 22.4L6.57143 25.6V19.2ZM6.57143 25.6L10.9524 28.8L6.57143 32V25.6ZM4.38095 0L0 3.2L4.38095 6.4V0ZM4.38095 6.4L0 9.6L4.38095 12.8V6.4ZM4.38095 12.8L0 16L4.38095 19.2V12.8ZM4.38095 19.2L0 22.4L4.38095 25.6V19.2ZM4.38095 25.6L0 28.8L4.38095 32V25.6ZM4.38095 0H6.57143V4.26667H4.38095V0ZM4.38095 27.7333H6.57143V32H4.38095V27.7333ZM4.38095 10.6667H6.57143V14.9333H4.38095V10.6667ZM4.38095 6.4H6.57143V8.53333H4.38095V6.4ZM4.38095 23.4667H6.57143V25.6H4.38095V23.4667ZM4.38095 17.0667H6.57143V21.3333H4.38095V17.0667Z" fill="white"></path>
+    </g>
+    <defs>
+      <clipPath id="clip0_264_9152">
+        <rect width="46" height="32" rx="3" fill="white"></rect>
+      </clipPath>
+    </defs>
+  </symbol>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 32" id="icon-uk-flag">
+    <rect width="46" height="32" rx="3" fill="#FFDA2C"></rect>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H46V17.0667H0V0Z" fill="#3A99FF"></path>
+  </symbol>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 32" id="icon-china-flag">
+    <g clip-path="url(#clip0_264_9148)">
+      <rect width="45" height="32" rx="3" fill="#F93939"></rect>
+      <path d="M40.7143 0H4.28571C1.91878 0 0 1.91025 0 4.26667V27.7333C0 30.0898 1.91878 32 4.28571 32H40.7143C43.0812 32 45 30.0898 45 27.7333V4.26667C45 1.91025 43.0812 0 40.7143 0Z" fill="#F93939"></path>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M11.7813 15.424L8.63126 17.0731L9.23126 13.5808L6.68555 11.1061L10.2063 10.6005L11.7813 7.42186L13.3541 10.6005L16.8748 11.1061L14.3248 13.5808L14.9291 17.0709L11.7813 15.424ZM19.2855 6.39999H21.4284V8.53333H19.2855V6.39999ZM21.4284 10.6667H23.5713V12.8H21.4284V10.6667ZM21.4284 14.9333H23.5713V17.0667H21.4284V14.9333ZM19.2855 19.2H21.4284V21.3333H19.2855V19.2Z" fill="#FFDA2C"></path>
+    </g>
+    <defs>
+      <clipPath id="clip0_264_9148">
+        <rect width="45" height="32" rx="3" fill="white"></rect>
+      </clipPath>
+    </defs>
+  </symbol>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47 32" id="icon-england-flag">
+    <g clip-path="url(#clip0_264_9147)">
+      <rect width="47" height="32" rx="3" fill="#1A47B8"></rect>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M4.99984 0H0V5.33333L41.973 32L47 32V26.6667L4.99984 0Z" fill="white"></path>
+      <path d="M1.6676 0L47 28.8756V32H45.3715L0 3.09453V0H1.6676Z" fill="#F93939"></path>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M42.5238 1.52588e-05H47V5.33335C47 5.33335 17.9267 23.0999 4.47619 32H0V26.6667L42.5238 1.52588e-05Z" fill="white"></path>
+      <path d="M47 0H45.482L0 28.9005V32H1.6676L47 3.1179V0Z" fill="#F93939"></path>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0925 0H29.9466V9.87054H47V22.1229H29.9466V32H17.0925V22.1229H0V9.87054H17.0925V0Z" fill="white"></path>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7895 0H27.2105V12.3077H47V19.6923H27.2105V32H19.7895V19.6923H0V12.3077H19.7895V0Z" fill="#F93939"></path>
+    </g>
+    <defs>
+      <clipPath id="clip0_264_9147">
+        <rect width="47" height="32" rx="3" fill="white"></rect>
+      </clipPath>
+    </defs>
+  </symbol>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 32" id="icon-india-flag">
+    <g clip-path="url(#clip0_264_9150)">
+      <rect width="45" height="32" rx="3" fill="white"></rect>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 21.3333H45V32H0V21.3333Z" fill="#249F58"></path>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M22.4997 21.3333C25.4569 21.3333 27.8569 18.944 27.8569 16C27.8569 13.056 25.4569 10.6667 22.4997 10.6667C19.5426 10.6667 17.1426 13.056 17.1426 16C17.1426 18.944 19.5426 21.3333 22.4997 21.3333ZM22.4997 19.2C24.274 19.2 25.714 17.7664 25.714 16C25.714 14.2336 24.274 12.8 22.4997 12.8C20.7254 12.8 19.2854 14.2336 19.2854 16C19.2854 17.7664 20.7254 19.2 22.4997 19.2Z" fill="#1A47B8"></path>
+      <path d="M22.4992 17.0667C23.0909 17.0667 23.5706 16.5891 23.5706 16C23.5706 15.4109 23.0909 14.9333 22.4992 14.9333C21.9074 14.9333 21.4277 15.4109 21.4277 16C21.4277 16.5891 21.9074 17.0667 22.4992 17.0667Z" fill="#1A47B8"></path>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H45V10.6667H0V0Z" fill="#FF6C2D"></path>
+    </g>
+    <defs>
+      <clipPath id="clip0_264_9150">
+        <rect width="45" height="32" rx="3" fill="white"></rect>
+      </clipPath>
+    </defs>
+  </symbol>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 32" id="icon-latvia-flag">
+    <g clip-path="url(#clip0_264_9146)">
+      <rect width="45" height="32" rx="3" fill="white"></rect>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 19.2H45V32H0V19.2ZM0 0H45V12.8H0V0Z" fill="#AF010D"></path>
+    </g>
+    <defs>
+      <clipPath id="clip0_264_9146">
+        <rect width="45" height="32" rx="3" fill="white"></rect>
+      </clipPath>
+    </defs>
+  </symbol>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 32" id="icon-tailand-flag">
+    <rect width="45" height="32" rx="3" fill="#F93939"></rect>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 21.3333H45V25.6H0V21.3333Z" fill="white"></path>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10.6667H45V21.3333H0V10.6667Z" fill="#1A47B8"></path>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 6.39999H45V10.6667H0V6.39999Z" fill="white"></path>
+  </symbol>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47 32" id="icon-usa-flag">
+    <g clip-path="url(#clip0_264_9149)">
+      <rect width="47" height="32" rx="3" fill="white"></rect>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H20.1429V14.9333H0V0Z" fill="#1A47B8"></path>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M20.1429 0V2.13333H47V0H20.1429ZM20.1429 4.26667V6.4H47V4.26667H20.1429ZM20.1429 8.53333V10.6667H47V8.53333H20.1429ZM20.1429 12.8V14.9333H47V12.8H20.1429ZM0 17.0667V19.2H47V17.0667H0ZM0 21.3333V23.4667H47V21.3333H0ZM0 25.6V27.7333H47V25.6H0ZM0 29.8667V32H47V29.8667H0Z" fill="#F93939"></path>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M2.23828 2.13333V4.26666H4.47638V2.13333H2.23828ZM6.71447 2.13333V4.26666H8.95257V2.13333H6.71447ZM11.1907 2.13333V4.26666H13.4288V2.13333H11.1907ZM15.6669 2.13333V4.26666H17.9049V2.13333H15.6669ZM13.4288 4.26666V6.4H15.6669V4.26666H13.4288ZM8.95257 4.26666V6.4H11.1907V4.26666H8.95257ZM4.47638 4.26666V6.4H6.71447V4.26666H4.47638ZM2.23828 6.4V8.53333H4.47638V6.4H2.23828ZM6.71447 6.4V8.53333H8.95257V6.4H6.71447ZM11.1907 6.4V8.53333H13.4288V6.4H11.1907ZM15.6669 6.4V8.53333H17.9049V6.4H15.6669ZM2.23828 10.6667V12.8H4.47638V10.6667H2.23828ZM6.71447 10.6667V12.8H8.95257V10.6667H6.71447ZM11.1907 10.6667V12.8H13.4288V10.6667H11.1907ZM15.6669 10.6667V12.8H17.9049V10.6667H15.6669ZM13.4288 8.53333V10.6667H15.6669V8.53333H13.4288ZM8.95257 8.53333V10.6667H11.1907V8.53333H8.95257ZM4.47638 8.53333V10.6667H6.71447V8.53333H4.47638Z" fill="white"></path>
+    </g>
+    <defs>
+      <clipPath id="clip0_264_9149">
+        <rect width="47" height="32" rx="3" fill="white"></rect>
+      </clipPath>
+    </defs>
+  </symbol>
 </svg>

@@ -68,6 +68,7 @@
         "webpack-stream": "latest"
     },
     "dependencies": {
+        "flag-icons": "^6.6.6",
         "js-datepicker": "^5.18.0",
         "simplebar": "latest",
         "slim-select": "^1.27.1",

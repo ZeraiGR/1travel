@@ -1,6 +1,7 @@
 // Импорт функционала ==============================================================================================================================================================================================================================================================================================================================
 // import { isMobile } from "./functions.js";
 // import { formsModules } from "./forms/forms.js";
+import '/node_modules/flag-icons/css/flag-icons.min.css';
 
 export function headerFixed() {
   const header = document.querySelector('.header'),
@@ -47,6 +48,9 @@ import './custom/tagger.js';
 
 // init tours mobile logic
 import './custom/tours-mobile-handler.js';
+
+// init visas mobile logic
+import './custom/visas-mobile-handler.js';
 
 // init resume content fixed
 import './custom/resume-content-equalizer.js';
