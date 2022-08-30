@@ -265,6 +265,16 @@
       grid-column: 1 / 2;
     }
   }
+
+  &.error {
+    .visa__error {
+      display: block;
+    }
+
+    .visa__input {
+      border-color: #ff4e4e;
+    }
+  }
 }
 
 .visa__label {
@@ -292,6 +302,15 @@
 .visa__textarea {
   min-height: 128px;
   border-radius: 13px;
+}
+
+.visa__error {
+  display: none;
+  color: #ff4e4e;
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 500;
+  margin-top: 7px;
 }
 
 .visa__info {
