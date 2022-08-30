@@ -1,4 +1,9 @@
 <div class="tours__filters filters">
+	<button class="filters__close" type="button">
+		<svg class="filters__close-icon">
+			<use xlink:href="@img/sprite.svg#icon-close-black"></use>
+		</svg>
+	</button>
 	<form class="filters__form">
 		<ul class="filters__list">
 			<li class="filters__item">
@@ -44,13 +49,13 @@
 						<!--  -->
 						<div class="filters__day-item">
 							<span>от</span>
-							<input id="input-day-start" class="filters__day-input" name="input-day-start" type="number" value="2"
+							<input id="input-day-start" class="filters__day-input" name="input-day-start" type="text" value="2"
 								aria-label="Минимальная цена">
 						</div>
 
 						<div class="filters__day-item">
 							<span>до</span>
-							<input id="input-day-end" class="filters__day-input" name="price-end" type="number" value="4"
+							<input id="input-day-end" class="filters__day-input" name="price-end" type="text" value="4"
 								aria-label="Максимальная цена">
 						</div>
 					</div>

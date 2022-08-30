@@ -1,3 +1,8 @@
+.filters {
+  display: flex;
+  flex-direction: column;
+}
+
 .filters__item {
   &:not(:last-child) {
     margin-bottom: 16px;
@@ -191,4 +196,14 @@
 
 .filters__btn {
   display: none;
+}
+
+.filters__close {
+  margin-left: auto;
+  margin-bottom: 5px;
+}
+
+.filters__close-icon {
+  width: 15px;
+  height: 15px;
 }

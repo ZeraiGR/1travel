@@ -65,7 +65,7 @@ const routerMobileHandler = () => {
     }
   };
 
-  if (mobileFields) {
+  if (mobileFields && window.innerWidth <= 972) {
     mobileFields.forEach((el) => {
       el.addEventListener('click', (e) => {
         const curTarget = e.currentTarget;

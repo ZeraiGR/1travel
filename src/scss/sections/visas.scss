@@ -178,26 +178,37 @@
 }
 
 .lang__item {
-  padding: 13px 36px;
+  padding: 12px 32px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 4px;
 
   a {
-    display: block;
-    width: 45px;
-    height: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+
+    span {
+      font-size: 10px;
+      font-weight: 500;
+      line-height: 1.2;
+    }
   }
 
   &.active {
     background-color: $accent;
+
+    span {
+      color: $white;
+    }
   }
 }
 
 .lang__icon {
-  width: 100%;
-  height: 100%;
+  width: 45px;
+  height: 32px;
 }
 
 .visas__filter {
@@ -395,8 +406,14 @@
   }
 }
 
-.visas__attention {
+.visas__details {
   max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.visas__attention {
   padding: 25px;
   border: 1px solid #f0940e;
   background-color: #ffe7c3;
@@ -410,4 +427,15 @@
     padding: 25px 20px 33px;
     max-width: 100%;
   }
+}
+
+.visas__button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.visas__button-icon {
+  width: 24px;
+  height: 24px;
 }

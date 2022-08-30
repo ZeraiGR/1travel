@@ -1,8 +1,12 @@
 .best-offers {
-  padding: 115px 0 130px;
+  padding: 85px 0 95px;
 
   @media (max-width: $tablet) {
     padding: 60px 0 85px;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 20px 0 35px;
   }
 }
 
