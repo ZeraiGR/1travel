@@ -146,6 +146,9 @@
 
 .selection__tab-title {
   padding: 11px 35px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
   color: $white;
   font-size: 16px;
   font-weight: 600;
@@ -158,6 +161,10 @@
     background-color: $white;
     color: $accent;
     border: none;
+
+    .selection__tab-icon {
+      fill: $accent;
+    }
   }
 
   @media (max-width: $mobile) {
@@ -166,5 +173,19 @@
 
   @media (max-width: $mobileSmall) {
     padding: 8px 20px;
+  }
+}
+
+.selection__tab-icon {
+  fill: $white;
+
+  &--airplane {
+    width: 16px;
+    height: 17px;
+  }
+
+  &--hotel {
+    width: 18px;
+    height: 14px;
   }
 }

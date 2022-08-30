@@ -8,9 +8,8 @@ const BTN_SELECTOR = '.router__counter',
   FIELD_BOX = '.field-box--passengers',
   FIELD = '.minmax',
   FILED_INPUT = '.minmax__num',
+  DECLANATIONS_SELECTOR = '.field-box__declanations span',
   ROUTER_MOBILE = '.router--mobile';
-
-const DECLANATIONS = ['пассажир', 'пассажира', 'пассажиров'];
 
 const initHandleCounter = () => {
   const openCounterBtns = document.querySelectorAll(BTN_SELECTOR);
@@ -28,6 +27,21 @@ const initHandleCounter = () => {
       res.push(el.querySelector(FILED_INPUT)),
     );
     return res;
+  };
+
+  const getDeclanations = (item) => {
+    const declElems = item.closest(FIELD_BOX).querySelectorAll(DECLANATIONS_SELECTOR);
+    let decls = [];
+
+    declElems?.forEach((el) => {
+      decls.push(el.textContent);
+    });
+
+    if (decls.length === 0) {
+      decls = ['пассажир', 'пассажира', 'пассажиров'];
+    }
+
+    return decls;
   };
 
   const validateNum = (num, min, max) => Math.max(min, Math.min(max, num));
@@ -100,6 +114,7 @@ const initHandleCounter = () => {
     const totalCountEl = getTotalCountEl(curTarget),
       totalLabelEl = getTotalLabelEl(curTarget),
       passengersType = getFieldInputEl(curTarget).dataset.passenger,
+      declanations = getDeclanations(curTarget),
       action = curTarget.dataset.action;
 
     if (action === 'inc') curValue = validateCounter(initValue + 1, passengersType);
@@ -111,7 +126,8 @@ const initHandleCounter = () => {
       total = inputs.reduce((acc, el) => acc + parseInt(el.value), 0);
 
     totalCountEl.innerHTML = total;
-    totalLabelEl.innerHTML = declOfNum(total, DECLANATIONS);
+
+    totalLabelEl.innerHTML = declOfNum(total, declanations);
   };
 
   const initBtnListeners = () => {
