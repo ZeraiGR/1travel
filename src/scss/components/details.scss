@@ -145,112 +145,45 @@
 }
 
 .details__table {
-  width: 100%;
-  font-weight: 500;
-
-  tr:first-child {
-    font-weight: 400;
-
-    th {
-      padding: 25px 22px;
-      font-size: 12px;
-      white-space: nowrap;
-
-      &:first-child {
-        border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;
-      }
-
-      &:last-child {
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
-      }
-    }
-
-    width: 100%;
-    background-color: $grey-200;
+  &.table {
+    padding: 0;
+    border: none;
   }
 
-  tr {
-    &:not(:first-child) {
-      border-bottom: 1px solid #d8d8d8;
-    }
+  .table__date {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
 
-    td {
-      &:first-child {
-        text-align: left;
-
-        span {
-          display: block;
-          margin-bottom: 5px;
-        }
-      }
-
-      &:nth-child(3) {
-        white-space: nowrap;
-      }
-    }
-  }
-
-  td {
-    padding: 25px 22px;
-    vertical-align: middle;
-    text-align: center;
-  }
-
-  .button {
-    padding: 10px 32px;
-    font-weight: 500;
-
-    @media (max-width: em(850)) {
-      font-size: 13px;
-    }
-  }
-
-  @media (max-width: em(850)) {
-    tr:first-child {
-      display: none;
-    }
-
-    tr {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-
-      &:not(:nth-of-type(2)) {
-        padding-top: 30px;
-      }
-
-      td:first-child {
-        span {
-          &:not(:last-child) {
-            margin-bottom: 10px;
-          }
-
-          font-weight: 500;
-        }
-      }
-    }
-
-    td {
-      // position: relative;
-      margin-bottom: 30px;
-      padding: 0;
-      text-align: left;
+    span {
+      font-size: 10px;
       line-height: 1.2;
+    }
+  }
 
-      &:not(:last-child) {
-        &::before {
-          margin-bottom: 14px;
-          display: block;
-          color: #707070;
-          font-size: 13px;
-          font-weight: 400;
+  .table__item--top {
+    .table__link {
+      grid-template-columns: 26% 20% 19% 1fr auto;
 
-          content: attr(data-title);
-        }
+      @media (max-width: em(972)) {
+        grid-template-columns: auto 1fr;
+        gap: 10px 15px;
       }
     }
+  }
+
+  .table__link {
+    grid-template-columns: 26% 20% 19% 1fr auto;
+    gap: 25px;
+
+    @media (max-width: em(972)) {
+      grid-template-columns: auto 1fr;
+      gap: 10px 15px;
+    }
+  }
+
+  .table__price {
+    padding-right: 50px;
   }
 }
 
