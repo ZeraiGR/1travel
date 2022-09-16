@@ -238,6 +238,12 @@
       grid-column: start / before;
     }
 
+    @media (max-width: em(1366)) {
+      .datepicker {
+        padding: 35px 48px 15px 22px;
+      }
+    }
+
     @media (max-width: $tablet) {
       grid-column: start / after;
     }

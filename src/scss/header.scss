@@ -1,5 +1,5 @@
 .header {
-  @media (max-width: em(1366)) {
+  @media (max-width: em(1300)) {
     border-bottom: 1px solid #f1f1f1;
   }
 
@@ -13,7 +13,7 @@
     .header__logo {
       padding-right: 35px;
 
-      @media (max-width: em(1366)) {
+      @media (max-width: em(1300)) {
         padding-right: 0;
       }
     }
@@ -43,7 +43,7 @@
     .header__nav {
       gap: 50px;
 
-      @media (max-width: em(1366)) {
+      @media (max-width: em(1300)) {
         gap: 20px;
       }
     }
@@ -229,7 +229,7 @@
   align-items: center;
   gap: 20px;
 
-  @media (max-width: em(1366)) {
+  @media (max-width: em(1300)) {
     &::after {
       position: absolute;
       z-index: 5;
@@ -271,7 +271,7 @@
     height: 80%;
   }
 
-  @media (max-width: em(1366)) {
+  @media (max-width: em(1300)) {
     padding-right: 0;
     min-width: 44px;
     height: 44px;
@@ -306,13 +306,13 @@
   height: 28.44px;
   fill: $white;
 
-  @media (max-width: em(1366)) {
+  @media (max-width: em(1300)) {
     display: block;
   }
 }
 
 .header__logo-img {
-  @media (max-width: em(1366)) {
+  @media (max-width: em(1300)) {
     display: none;
   }
 }
@@ -356,7 +356,7 @@
     }
   }
 
-  @media (max-width: em(1366)) {
+  @media (max-width: em(1300)) {
     margin-right: auto;
   }
 
@@ -372,7 +372,7 @@
   align-items: center;
   gap: 30px;
 
-  @media (max-width: em(1366)) {
+  @media (max-width: em(1300)) {
     position: fixed;
     transform: translateY(-200%);
     z-index: 5;
@@ -402,7 +402,7 @@
     font-size: 16px;
   }
 
-  @media (max-width: em(1366)) {
+  @media (max-width: em(1300)) {
     margin-top: 150px;
     flex-direction: column;
     width: 100%;
@@ -431,11 +431,11 @@
   position: relative;
   flex-shrink: 2;
 
-  @media (max-width: em(1366)) {
+  @media (max-width: em(1300)) {
     margin-top: auto;
   }
 
-  @media (max-width: em(1366)) and (orientation: landscape) {
+  @media (max-width: em(1300)) and (orientation: landscape) {
     display: none;
   }
 
@@ -466,7 +466,7 @@
     color: #999999;
   }
 
-  @media (max-width: em(1366)) {
+  @media (max-width: em(1300)) {
     background-color: $grey-200;
     color: $black;
   }
@@ -497,7 +497,7 @@
   &--mobile {
     display: none;
 
-    @media (max-width: em(1366)) {
+    @media (max-width: em(1300)) {
       display: block;
     }
 
@@ -515,7 +515,7 @@
     }
   }
 
-  @media (max-width: em(1366)) {
+  @media (max-width: em(1300)) {
     border: 1px solid $white;
   }
 }
@@ -523,7 +523,7 @@
 .header__burger {
   display: none;
 
-  @media (max-width: em(1366)) {
+  @media (max-width: em(1300)) {
     display: block;
     min-width: 40px;
     z-index: 6;

@@ -181,3 +181,29 @@
     display: none;
   }
 }
+
+.tour__rating {
+  display: flex;
+  gap: 3px;
+
+  li.active {
+    .tour__rating-icon {
+      fill: #ffdc26;
+    }
+  }
+
+  @media (max-width: $mobileSmall) {
+    gap: 2px;
+  }
+}
+
+.tour__rating-icon {
+  width: 19px;
+  height: 19px;
+  fill: $grey-400;
+
+  @media (max-width: $mobileSmall) {
+    width: 14px;
+    height: 14px;
+  }
+}
