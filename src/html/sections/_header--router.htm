@@ -62,6 +62,51 @@
 						data-title="Место назначения">
 					<label class="router__label transform-label" for="author-city-to">Страна прибытия</label>
 
+					<div class="router__results results" data-simplebar>
+						<ul class="results__content">
+							<li class="results__item results__item--head results__item--success">
+								<span class="results__detail">Популярные направления:</span>
+							</li>
+
+							<li class="results__item results__item--head results__item--not">
+								<span class="results__detail">По данному запросу ничего не найдено</span>
+							</li>
+
+							<li class="results__item">
+								<!-- button / link -->
+								<!-- available modificator: "results__btn--choose" for enabling autocomplete option -->
+								<button class="results__btn results__btn--choose" type="button">
+									<!-- mod: "results__main--comma" is optional -->
+									<strong class="results__main results__main--comma">Москва</strong>
+									<span class="results__detail">Россия</span>
+								</button>
+							</li>
+
+							<li class="results__item">
+								<button class="results__btn results__btn--choose" type="button">
+									<strong class="results__main results__main--comma">Санкт-Петербург</strong>
+									<span class="results__detail">Россия</span>
+								</button>
+							</li>
+
+							<li class="results__item">
+								<button class="results__btn results__btn--choose" type="button">
+									<strong class="results__main results__main--comma">Киев</strong>
+									<span class="results__detail">Украина</span>
+								</button>
+							</li>
+
+							<li class="results__item">
+								<button class="results__btn results__btn--choose" type="button">
+									<strong class="results__main results__main--comma">Ростов-на-Дону</strong>
+									<span class="results__detail">Россия, Ростовская область</span>
+								</button>
+							</li>
+						</ul>
+						<div class="loader" aria-hidden="true">
+						</div>
+					</div>
+
 					<div class="field-box__content">
 						<div class="field-box__search">
 							<svg class="field-box__search-icon">

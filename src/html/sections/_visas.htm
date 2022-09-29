@@ -6,6 +6,19 @@
 		<div class="visas__content">
 			<div class="visas__top">
 				<div class="visas__lang lang">
+
+					<div class="visas__lang-choosen">
+						<div class="visas__lang-choosen-content">
+							<svg class="lang__icon">
+								<use xlink:href="@img/sprite.svg#icon-belorussia-flag"></use>
+							</svg>
+						</div>
+
+						<svg class="lang__icon-caret">
+							<use xlink:href="@img/sprite.svg#icon-polygon"></use>
+						</svg>
+					</div>
+
 					<ul class="lang__list">
 						<li class="lang__item">
 							<a href="#">
@@ -16,7 +29,7 @@
 							</a>
 						</li>
 
-						<li class="lang__item active">
+						<li class="lang__item selected">
 							<a href="#">
 								<svg class="lang__icon">
 									<use xlink:href="@img/sprite.svg#icon-belorussia-flag"></use>
@@ -88,35 +101,6 @@
 							</a>
 						</li>
 					</ul>
-
-					<select name="visa-country" class="lang__mobile">
-						<option value="russia" selected data-asset="@img/icons/icon-russia-flag.svg">
-						</option>
-
-						<option value="belarusia" data-href="#" data-asset="@img/icons/icon-belorussia-flag.svg">
-						</option>
-
-						<option value="ukraina" data-href="#" data-asset="@img/icons/icon-uk-flag.svg">
-						</option>
-
-						<option value="india" data-href="#" data-asset="@img/icons/icon-india-flag.svg">
-						</option>
-
-						<option value="latvia" data-href="#" data-asset="@img/icons/icon-latvia-flag.svg">
-						</option>
-
-						<option value="tailand" data-href="#" data-asset="@img/icons/icon-tailand-flag.svg">
-						</option>
-
-						<option value="usa" data-href="#" data-asset="@img/icons/icon-usa-flag.svg">
-						</option>
-
-						<option value="england" data-href="#" data-asset="@img/icons/icon-england-flag.svg">
-						</option>
-
-						<option value="china" data-href="#" data-asset="@img/icons/icon-china-flag.svg">
-						</option>
-					</select>
 				</div>
 				<button class="visas__filter">Фильтр</button>
 			</div>

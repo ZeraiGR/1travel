@@ -70,6 +70,11 @@
         padding: 30px 15px 15px;
         background-color: $white;
         transition: transform 0.3s ease;
+        overflow-y: auto;
+
+        &.panel-is-open {
+          overflow-y: initial;
+        }
       }
     }
 
@@ -219,6 +224,10 @@
         display: flex;
       }
     }
+  }
+
+  .router__results {
+    width: 100%;
   }
 }
 

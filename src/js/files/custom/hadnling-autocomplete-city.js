@@ -66,7 +66,7 @@ const handleAutocomplete = () => {
   };
 
   inputs?.forEach((inp) => {
-    if (!inp.closest(ROUTER_MOBILE)) {
+    if (!(inp.closest(ROUTER_MOBILE) && window.innerWidth <= 972)) {
       inp.addEventListener('focus', (e) => {
         let curTurget = e.currentTarget;
         const results = getLocalResults(curTurget);
