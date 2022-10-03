@@ -33,7 +33,7 @@ const visasMobileHandler = () => {
     });
   }
 
-  if (selectContainer && select) {
+  if (selectContainer && select && window.innerWidth <= 1366) {
     select.onclick = () => {
       selectContainer.classList.toggle('active');
       if (selectContainer.classList.contains('active')) {
@@ -47,10 +47,12 @@ const visasMobileHandler = () => {
   if (options && selectContainer) {
     options.forEach((el) => {
       el.addEventListener('click', (e) => {
-        selectContent.innerHTML = e.target.closest('.lang__icon').outerHTML;
+        if (window.innerWidth <= 1366) {
+          selectContent.innerHTML = e.target.closest('.lang__icon').outerHTML;
+          updateWindowListeners(false);
+          selectContainer.classList.remove('active');
+        }
 
-        updateWindowListeners(false);
-        selectContainer.classList.remove('active');
         options.forEach((opt) => {
           opt.classList.remove('selected');
         });

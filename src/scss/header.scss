@@ -216,7 +216,8 @@
 
   &--result {
     @media (max-width: em(972)) {
-      .header__logo {
+      .header__logo,
+      .header__burger {
         display: none;
       }
 

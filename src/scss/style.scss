@@ -81,6 +81,13 @@ body {
       background-color: $white;
     }
 
+    .header--router {
+      .select__title {
+        color: $white;
+        background-image: url('@img/icons/icon-global-white.svg');
+      }
+    }
+
     .header__logo-icon {
       display: block;
       fill: $accent;

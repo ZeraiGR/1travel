@@ -1,1 +1,20 @@
 <script src="js/app.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+	crossorigin="anonymous"></script>
+
+<script>
+	$('[name="offer-date-from"]').each(function () {
+		// to change init state and add some id
+		document.querySelector('[name="offer-date-from"]').selectedIndex = 2;
+		document.querySelector('[name="offer-date-from"]').children[2].id = 'test';
+		document.querySelector('[name="offer-date-from"]').dispatchEvent(new Event('change'));
+
+		document.addEventListener('selectCallback', function (e) {
+			// to handle
+			const currentSelect = e.detail.select;
+			console.log(e);
+			console.log(currentSelect);
+		});
+	});
+</script>

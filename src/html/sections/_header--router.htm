@@ -15,10 +15,93 @@
 						<use xlink:href="@img/sprite.svg#icon-back-black"></use>
 					</svg>
 				</button>
+			</div>
 
-				<dev class="header__result-text">
-					Таллин <span>/</span> Австралия <span>/</span> 08.04. - 19.04. <span>/</span> 2
-				</dev>
+			<div class="header__mobpanel">
+				<ul class="header__menu menu">
+					<li>
+						<a href="#">Все туры</a>
+					</li>
+					<li>
+						<a href="#">Визы</a>
+					</li>
+					<li>
+						<a href="#">Чартеры</a>
+					</li>
+					<li>
+						<a href="#">О нас</a>
+					</li>
+				</ul>
+
+				<form class="header__search">
+					<svg class="header__search-icon">
+						<use xlink:href="@img/sprite.svg#icon-search"></use>
+					</svg>
+					<input class="header__search-input" type="search" placeholder="Поиск" aria-label="Поиск по сайту">
+					<!-- available modificators: results--loading, results--show, results--not  -->
+					<!-- without any modificators it will be hidden -->
+					<div class="header__search-results results" data-simplebar>
+						<ul class="results__content">
+							<li class="results__item results__item--head results__item--success">
+								<span class="results__detail">Результаты поиска:</span>
+							</li>
+
+							<li class="results__item results__item--head results__item--not">
+								<span class="results__detail">По данному запросу ничего не найдено</span>
+							</li>
+
+							<li class="results__item">
+								<!-- button / link -->
+								<button class="results__btn" type="button">
+									<!-- mod: "results__main--comma" is optional -->
+									<strong class="results__main results__main--comma">Москва</strong>
+									<span class="results__detail">Россия</span>
+								</button>
+							</li>
+
+							<li class="results__item">
+								<button class="results__btn" type="button">
+									<strong class="results__main results__main--comma">Санкт-Петербург</strong>
+									<span class="results__detail">Россия</span>
+								</button>
+							</li>
+
+							<li class="results__item">
+								<button class="results__btn" type="button">
+									<strong class="results__main results__main--comma">Киев</strong>
+									<span class="results__detail">Украина</span>
+								</button>
+							</li>
+
+							<li class="results__item">
+								<button class="results__btn" type="button">
+									<strong class="results__main results__main--comma">Ростов-на-Дону</strong>
+									<span class="results__detail">Россия, Ростовская область</span>
+								</button>
+							</li>
+
+							<li class="results__item">
+								<a class="results__btn" href="#" type="button">
+									<strong class="results__main">Тур в Лас-Вегас!</strong>
+									<span class="results__detail">Только на этой неделе...</span>
+								</a>
+							</li>
+
+							<li class="results__item">
+								<a class="results__btn" href="#" type="button">
+									<strong class="results__main">Топ 10 советов путешественникам!</strong>
+									<span class="results__detail">Для того, чтобы выжать максимум из поездки...</span>
+								</a>
+							</li>
+						</ul>
+						<div class="loader" aria-hidden="true">
+						</div>
+					</div>
+				</form>
+
+				<button class="header__button header__button--menu button" data-popup="#get-offer">
+					Получить предложение
+				</button>
 			</div>
 
 			<form class="router router--mobile">
@@ -322,6 +405,11 @@
 					<option value="eng">ENG</option>
 				</select>
 			</form>
+
+			<button class="header__burger burger" type="button" aria-label="Кнопка открыть / закрыть мобильное меню">
+				<span aria-hidden></span>
+				<span aria-hidden></span>
+			</button>
 		</nav>
 	</div>
 </header>

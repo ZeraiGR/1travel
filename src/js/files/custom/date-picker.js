@@ -39,6 +39,13 @@ resetBtns?.forEach((btn) => {
 });
 
 const initPickers = (idArr) => {
+  const select = document.querySelector('.resume__select-form');
+  // select.click();
+  Array.from(select.children).forEach((el) => {
+    el.selected = false;
+    select.children[2].selected = true;
+  });
+
   if (!idArr.every((id) => document.querySelector(id))) {
     return;
   }
@@ -49,6 +56,7 @@ const initPickers = (idArr) => {
         onSelect: (instance) => {
           checkFilled(instance.el);
         },
+        disabledDates: [new Date('2022-10-14'), new Date('2022-10-15'), new Date('2022-10-16')],
         formatter: (input, date) => {
           const value = `${date.getDate()} ${date.toLocaleString('default', {
             month: 'long',
