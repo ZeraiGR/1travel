@@ -285,3 +285,30 @@
     font-size: 11px;
   }
 }
+
+// changes
+
+.error-field {
+  border: 1px solid red;
+}
+
+.txt__error {
+  color: #ff4e4e;
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 500;
+  margin-top: 7px;
+}
+
+.danger-red {
+  color: red;
+}
+
+.select__options {
+  max-height: 400px;
+  overflow-y: scroll;
+}
+
+.popup__checkbox.error-check .checkbox__label::before {
+  border: 1px solid red;
+}

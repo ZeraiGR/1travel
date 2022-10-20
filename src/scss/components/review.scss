@@ -140,13 +140,18 @@
 
 .review__text {
   margin-bottom: 40px;
-  @include cut-text(3);
   font-size: 18px;
   font-weight: 500;
   line-height: 1.4;
 
+  p {
+    @include cut-text(3);
+  }
+
   &.cut {
-    @include cut-text(1);
+    p {
+      @include cut-text(1);
+    }
 
     & + .review__author {
       flex-grow: 1;

@@ -122,8 +122,9 @@
 .swiper-wrapper {
   &.best-offers__list {
     margin-bottom: 60px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     gap: 53px;
 
     @media (max-width: em(1500)) {
@@ -132,20 +133,53 @@
 
     @media (max-width: em(1024)) {
       margin-bottom: 40px;
-      grid-template-columns: repeat(2, 1fr);
     }
 
-    @media (max-width: em(830)) {
-      display: flex;
+    @media (max-width: em(829)) {
+      flex-wrap: nowrap;
       gap: 0;
     }
+  }
+}
+
+.best-offers__item {
+  max-width: calc(33.3% - 35px);
+  width: 100%;
+
+  .tour__img {
+    height: 420px;
+
+    @media (max-width: em(1500)) {
+      height: 280px;
+    }
+
+    @media (max-width: em(1366)) {
+      height: 240px;
+    }
+
+    @media (max-width: em(829)) {
+      height: 150px;
+    }
+  }
+
+  @media (max-width: em(1500)) {
+    max-width: calc(33.3% - 20px);
+  }
+
+  @media (max-width: em(1024)) {
+    max-width: calc(50% - 20px) !important;
+  }
+
+  @media (max-width: em(829)) {
+    max-width: 290px !important;
+    width: auto;
   }
 }
 
 .best-offers__btns {
   display: none;
 
-  @media (max-width: em(830)) {
+  @media (max-width: em(829)) {
     display: flex;
     justify-content: center;
     gap: 12px;

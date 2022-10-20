@@ -414,6 +414,23 @@
     }
   }
 
+	td.duration {
+		@media (max-width: em(972)){
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 0 15px;
+
+			span {
+				margin-bottom: 0!important;
+			}
+
+			&::before {
+				grid-column: 1 / 4;
+			}
+		}
+		
+	}
+
   .button {
     padding: 11px 32px;
     font-size: 13px;

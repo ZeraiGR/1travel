@@ -48,7 +48,7 @@ const visasMobileHandler = () => {
     options.forEach((el) => {
       el.addEventListener('click', (e) => {
         if (window.innerWidth <= 1366) {
-          selectContent.innerHTML = e.target.closest('.lang__icon').outerHTML;
+          selectContent.innerHTML = e.target.closest('.lang__item').querySelector('img').outerHTML;
           updateWindowListeners(false);
           selectContainer.classList.remove('active');
         }

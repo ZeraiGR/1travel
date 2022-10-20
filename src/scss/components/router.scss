@@ -1,4 +1,6 @@
 .router {
+  margin: 0 auto;
+  max-width: max-content;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -6,6 +8,11 @@
   background-color: $white;
   box-shadow: 0 20px 60px 0 #0000001a;
   border-radius: 20px;
+
+  &--center {
+    margin: 0 auto;
+    max-width: max-content;
+  }
 
   &--mobile {
     .router__counter {
@@ -76,18 +83,18 @@
   &--hotel {
     @media (max-width: em(1500)) {
       display: grid;
-      grid-template-columns: [start] 280px [before] 140px [middle] 140px [after] 1fr [end];
+      grid-template-columns: [start] 280px [before] 140px [middle] 140px [after] 1fr [end] !important;
     }
 
     @media (max-width: $tablet) {
       padding: 24px 32px;
-      grid-template-columns: [start] 2fr [before] 1fr [after] 1fr [end];
+      grid-template-columns: [start] 2fr [before] 1fr [after] 1fr [end] !important;
     }
 
     @media (max-width: $mobile) {
       padding: 30px 16px;
       gap: 6px;
-      grid-template-columns: [start] 5fr [before] 2fr [after] 3fr [end];
+      grid-template-columns: [start] 5fr [before] 2fr [after] 3fr [end] !important;
     }
 
     .field-box {
@@ -177,6 +184,190 @@
       @media (max-width: $mobileSmall) {
         grid-row: 6 / 7;
       }
+    }
+  }
+
+  &--light {
+    display: flex;
+
+    .router__switch {
+      margin-left: 0;
+      margin-right: 0;
+
+      @media (max-width: em(972)) {
+        margin-left: -10px;
+        margin-right: -10px;
+      }
+    }
+
+    .router__places--right {
+      @media (max-width: em(1366)) {
+        margin-right: -10px;
+      }
+    }
+
+    .field-box--date-from {
+      @media (max-width: $mobile) {
+        grid-column: start / middle;
+      }
+
+      @media (max-width: em(525)) {
+        grid-column: start / end;
+      }
+    }
+
+    .router__submit {
+      @media (max-width: em(972)) {
+        grid-row: 2 / 3;
+      }
+
+      @media (max-width: $mobile) {
+        grid-row: 3 / 4;
+      }
+
+      @media (max-width: em(525)) {
+        grid-row: 4 / 5;
+      }
+    }
+
+    @media (max-width: em(1500)) {
+      display: flex;
+    }
+
+    @media (max-width: em(972)) {
+      display: grid;
+    }
+
+    @media (max-width: $mobile) {
+      max-width: 100%;
+    }
+  }
+
+  &--hotel-light {
+    display: flex;
+    align-items: stretch;
+
+    .field-box--passengers {
+      @media (max-width: em(1500)) {
+        max-width: 220px;
+      }
+
+      @media (max-width: em(1266)) {
+        grid-row: 2 / 3;
+        grid-column: middle / after;
+      }
+
+      @media (max-width: em(972)) {
+        max-width: 100%;
+      }
+
+      @media (max-width: $mobile) {
+        grid-column: start / middle;
+      }
+
+      @media (max-width: em(525)) {
+        grid-row: 3 / 4;
+        grid-column: start / end;
+      }
+    }
+
+    .router__places--from {
+      @media (max-width: em(525)) {
+        grid-row: 1 / 2;
+        grid-column: start / end;
+      }
+    }
+
+    .router__places--hotel {
+      @media (max-width: em(1266)) {
+        grid-row: 1 / 2;
+        grid-column: middle / after;
+      }
+
+      @media (max-width: $mobile) {
+        grid-column: middle / end;
+      }
+
+      @media (max-width: em(525)) {
+        grid-row: 2 / 3;
+        grid-column: start / end;
+      }
+    }
+
+    .field-box--nights {
+      @media (max-width: em(1266)) {
+        grid-row: 1 / 2;
+        grid-column: after / end;
+      }
+
+      @media (max-width: $mobile) {
+        max-width: 100%;
+        grid-row: 2 / 3;
+        grid-column: middle / end;
+      }
+
+      @media (max-width: em(525)) {
+        grid-row: 5 / 6;
+        grid-column: start / after;
+      }
+    }
+
+    .field-box--date-from {
+      @media (max-width: em(1266)) {
+        grid-row: 2 / 3;
+        grid-column: start / middle;
+      }
+
+      @media (max-width: $mobile) {
+        grid-row: 3 / 4;
+        grid-column: start / after;
+      }
+
+      @media (max-width: em(525)) {
+        grid-row: 4 / 5;
+        grid-column: start / end;
+      }
+    }
+
+    .router__submit {
+      @media (max-width: em(1266)) {
+        grid-row: 2 / 3;
+        grid-column: after / end;
+      }
+
+      @media (max-width: $mobile) {
+        grid-row: 3 / 4;
+        grid-column: after / end;
+      }
+
+      @media (max-width: em(525)) {
+        grid-row: 5 / 6;
+      }
+    }
+
+    .router__places {
+      @media (max-width: em(972)) {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: em(1500)) {
+      display: flex;
+      align-items: stretch;
+    }
+
+    @media (max-width: em(1266)) {
+      display: grid;
+      grid-template-columns: [start] 220px [middle] 220px [after] 1fr [end];
+    }
+
+    @media (max-width: em(972)) {
+      grid-template-columns: [start] 3fr [middle] 3fr [after] 1fr [end];
+    }
+
+    @media (max-width: $mobile) {
+      max-width: 100%;
+      grid-template-columns: [start] 3fr [middle] 2fr [after] 1fr [end];
     }
   }
 }
@@ -376,6 +567,24 @@
   background-size: 100% 100%;
   max-width: 280px;
 
+  &--right,
+  &--left {
+    &::before {
+      content: '';
+      position: absolute;
+      height: 32px;
+      width: 26px;
+      background: #fff;
+      border: 1px solid $grey-300;
+      border-radius: 50%;
+      top: 50%;
+
+      @media (max-width: $mobile) {
+        display: none;
+      }
+    }
+  }
+
   &--right {
     margin-right: -10px;
 
@@ -427,21 +636,6 @@
       margin-left: 0;
       grid-row: 2 / 3;
       grid-column: start / end;
-    }
-  }
-
-  &::before {
-    content: '';
-    position: absolute;
-    height: 32px;
-    width: 26px;
-    background: #fff;
-    border: 1px solid $grey-300;
-    border-radius: 50%;
-    top: 50%;
-
-    @media (max-width: $mobile) {
-      display: none;
     }
   }
 
@@ -566,12 +760,17 @@
 
 .router__submit {
   width: 110px;
+  min-width: 80px;
   min-height: 76px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: $black;
   border-radius: 10px;
+
+  &--accent {
+    background-color: $accent;
+  }
 
   @media (max-width: em(1500)) {
     grid-row: 2 / 3;

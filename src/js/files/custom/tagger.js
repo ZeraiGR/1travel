@@ -39,3 +39,4 @@ if (taggerEl && taggerHelpers) {
 
   tagger.set();
 }
+
