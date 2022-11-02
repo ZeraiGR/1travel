@@ -5,9 +5,9 @@
 <script src="https://unpkg.com/js-datepicker"></script>
 
 <script>
-	const datePickerWithRange = () => {
-		let firstDate = null;
-		let secondDate = null;
+	const datePickerWithRange = (pickerId, startDate = null, finishDate = null) => {
+		let firstDate = startDate;
+		let secondDate = finishDate;
 
 		const updateWatcher = (status) => {
 			if (status) {
@@ -82,8 +82,9 @@
 
 		const updateRange = (instance) => {
 			const days = getDays(instance);
+			console.log('update');
 
-			if (firstDate < secondDate) {
+			if (secondDate && firstDate < secondDate) {
 				if (instance.currentYear === secondDate.getFullYear() && instance.currentYear === firstDate.getFullYear()) {
 
 					if (firstDate.getMonth() < instance.currentMonth && instance.currentMonth < secondDate.getMonth()) {
@@ -145,7 +146,7 @@
 					}
 				}
 
-			} else {
+			} else if (secondDate) {
 				if (instance.currentYear === secondDate.getFullYear() && instance.currentYear === firstDate.getFullYear()) {
 
 					if (firstDate.getMonth() > instance.currentMonth && instance.currentMonth > secondDate.getMonth()) {
@@ -219,7 +220,43 @@
 			});
 		}
 
-		const dateFromPicker = datepicker('#author-date-from', {
+		const fillFigures = (input, date) => {
+			let value = '';
+
+			if (secondDate && !finishDate) {
+				value = '';
+			} else if (firstDate && date) {
+				const dayF = firstDate.getDate(),
+					monthF = firstDate.getMonth() > 8 ? firstDate.getMonth() + 1 : `0${firstDate.getMonth() + 1}`,
+					yearF = firstDate.getFullYear().toString().slice(-2),
+					dayS = date.getDate(),
+					monthS = date.getMonth() > 8 ? date.getMonth() + 1 : `0${date.getMonth() + 1}`,
+					yearS = date.getFullYear().toString().slice(-2);
+
+				if (firstDate < date) {
+					if (firstDate.getFullYear() !== date.getFullYear()) {
+						value = dayF + '.' + monthF + '.' + yearF + ' - ' + dayS + '.' + monthS + '.' + yearS;
+					} else {
+						value = dayF + '.' + monthF + ' - ' + dayS + '.' + monthS;
+					}
+				} else {
+					if (firstDate.getFullYear() !== date.getFullYear()) {
+						value = dayS + '.' + monthS + '.' + yearS + ' - ' + dayF + '.' + monthF + '.' + yearF;
+					} else {
+						value = dayS + '.' + monthS + ' - ' + dayF + '.' + monthF;
+					}
+				}
+			} else if (firstDate) {
+				value = `${firstDate.getDate()}.${firstDate.getMonth() > 8 ? firstDate.getMonth() + 1 : `0${firstDate.getMonth() + 1}`}`;
+			} else {
+				value = `${date.getDate()}.${date.getMonth() > 8 ? date.getMonth() + 1 : `0${date.getMonth() + 1}`}`;
+			}
+
+			console.log(value, secondDate);
+			input.value = value;
+		};
+
+		const dateFromPicker = datepicker(pickerId, {
 			onShow: instance => {
 				instance.alwaysShow = true;
 				updateWatcher(true);
@@ -246,45 +283,11 @@
 
 				checkFilled(instance.el);
 			},
-			onHide: instance => {
-				console.log(instance);
-			},
 			onMonthChange: instance => {
 				updateRange(instance);
 			},
 			formatter: (input, date) => {
-				let value = '';
-
-				if (secondDate) {
-					value = '';
-				} else if (firstDate && date) {
-					const dayF = firstDate.getDate(),
-						monthF = firstDate.getMonth() > 8 ? firstDate.getMonth() + 1 : `0${firstDate.getMonth() + 1}`,
-						yearF = firstDate.getFullYear().toString().slice(-2),
-						dayS = date.getDate(),
-						monthS = date.getMonth() > 8 ? date.getMonth() + 1 : `0${date.getMonth() + 1}`,
-						yearS = date.getFullYear().toString().slice(-2);
-
-					if (firstDate < date) {
-						if (firstDate.getFullYear() !== date.getFullYear()) {
-							value = dayF + '.' + monthF + '.' + yearF + ' - ' + dayS + '.' + monthS + '.' + yearS;
-						} else {
-							value = dayF + '.' + monthF + ' - ' + dayS + '.' + monthS;
-						}
-					} else {
-						if (firstDate.getFullYear() !== date.getFullYear()) {
-							value = dayS + '.' + monthS + '.' + yearS + ' - ' + dayF + '.' + monthF + '.' + yearF;
-						} else {
-							value = dayS + '.' + monthS + ' - ' + dayF + '.' + monthF;
-						}
-					}
-				} else if (firstDate) {
-					value = `${firstDate.getDate()}.${firstDate.getMonth() > 8 ? firstDate.getMonth() + 1 : `0${firstDate.getMonth() + 1}`}`;
-				} else {
-					value = `${date.getDate()}.${date.getMonth() > 8 ? date.getMonth() + 1 : `0${date.getMonth() + 1}`}`;
-				}
-
-				input.value = value;
+				fillFigures(input, date);
 			},
 			overlayPlaceholder: new Date().getFullYear().toString(),
 			customMonths: [
@@ -301,10 +304,26 @@
 				'November',
 				'December',
 			],
-			customDays: ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'],
+			customDays: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+			startDay: 1,
 			disabler: (date) => date.getTime() <= new Date(Date.now() - 86400000),
 		});
+
+		if (startDate && finishDate) {
+			dateFromPicker.setDate(startDate);
+			dateFromPicker.navigate(secondDate, true);
+			fillFigures(dateFromPicker.el, finishDate);
+			checkFilled(dateFromPicker.el);
+		}
 	};
 
-	datePickerWithRange();
+	const dateOutPickerId = '#author-date-from';
+	// ...
+	// init
+	const dayStart = new Date('2022-10-23');
+	const dayFinish = new Date('2022-11-25');
+
+	// 2 and 3 parametres aren't necessary
+	datePickerWithRange(dateOutPickerId);
+	// ....
 </script>
