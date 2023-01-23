@@ -46,7 +46,7 @@ function initSliders() {
 
   if (document.querySelector('.swiper')) {
     new Swiper('.selection__slider', {
-      modules: [Navigation, Pagination, EffectFade],
+      modules: [Navigation, Pagination, EffectFade, Autoplay],
       effect: 'fade',
       fadeEffect: {
         crossFade: true,
@@ -72,14 +72,18 @@ function initSliders() {
         nextEl: '.selection__btn--next',
         prevEl: '.selection__btn--prev',
       },
+			autoplay: {
+				delay: 3000,
+			},
       breakpoints: {
-        320: {
-          noSwiping: true,
-          noSwipingClass: '.selection__slider',
-        },
-        768: {
-          noSwiping: false,
-        },
+        // 320: {
+				// 	autoplay: {
+				// 		delay: 3000,
+				// 	},
+        // },
+        // 768: {
+          // autoplay: false
+        // },
       },
 
       on: {},

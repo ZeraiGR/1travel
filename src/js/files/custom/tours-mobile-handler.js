@@ -78,7 +78,6 @@ const routerMobileHandler = () => {
 
         routerPanelTitle.textContent = curTarget.dataset.title;
         routerPanelContent.innerHTML = '';
-        console.log(content);
         routerPanelContent.append(content);
 
         if (curTarget === cityOutElem) {
@@ -95,7 +94,7 @@ const routerMobileHandler = () => {
         }
 
         if (curTarget === cityBackElem) {
-          const searchInput = content.querySelector('.field-box__search-input');
+          // const searchInput = content.querySelector('.field-box__search-input');
           const btns = content.querySelectorAll('.field-box__btn');
           const items = content.querySelectorAll('.field-box__item');
           const values = Array.from(items).reduce((acc, el) => {
@@ -103,21 +102,21 @@ const routerMobileHandler = () => {
             return acc;
           }, []);
 
-          searchInput.addEventListener('input', (e) => {
-            let filterStr = e.currentTarget.value.toUpperCase();
+          // searchInput.addEventListener('input', (e) => {
+          //   let filterStr = e.currentTarget.value.toUpperCase();
 
-            const filteredValues = values.filter((el) => el.includes(filterStr));
+          //   const filteredValues = values.filter((el) => el.includes(filterStr));
 
-            items.forEach((item) => {
-              let testItem = item.querySelector('span').textContent.toUpperCase();
+          //   items.forEach((item) => {
+          //     let testItem = item.querySelector('span').textContent.toUpperCase();
 
-              if (!filteredValues.includes(testItem)) {
-                item.classList.add('hide');
-              } else {
-                item.classList.remove('hide');
-              }
-            });
-          });
+          //     if (!filteredValues.includes(testItem)) {
+          //       item.classList.add('hide');
+          //     } else {
+          //       item.classList.remove('hide');
+          //     }
+          //   });
+          // });
 
           btns.forEach((btn) => {
             btn.addEventListener('click', (e) => {

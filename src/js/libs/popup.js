@@ -248,7 +248,7 @@ export class Popup {
 
       this.targetOpen.element.setAttribute('aria-hidden', 'false');
 
-      // // Запоминаю это открытое окно. Оно будет последним открытым
+      // Запоминаю это открытое окно. Оно будет последним открытым
       this.previousOpen.selector = this.targetOpen.selector;
       this.previousOpen.element = this.targetOpen.element;
 
@@ -271,6 +271,7 @@ export class Popup {
           },
         }),
       );
+
       this.popupLogging(`Открыл попап`);
     } else this.popupLogging(`Ой ой, такого попапа нет. Проверьте корректность ввода. `);
   }
@@ -308,6 +309,14 @@ export class Popup {
     setTimeout(() => {
       this._focusTrap();
     }, 50);
+
+		document.dispatchEvent(
+			new CustomEvent('afterPopupClose', {
+				detail: {
+					popup: this,
+				},
+			}),
+		);
 
     this.popupLogging(`Закрыл попап`);
   }

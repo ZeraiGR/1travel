@@ -19,6 +19,9 @@ export function headerFixed() {
   });
 }
 
+// review popup handler
+import './custom/review-popup-handler.js';
+
 // transforming when elems were focused
 import './custom/transform-with-focus.js';
 

@@ -252,7 +252,6 @@
 				value = `${date.getDate()}.${date.getMonth() > 8 ? date.getMonth() + 1 : `0${date.getMonth() + 1}`}`;
 			}
 
-			console.log(value, secondDate);
 			input.value = value;
 		};
 
@@ -306,6 +305,14 @@
 			],
 			customDays: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
 			startDay: 1,
+			events: [
+				new Date(2022, 10, 20),
+			],
+			disabledDates: [
+				new Date(2099, 0, 5),
+				new Date(2099, 0, 6),
+				new Date(2099, 0, 7),
+			],
 			disabler: (date) => date.getTime() <= new Date(Date.now() - 86400000),
 		});
 
@@ -324,6 +331,6 @@
 	const dayFinish = new Date('2022-11-25');
 
 	// 2 and 3 parametres aren't necessary
-	datePickerWithRange(dateOutPickerId);
+	// datePickerWithRange(dateOutPickerId);
 	// ....
 </script>

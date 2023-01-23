@@ -127,6 +127,14 @@
   }
 }
 
+.qs-event {
+	opacity: 0.2;
+}
+
+.qs-event::after {
+	display: none;
+}
+
 .qs-square:not(.qs-empty):not(.qs-disabled):not(.qs-day):not(.qs-active):hover {
   color: $white;
   background: $accent-hover;
